@@ -1,0 +1,80 @@
+<div class="header">
+  <div class="tabs">
+    <div class="tabs">
+      <img class="tab vscode-icon" src="../assets/vscode.png" />
+      <div class="tab" src="">File</div>
+      <div class="tab">Edit</div>
+      <div class="tab">Selection</div>
+      <div class="tab">View</div>
+      <div class="tab">Go</div>
+      <div class="tab">Run</div>
+      <div class="tab">Terminal</div>
+      <div class="tab">Help</div>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="sidebar1">
+    <div class="sidebar-item1">
+      <fa-icon [icon]="faFolder"></fa-icon>
+    </div>
+    <div class="sidebar-item1">
+      <fa-icon [icon]="faSearch"></fa-icon>
+    </div>
+    <div class="sidebar-item1">
+      <fa-icon [icon]="faCode"></fa-icon>
+    </div>
+  </div>
+  <!--<div class="sidebar2">
+    <div class="sidebar-item2" (click)="toggleDropdown1()">
+      <fa-icon [icon]="dropdownOpen ? faChevronDown : faChevronRight"></fa-icon>
+      <span>Explorer</span>
+    </div>
+    <div *ngIf="dropdownOpen" class="dropdown-content">
+      <div>Home</div>
+      <div>Experience</div>
+      <div>Projects</div>
+      <div>Skills</div>
+      <div>Education</div>
+      <div>Certifications</div>
+    </div>
+  </div>-->
+  <div class="sidebar2">
+  <div class="sidebar-item2" (click)="toggleDropdown('explorer')">
+    <fa-icon class="icon-container" [icon]="dropdownStates['explorer'] ? faChevronDown : faChevronRight"></fa-icon>
+    <span>Explorer</span>
+  </div>
+  <div *ngIf="dropdownStates['explorer']" class="dropdown-content">
+    <div class="sidebar-item2" (click)="toggleDropdown('home')">
+      <fa-icon [icon]="dropdownStates['home'] ? faChevronDown : faChevronRight"></fa-icon>
+      <span>Home</span>
+    </div>
+    <div *ngIf="dropdownStates['home']" class="dropdown-content">
+      <a routerLink="/home/overview">Overview</a>
+      <a routerLink="/home/details">Details</a>
+    </div>
+    <div class="sidebar-item2" (click)="toggleDropdown('projects')">
+      <fa-icon [icon]="dropdownStates['projects'] ? faChevronDown : faChevronRight"></fa-icon>
+      <span>Projects</span>
+    </div>
+    <div *ngIf="dropdownStates['projects']" class="dropdown-content">
+      <a routerLink="/projects/current">Current Projects</a>
+      <a routerLink="/projects/completed">Completed Projects</a>
+    </div>
+  </div>
+</div>
+<div class="editor">
+  <div class="file-tabs">
+    <div class="file-tab" [class.active]="isActive('/home')" (click)="navigateTo('/home')">Home.ts <fa-icon [icon]="faClose"></fa-icon></div>
+    <div class="file-tab" [class.active]="isActive('/experience')" (click)="navigateTo('/experience')">Experience.ts <fa-icon [icon]="faClose"></fa-icon></div>
+    <div class="file-tab" [class.active]="isActive('/projects')" (click)="navigateTo('/projects')">Projects.ts <fa-icon [icon]="faClose"></fa-icon></div>
+    <div class="file-tab" [class.active]="isActive('/skills')" (click)="navigateTo('/skills')">Skills.ts <fa-icon [icon]="faClose"></fa-icon></div>
+    <div class="file-tab" [class.active]="isActive('/education')" (click)="navigateTo('/education')">Education.ts <fa-icon [icon]="faClose"></fa-icon></div>
+    <div class="file-tab" [class.active]="isActive('/certifications')" (click)="navigateTo('/certifications')">Certifications.ts <fa-icon [icon]="faClose"></fa-icon></div>
+  </div>
+  <div class="file-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+</div>
