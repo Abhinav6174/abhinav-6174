@@ -26,55 +26,198 @@
       <fa-icon [icon]="faCode"></fa-icon>
     </div>
   </div>
-  <!--<div class="sidebar2">
-    <div class="sidebar-item2" (click)="toggleDropdown1()">
-      <fa-icon [icon]="dropdownOpen ? faChevronDown : faChevronRight"></fa-icon>
-      <span>Explorer</span>
+
+  <div class="resizable-sidebar" [ngStyle]="{ 'left.px': sidebarLeftPosition }">
+    <div class="sidebar2" #sidebar2>
+      <div class="sidebar2-content">
+        <div>Explorer</div>
+        <div style="margin-top: 10px;">
+          <div class="sidebar-item2" (click)="toggleDropdown('angular')">
+            <fa-icon class="icon-arrow" [icon]="dropdownStates['angular'] ? faChevronDown : faChevronRight"></fa-icon>
+            <fa-icon class="icon-folder" [icon]="faFolder"></fa-icon>
+            <span>.angular</span>
+          </div>
+          <div *ngIf="dropdownStates['angular']" class="dropdown-content">
+            <div class="sidebar-item2 subfolder-dropdown-content" (click)="toggleDropdown('myapp')">
+              <fa-icon class="icon-arrow" [icon]="dropdownStates['myapp'] ? faChevronDown : faChevronRight"></fa-icon>
+              <span>myapp</span>
+            </div>
+            <div class="sidebar-item2 subfolder-dropdown-content" (click)="toggleDropdown('vite')">
+              <fa-icon class="icon-arrow" [icon]="dropdownStates['vite'] ? faChevronDown : faChevronRight"></fa-icon>
+              <span>vite</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 4px;">
+          <div class="sidebar-item2" (click)="toggleDropdown('vscode')">
+            <fa-icon class="icon-arrow" [icon]="dropdownStates['vscode'] ? faChevronDown : faChevronRight"></fa-icon>
+            <fa-icon class="icon-folder" [icon]="faFolder"></fa-icon>
+            <span>.vscode</span>
+          </div>
+          <div *ngIf="dropdownStates['vscode']" class="dropdown-content">
+            <div class="sidebar-item2 subfolder-dropdown-content">
+              <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
+              <span>extensions.json</span>
+            </div>
+            <div class="sidebar-item2 subfolder-dropdown-content">
+              <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
+              <span>launch.json</span>
+            </div>
+            <div class="sidebar-item2 subfolder-dropdown-content">
+              <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
+              <span>tasks.json</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 4px;">
+          <div class="sidebar-item2">
+            <fa-icon class="icon-arrow" [icon]="dropdownStates['vscode'] ? faChevronDown : faChevronRight"></fa-icon>
+            <fa-icon class="icon-folder" [icon]="faFolder"></fa-icon>
+            <span>node_modules</span>
+          </div>
+        </div>
+
+        <div style="margin-top: 4px;">
+          <div class="sidebar-item2" (click)="toggleDropdown('public')">
+            <fa-icon class="icon-arrow" [icon]="dropdownStates['public'] ? faChevronDown : faChevronRight"></fa-icon>
+            <fa-icon class="icon-folder" [icon]="faFolder"></fa-icon>
+            <span>public</span>
+          </div>
+          <div *ngIf="dropdownStates['public']" class="dropdown-content">
+            <div class="sidebar-item2 subfolder-dropdown-content">
+              <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
+              <span>favicon.ico</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 4px;">
+          <div class="sidebar-item2" (click)="toggleDropdown('src')">
+            <fa-icon class="icon-arrow" [icon]="dropdownStates['src'] ? faChevronDown : faChevronRight"></fa-icon>
+            <fa-icon class="icon-folder" [icon]="faFolder"></fa-icon>
+            <span>src</span>
+          </div>
+          <div *ngIf="dropdownStates['src']" class="dropdown-content">
+            <div class="sidebar-item2" (click)="toggleDropdown('home')">
+              <fa-icon class="icon-arrow" [icon]="dropdownStates['home'] ? faChevronDown : faChevronRight"></fa-icon>
+              <span>Home</span>
+            </div>
+            <div *ngIf="dropdownStates['home']" class="dropdown-content">
+              <a routerLink="/home/overview">Overview</a>
+              <a routerLink="/home/details">Details</a>
+            </div>
+            <div class="sidebar-item2" (click)="toggleDropdown('projects')">
+              <fa-icon class="icon-arrow"
+                [icon]="dropdownStates['projects'] ? faChevronDown : faChevronRight"></fa-icon>
+              <span>Projects</span>
+            </div>
+            <div *ngIf="dropdownStates['projects']" class="dropdown-content">
+              <a routerLink="/projects/current">Current Projects</a>
+              <a routerLink="/projects/completed">Completed Projects</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div style="margin-top: 4px;">
+          <div class="sidebar-item2" (click)="toggleDropdown('src')">
+            <fa-icon class="icon-arrow" [icon]="dropdownStates['src'] ? faChevronDown : faChevronRight"></fa-icon>
+            <fa-icon class="icon-folder" [icon]="faFolder"></fa-icon>
+            <span>src</span>
+          </div>
+          <div *ngIf="dropdownStates['src']" class="dropdown-content">
+
+            <!-- Home Component -->
+            <div class="sidebar-item2" (click)="toggleDropdown('home')">
+              <fa-icon class="icon-arrow" [icon]="dropdownStates['home'] ? faChevronDown : faChevronRight"></fa-icon>
+              <fa-icon class="icon-folder" [icon]="faFolder"></fa-icon>
+              <span>Home</span>
+            </div>
+            <div *ngIf="dropdownStates['home']" class="dropdown-content">
+              <a routerLink="/home/home.component.html">home.component.html</a>
+              <a routerLink="/home/home.component.css">home.component.css</a>
+              <a routerLink="/home/home.component.ts">home.component.ts</a>
+            </div>
+
+            <!-- Projects Component -->
+            <div class="sidebar-item2" (click)="toggleDropdown('projects')">
+              <fa-icon class="icon-arrow"
+                [icon]="dropdownStates['projects'] ? faChevronDown : faChevronRight"></fa-icon>
+              <fa-icon class="icon-folder" [icon]="faFolder"></fa-icon>
+              <span>Projects</span>
+            </div>
+            <div *ngIf="dropdownStates['projects']" class="dropdown-content">
+              <a routerLink="/projects/projects.component.html">projects.component.html</a>
+              <a routerLink="/projects/projects.component.css">projects.component.css</a>
+              <a routerLink="/projects/projects.component.ts">projects.component.ts</a>
+            </div>
+
+            <!-- Skills Component -->
+            <div class="sidebar-item2" (click)="toggleDropdown('skills')">
+              <fa-icon class="icon-arrow" [icon]="dropdownStates['skills'] ? faChevronDown : faChevronRight"></fa-icon>
+              <fa-icon class="icon-folder" [icon]="faFolder"></fa-icon>
+              <span>Skills</span>
+            </div>
+            <div *ngIf="dropdownStates['skills']" class="dropdown-content">
+              <a routerLink="/skills/skills.component.html">skills.component.html</a>
+              <a routerLink="/skills/skills.component.css">skills.component.css</a>
+              <a routerLink="/skills/skills.component.ts">skills.component.ts</a>
+            </div>
+
+            <!-- Education Component -->
+            <div class="sidebar-item2" (click)="toggleDropdown('education')">
+              <fa-icon class="icon-arrow"
+                [icon]="dropdownStates['education'] ? faChevronDown : faChevronRight"></fa-icon>
+              <fa-icon class="icon-folder" [icon]="faFolder"></fa-icon>
+              <span>Education</span>
+            </div>
+            <div *ngIf="dropdownStates['education']" class="dropdown-content">
+              <a routerLink="/education/education.component.html">education.component.html</a>
+              <a routerLink="/education/education.component.css">education.component.css</a>
+              <a routerLink="/education/education.component.ts">education.component.ts</a>
+            </div>
+
+            <!-- Certifications Component -->
+            <div class="sidebar-item2" (click)="toggleDropdown('certifications')">
+              <fa-icon class="icon-arrow"
+                [icon]="dropdownStates['certifications'] ? faChevronDown : faChevronRight"></fa-icon>
+              <fa-icon class="icon-folder" [icon]="faFolder"></fa-icon>
+              <span>Certifications</span>
+            </div>
+            <div *ngIf="dropdownStates['certifications']" class="dropdown-content">
+              <a routerLink="/certifications/certifications.component.html">certifications.component.html</a>
+              <a routerLink="/certifications/certifications.component.css">certifications.component.css</a>
+              <a routerLink="/certifications/certifications.component.ts">certifications.component.ts</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div *ngIf="dropdownOpen" class="dropdown-content">
-      <div>Home</div>
-      <div>Experience</div>
-      <div>Projects</div>
-      <div>Skills</div>
-      <div>Education</div>
-      <div>Certifications</div>
-    </div>
-  </div>-->
-  <div class="sidebar2">
-  <div class="sidebar-item2" (click)="toggleDropdown('explorer')">
-    <fa-icon class="icon-container" [icon]="dropdownStates['explorer'] ? faChevronDown : faChevronRight"></fa-icon>
-    <span>Explorer</span>
+    <div class="resizer" (mousedown)="onMouseDown($event)"></div>
   </div>
-  <div *ngIf="dropdownStates['explorer']" class="dropdown-content">
-    <div class="sidebar-item2" (click)="toggleDropdown('home')">
-      <fa-icon [icon]="dropdownStates['home'] ? faChevronDown : faChevronRight"></fa-icon>
-      <span>Home</span>
+
+  <div class="editor">
+    <div class="file-tabs">
+      <div class="file-tab" [class.active]="isActive('/home')" (click)="navigateTo('/home')">Home.ts <fa-icon
+          [icon]="faClose"></fa-icon></div>
+      <div class="file-tab" [class.active]="isActive('/experience')" (click)="navigateTo('/experience')">Experience.ts
+        <fa-icon [icon]="faClose"></fa-icon>
+      </div>
+      <div class="file-tab" [class.active]="isActive('/projects')" (click)="navigateTo('/projects')">Projects.ts
+        <fa-icon [icon]="faClose"></fa-icon>
+      </div>
+      <div class="file-tab" [class.active]="isActive('/skills')" (click)="navigateTo('/skills')">Skills.ts <fa-icon
+          [icon]="faClose"></fa-icon></div>
+      <div class="file-tab" [class.active]="isActive('/education')" (click)="navigateTo('/education')">Education.ts
+        <fa-icon [icon]="faClose"></fa-icon>
+      </div>
+      <div class="file-tab" [class.active]="isActive('/certifications')" (click)="navigateTo('/certifications')">
+        Certifications.ts <fa-icon [icon]="faClose"></fa-icon></div>
     </div>
-    <div *ngIf="dropdownStates['home']" class="dropdown-content">
-      <a routerLink="/home/overview">Overview</a>
-      <a routerLink="/home/details">Details</a>
-    </div>
-    <div class="sidebar-item2" (click)="toggleDropdown('projects')">
-      <fa-icon [icon]="dropdownStates['projects'] ? faChevronDown : faChevronRight"></fa-icon>
-      <span>Projects</span>
-    </div>
-    <div *ngIf="dropdownStates['projects']" class="dropdown-content">
-      <a routerLink="/projects/current">Current Projects</a>
-      <a routerLink="/projects/completed">Completed Projects</a>
+    <div class="file-content">
+      <router-outlet></router-outlet>
     </div>
   </div>
-</div>
-<div class="editor">
-  <div class="file-tabs">
-    <div class="file-tab" [class.active]="isActive('/home')" (click)="navigateTo('/home')">Home.ts <fa-icon [icon]="faClose"></fa-icon></div>
-    <div class="file-tab" [class.active]="isActive('/experience')" (click)="navigateTo('/experience')">Experience.ts <fa-icon [icon]="faClose"></fa-icon></div>
-    <div class="file-tab" [class.active]="isActive('/projects')" (click)="navigateTo('/projects')">Projects.ts <fa-icon [icon]="faClose"></fa-icon></div>
-    <div class="file-tab" [class.active]="isActive('/skills')" (click)="navigateTo('/skills')">Skills.ts <fa-icon [icon]="faClose"></fa-icon></div>
-    <div class="file-tab" [class.active]="isActive('/education')" (click)="navigateTo('/education')">Education.ts <fa-icon [icon]="faClose"></fa-icon></div>
-    <div class="file-tab" [class.active]="isActive('/certifications')" (click)="navigateTo('/certifications')">Certifications.ts <fa-icon [icon]="faClose"></fa-icon></div>
-  </div>
-  <div class="file-content">
-    <router-outlet></router-outlet>
-  </div>
-</div>
 </div>

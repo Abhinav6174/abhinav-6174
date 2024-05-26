@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Router, ActivatedRoute, UrlSegment , NavigationEnd, UrlTree } from '@angular/router';
-import { filter } from 'rxjs/operators';
+import { Router, ActivatedRoute } from '@angular/router';
+import { HostListener, ViewChild, ElementRef } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CommonModule } from '@angular/common';
 import { faFolder, faSearch, faCode, faClose, faChevronDown, faChevronRight } from '@fortawesome/free-solid-svg-icons';
@@ -31,13 +31,20 @@ export class AppComponent {
   dropdownOpen = false;
 
   dropdownStates: { [key: string]: boolean } = {
-    explorer: false,
+    src: false,
     home: false,
-    projects: false
+    projects: false,
+    skills: false,
+    education: false,
+    certifications: false,
   };
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
+  @ViewChild('sidebar2', { static: false }) sidebar2!: ElementRef;
+  isResizing = false;
+  sidebarLeftPosition = 0;
 
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
+  
   toggleDropdown(section: string) {
     this.dropdownStates[section] = !this.dropdownStates[section];
   }
@@ -52,6 +59,59 @@ export class AppComponent {
 
   toggleDropdown1(){
     this.dropdownOpen = !this.dropdownOpen;
+  }
+
+  onMouseDown(event: MouseEvent): void {
+    this.isResizing = true;
+    document.addEventListener('mousemove', this.onMouseMove);
+    document.addEventListener('mouseup', this.onMouseUp);
+  }
+
+  //onMouseMove = (event: MouseEvent): void => {
+  //  if (this.isResizing) {
+  //    const newWidth = event.clientX - this.sidebar2.nativeElement.getBoundingClientRect().left;
+  //     this.sidebar2.nativeElement.style.width = `${newWidth}px`;
+  //  }
+  //};
+
+  //onMouseMove = (event: MouseEvent): void => {
+  //  if (this.isResizing) {
+  //    const sidebarWidth = this.sidebar2.nativeElement.offsetWidth;
+  //    const newWidth = event.clientX - this.sidebar2.nativeElement.getBoundingClientRect().left;
+  //    const newLeftPosition = event.clientX - sidebarWidth;
+  //    this.sidebarLeftPosition = newLeftPosition > 0 ? newLeftPosition : 0; // Prevent sidebar from going beyond left edge
+  //    this.sidebar2.nativeElement.style.width = `${newWidth}px`;
+  //  }
+  //};
+
+  onMouseMove = (event: MouseEvent): void => {
+    if (this.isResizing) {
+      const sidebarWidth = this.sidebar2.nativeElement.offsetWidth;
+      const newWidth = event.clientX - this.sidebar2.nativeElement.getBoundingClientRect().left;
+      const newLeftPosition = event.clientX - sidebarWidth;
+      const minWidth = 170; // Define your minimum width here
+  
+      // Check if new width is greater than minimum width before resizing
+      if (newWidth >= minWidth) {
+        this.sidebarLeftPosition = newLeftPosition > 0 ? newLeftPosition : 0; // Prevent sidebar from going beyond left edge
+        this.sidebar2.nativeElement.style.width = `${newWidth}px`;
+      }
+    }
+  };
+
+  onMouseUp = (): void => {
+    this.isResizing = false;
+    document.removeEventListener('mousemove', this.onMouseMove);
+    document.removeEventListener('mouseup', this.onMouseUp);
+  };
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event): void {
+    if (window.innerWidth <= 768) {
+      this.sidebar2.nativeElement.style.display = 'none';
+    } else {
+      this.sidebar2.nativeElement.style.display = 'block';
+    }
   }
 
 }
