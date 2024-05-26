@@ -89,11 +89,12 @@ export class AppComponent {
       const sidebarWidth = this.sidebar2.nativeElement.offsetWidth;
       const newWidth = event.clientX - this.sidebar2.nativeElement.getBoundingClientRect().left;
       const newLeftPosition = event.clientX - sidebarWidth;
-      const minWidth = 170; // Define your minimum width here
+      const minWidth = 170;
+      const maxWidth = 270;
   
       // Check if new width is greater than minimum width before resizing
-      if (newWidth >= minWidth) {
-        this.sidebarLeftPosition = newLeftPosition > 0 ? newLeftPosition : 0; // Prevent sidebar from going beyond left edge
+      if (newWidth >= minWidth && newWidth <= maxWidth) {
+        this.sidebarLeftPosition = newLeftPosition > 0 ? newLeftPosition : 0;
         this.sidebar2.nativeElement.style.width = `${newWidth}px`;
       }
     }

@@ -380,6 +380,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  user-select: none;
 }
 
 .vscode-icon {
@@ -439,6 +440,7 @@ body {
   scrollbar-width: thin;
   scrollbar-color: #555 #333;
   white-space: nowrap;
+  user-select: none;
 }
 
 .sidebar2-content {
@@ -493,7 +495,7 @@ body {
 }
 
 .subfolder-dropdown-content {
-  margin-bottom: -5px;
+  margin-bottom: 0px;
 }
 
 .editor {
@@ -510,6 +512,7 @@ body {
   padding-bottom: 10px;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  user-select: none;
 }
 
 .file-tab {
@@ -552,7 +555,7 @@ body {
 .resizer {
   width: 5px;
   cursor: ew-resize;
-  background-color: #333333;
+  background-color: #ffffff;
 }
 
 @media (max-width: 768px) {
