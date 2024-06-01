@@ -1,0 +1,82 @@
+.home-container {
+    max-height: 77vh;
+    overflow-y: auto;
+    background-color: 1e1e1e;
+    margin: 0px;
+    padding: 0px;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.profile-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.profile-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.name {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.role {
+    margin-top: -8px;
+    font-size: 20px;
+    color: #999;
+    margin-bottom: 20px;
+}
+
+.about {
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+.social-icons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: #ffffff;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.buttons{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+@media (min-width: 768px) {
+    .profile-item {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+    }
+
+    .profile-text {
+        margin: 20px;
+    }
+
+    .profile-image {
+        width: 250px;
+        height: 250px;
+    }
+}
