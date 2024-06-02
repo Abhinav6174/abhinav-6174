@@ -13,6 +13,7 @@ import { ExperienceComponent } from './experience/experience.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { SkillsComponent } from './skills/skills.component';
 import { FooterComponent } from './footer/footer.component';
+import { EditorComponent } from './editor/editor.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { FooterComponent } from './footer/footer.component';
     ProjectsComponent,
     SkillsComponent,
     FooterComponent,
+    EditorComponent
   ],
   providers: [],
   bootstrap: []

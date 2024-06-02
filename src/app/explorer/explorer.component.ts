@@ -136,6 +136,7 @@ export class ExplorerComponent implements AfterViewInit, OnDestroy {
   faChevronRight = faChevronRight;
 
   dropdownStates: { [key: string]: boolean } = {
+    MYPORTFOLIO: true,
     src: false,
     home: false,
     projects: false,
@@ -148,7 +149,7 @@ export class ExplorerComponent implements AfterViewInit, OnDestroy {
   @ViewChild('sidebarContainer', { static: false }) sidebarContainer!: ElementRef;
   isResizing = false;
 
-  isExplorerVisible = false;
+  isExplorerVisible = true;
   private subscription: Subscription;
 
   constructor(public toggleExplorerService: ToggleExplorerService) {
@@ -183,7 +184,7 @@ export class ExplorerComponent implements AfterViewInit, OnDestroy {
   onMouseMove = (event: MouseEvent): void => {
     if (this.isResizing && this.sidebar2) {
       const minWidth = 170;
-      const maxWidth = 310;
+      const maxWidth = 380;
       const newWidth = event.clientX - this.sidebar2.nativeElement.getBoundingClientRect().left;
 
       if (newWidth >= minWidth && newWidth <= maxWidth) {

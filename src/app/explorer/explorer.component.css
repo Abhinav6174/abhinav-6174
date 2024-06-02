@@ -55,7 +55,7 @@
 }
 
 .sidebar-item2 :hover {
-  background-color: #1e1e1e;
+  background-color: #333;
 }
 
 .sidebar-item2 fa-icon {
@@ -80,6 +80,16 @@
 
 .sidebar2::-webkit-scrollbar-track {
   background-color: #333;
+}
+
+.faClose {
+  font-size: 12px;
+}
+
+.explorer-folder-icon {
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
 }
 
 .icon-arrow {
@@ -116,6 +126,7 @@
 
 .subfolder-dropdown-content {
   margin-bottom: 0px;
+  margin-left: 14px;
 }
 
 .resizer {

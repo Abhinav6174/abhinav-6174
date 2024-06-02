@@ -52,27 +52,9 @@
     <div class="editor-container">
       <app-explorer></app-explorer>
       <div class="editor">
-        <!-- Your editor content goes here -->
-        <div class="file-tabs">
-          <div class="file-tab" [class.active]="isActive('/home')" (click)="navigateTo('/home')">Home.ts <fa-icon
-              [icon]="faClose"></fa-icon></div>
-          <div class="file-tab" [class.active]="isActive('/experience')" (click)="navigateTo('/experience')">Experience.ts
-            <fa-icon [icon]="faClose"></fa-icon>
-          </div>
-          <div class="file-tab" [class.active]="isActive('/projects')" (click)="navigateTo('/projects')">Projects.ts
-            <fa-icon [icon]="faClose"></fa-icon>
-          </div>
-          <div class="file-tab" [class.active]="isActive('/skills')" (click)="navigateTo('/skills')">Skills.ts <fa-icon
-              [icon]="faClose"></fa-icon></div>
-          <div class="file-tab" [class.active]="isActive('/education')" (click)="navigateTo('/education')">Education.ts
-            <fa-icon [icon]="faClose"></fa-icon>
-          </div>
-        </div>
-        <div class="file-content">
-          <router-outlet></router-outlet>
-        </div>
+        <app-editor></app-editor>
       </div>
-  </div>
+    </div>
 
     
 
