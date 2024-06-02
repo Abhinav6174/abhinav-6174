@@ -5,7 +5,7 @@
     overflow-y: hidden;
   }
 
-.header1 {
+/* .header1 {
     padding: 2px;
     color: #d4d4d4;
     display: flex;
@@ -16,13 +16,13 @@
     background: linear-gradient(to right, #353535, #171717);
     scrollbar-width: none;
     -ms-overflow-style: none;
-  }
+  } */
   
   .vscode-icon {
     height: 20px;
   }
   
-  .tabs1 {
+  /* .tabs1 {
     display: flex;
   }
   
@@ -34,7 +34,7 @@
   
   .tab:hover {
     background-color: #3a3a3a;
-  }
+  } */
   
   .content1 {
     display: flex;

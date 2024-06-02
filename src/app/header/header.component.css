@@ -1,0 +1,48 @@
+/* :ho{
+  display: block;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+} */
+
+/* @media (max-width: 768px) {
+  :host {
+    padding: 0.5rem;
+  }
+} */
+
+
+
+
+.header1 {
+    padding: 2px;
+    color: #d4d4d4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    overflow-x: auto;
+    background: linear-gradient(to right, #353535, #171717);
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .vscode-icon {
+    height: 20px;
+  }
+  
+  .tabs1 {
+    display: flex;
+  }
+  
+  .tab1 {
+    padding: 6px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .tab:hover {
+    background-color: #3a3a3a;
+  }

@@ -1,0 +1,291 @@
+<div *ngIf="isExplorerVisible" class="resizable-sidebar">
+    <div class="sidebar2" #sidebar2>
+      <div class="sidebar2-content">
+        <div>Explorer</div>
+        <div style="margin-top: 10px;">
+          <div class="sidebar-item2" (click)="toggleDropdown('angular')">
+            <fa-icon class="icon-arrow" [icon]="dropdownStates['angular'] ? faChevronDown : faChevronRight"></fa-icon>
+            <fa-icon class="icon-folder" [icon]="faFolder"></fa-icon>
+            <span>.angular</span>
+          </div>
+          <div *ngIf="dropdownStates['angular']" class="dropdown-content">
+            <div class="sidebar-item2 subfolder-dropdown-content" (click)="toggleDropdown('myapp')">
+              <fa-icon class="icon-arrow" [icon]="dropdownStates['myapp'] ? faChevronDown : faChevronRight"></fa-icon>
+              <span>myapp</span>
+            </div>
+            <div class="sidebar-item2 subfolder-dropdown-content" (click)="toggleDropdown('vite')">
+              <fa-icon class="icon-arrow" [icon]="dropdownStates['vite'] ? faChevronDown : faChevronRight"></fa-icon>
+              <span>vite</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 4px;">
+          <div class="sidebar-item2" (click)="toggleDropdown('vscode')">
+            <fa-icon class="icon-arrow" [icon]="dropdownStates['vscode'] ? faChevronDown : faChevronRight"></fa-icon>
+            <fa-icon class="icon-folder" [icon]="faFolder"></fa-icon>
+            <span>.vscode</span>
+          </div>
+          <div *ngIf="dropdownStates['vscode']" class="dropdown-content">
+            <div class="sidebar-item2 subfolder-dropdown-content">
+              <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
+              <span>extensions.json</span>
+            </div>
+            <div class="sidebar-item2 subfolder-dropdown-content">
+              <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
+              <span>launch.json</span>
+            </div>
+            <div class="sidebar-item2 subfolder-dropdown-content">
+              <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
+              <span>tasks.json</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 4px;">
+          <div class="sidebar-item2">
+            <fa-icon class="icon-arrow" [icon]="dropdownStates['vscode'] ? faChevronDown : faChevronRight"></fa-icon>
+            <fa-icon class="icon-folder" [icon]="faFolder"></fa-icon>
+            <span>node_modules</span>
+          </div>
+        </div>
+
+        <div style="margin-top: 4px;">
+          <div class="sidebar-item2" (click)="toggleDropdown('public')">
+            <fa-icon class="icon-arrow" [icon]="dropdownStates['public'] ? faChevronDown : faChevronRight"></fa-icon>
+            <fa-icon class="icon-folder" [icon]="faFolder"></fa-icon>
+            <span>public</span>
+          </div>
+          <div *ngIf="dropdownStates['public']" class="dropdown-content">
+            <div class="sidebar-item2 subfolder-dropdown-content">
+              <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
+              <span>favicon.ico</span>
+            </div>
+          </div>
+        </div>
+
+
+        <div style="margin-top: 4px;">
+          <div class="sidebar-item2" (click)="toggleDropdown('src')">
+            <fa-icon class="icon-arrow" [icon]="dropdownStates['src'] ? faChevronDown : faChevronRight"></fa-icon>
+            <fa-icon class="icon-folder" [icon]="faFolder"></fa-icon>
+            <span>src</span>
+          </div>
+          <div *ngIf="dropdownStates['src']" class="dropdown-content">
+
+            <div style="margin-top: 5px;">
+              <div class="sidebar-item2" (click)="toggleDropdown('app')">
+                <fa-icon class="icon-arrow" [icon]="dropdownStates['app'] ? faChevronDown : faChevronRight"></fa-icon>
+                <fa-icon class="icon-folder" [icon]="faFolder"></fa-icon>
+                <span>app</span>
+              </div>
+              <div *ngIf="dropdownStates['app']" class="dropdown-content">
+
+                <div class="sidebar-item2" (click)="toggleDropdown('home')">
+                  <fa-icon class="icon-arrow"
+                    [icon]="dropdownStates['home'] ? faChevronDown : faChevronRight"></fa-icon>
+                  <fa-icon class="icon-folder" [icon]="faFolder"></fa-icon>
+                  <span>Home</span>
+                </div>
+
+                <div *ngIf="dropdownStates['home']" class="dropdown-content">
+                  <div class="sidebar-item2 subfolder-dropdown-content">
+                    <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
+                    <span>home.component.html</span>
+                  </div>
+                  <div class="sidebar-item2 subfolder-dropdown-content">
+                    <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
+                    <span>home.component.css</span>
+                  </div>
+                  <div class="sidebar-item2 subfolder-dropdown-content">
+                    <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
+                    <span>home.component.ts</span>
+                  </div>
+                </div>
+
+                <div class="sidebar-item2" (click)="toggleDropdown('projects')">
+                  <fa-icon class="icon-arrow"
+                    [icon]="dropdownStates['projects'] ? faChevronDown : faChevronRight"></fa-icon>
+                  <fa-icon class="icon-folder" [icon]="faFolder"></fa-icon>
+                  <span>Projects</span>
+                </div>
+                <div *ngIf="dropdownStates['projects']" class="dropdown-content">
+                  <div class="sidebar-item2 subfolder-dropdown-content">
+                    <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
+                    <span>projects.component.html</span>
+                  </div>
+                  <div class="sidebar-item2 subfolder-dropdown-content">
+                    <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
+                    <span>projects.component.css</span>
+                  </div>
+                  <div class="sidebar-item2 subfolder-dropdown-content">
+                    <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
+                    <span>projects.component.ts</span>
+                  </div>
+                </div>
+
+                <div class="sidebar-item2" (click)="toggleDropdown('skills')">
+                  <fa-icon class="icon-arrow"
+                    [icon]="dropdownStates['skills'] ? faChevronDown : faChevronRight"></fa-icon>
+                  <fa-icon class="icon-folder" [icon]="faFolder"></fa-icon>
+                  <span>Skills</span>
+                </div>
+                <div *ngIf="dropdownStates['skills']" class="dropdown-content">
+                  <div class="sidebar-item2 subfolder-dropdown-content">
+                    <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
+                    <span>skills.component.html</span>
+                  </div>
+                  <div class="sidebar-item2 subfolder-dropdown-content">
+                    <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
+                    <span>skills.component.css</span>
+                  </div>
+                  <div class="sidebar-item2 subfolder-dropdown-content">
+                    <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
+                    <span>skills.component.ts</span>
+                  </div>
+                </div>
+
+                <div class="sidebar-item2" (click)="toggleDropdown('education')">
+                  <fa-icon class="icon-arrow"
+                    [icon]="dropdownStates['education'] ? faChevronDown : faChevronRight"></fa-icon>
+                  <fa-icon class="icon-folder" [icon]="faFolder"></fa-icon>
+                  <span>Education</span>
+                </div>
+                <div *ngIf="dropdownStates['education']" class="dropdown-content">
+                  <div class="sidebar-item2 subfolder-dropdown-content">
+                    <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
+                    <span>education.component.html</span>
+                  </div>
+                  <div class="sidebar-item2 subfolder-dropdown-content">
+                    <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
+                    <span>education.component.css</span>
+                  </div>
+                  <div class="sidebar-item2 subfolder-dropdown-content">
+                    <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
+                    <span>education.component.ts</span>
+                  </div>
+                </div>
+
+                <div class="sidebar-item2" (click)="toggleDropdown('certifications')">
+                  <fa-icon class="icon-arrow"
+                    [icon]="dropdownStates['certifications'] ? faChevronDown : faChevronRight"></fa-icon>
+                  <fa-icon class="icon-folder" [icon]="faFolder"></fa-icon>
+                  <span>Certifications</span>
+                </div>
+                <div *ngIf="dropdownStates['certifications']" class="dropdown-content">
+                  <div class="sidebar-item2 subfolder-dropdown-content">
+                    <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
+                    <span>certifications.component.html</span>
+                  </div>
+                  <div class="sidebar-item2 subfolder-dropdown-content">
+                    <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
+                    <span>certifications.component.css</span>
+                  </div>
+                  <div class="sidebar-item2 subfolder-dropdown-content">
+                    <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
+                    <span>certifications.component.ts</span>
+                  </div>
+                </div>
+
+                <div class="sidebar-item2">
+                  <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
+                  <span>app.component.css</span>
+                </div>
+                <div class="sidebar-item2">
+                  <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
+                  <span>app.component.html</span>
+                </div>
+                <div class="sidebar-item2">
+                  <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
+                  <span>app.component.ts</span>
+                </div>
+                <div class="sidebar-item2">
+                  <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
+                  <span>app.config.ts</span>
+                </div>
+                <div class="sidebar-item2">
+                  <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
+                  <span>app.module.ts</span>
+                </div>
+                <div class="sidebar-item2">
+                  <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
+                  <span>app.routes.ts</span>
+                </div>
+
+
+
+
+
+
+              </div>
+              <div class="sidebar-item2" (click)="toggleDropdown('assets')">
+                <fa-icon class="icon-arrow"
+                  [icon]="dropdownStates['assets'] ? faChevronDown : faChevronRight"></fa-icon>
+                <fa-icon class="icon-folder" [icon]="faFolder"></fa-icon>
+                <span>assets</span>
+              </div>
+              <div *ngIf="dropdownStates['assets']" class="dropdown-content">
+                <div class="sidebar-item2 subfolder-dropdown-content">
+                  <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
+                  <span>vscode.png</span>
+                </div>
+              </div>
+
+              <div class="sidebar-item2">
+                <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
+                <span>index.html</span>
+              </div>
+              <div class="sidebar-item2">
+                <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
+                <span>main.ts</span>
+              </div>
+              <div class="sidebar-item2">
+                <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
+                <span>styles.css</span>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-item2">
+          <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
+          <span>.editorconfig</span>
+        </div>
+        <div class="sidebar-item2">
+          <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
+          <span>.gitignore</span>
+        </div>
+        <div class="sidebar-item2">
+          <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
+          <span>angular.json</span>
+        </div>
+        <div class="sidebar-item2">
+          <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
+          <span>package-lock.json</span>
+        </div>
+        <div class="sidebar-item2">
+          <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
+          <span>package.json</span>
+        </div>
+        <div class="sidebar-item2">
+          <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
+          <span>README.md</span>
+        </div>
+        <div class="sidebar-item2">
+          <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
+          <span>tsconfig.app.json</span>
+        </div>
+        <div class="sidebar-item2">
+          <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
+          <span>tsconfig.json</span>
+        </div>
+        <div class="sidebar-item2">
+          <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
+          <span>tsconfig.spec.json</span>
+        </div>
+      </div>
+    </div>
+    <div class="resizer" (mousedown)="onMouseDown($event)"></div>
+  </div>

@@ -1,0 +1,50 @@
+:host {
+  display: block;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  /* z-index: 1000; */
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000000;
+    color: white;
+    padding: 8px;
+    height: 10px;
+  }
+  
+  .footer-icons {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  
+  .footer-tabs {
+    display: flex;
+  
+  }
+  
+  .footer-content {
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .left-content {
+    flex: 1;
+  }
+  
+  .right-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .notification-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+  }
