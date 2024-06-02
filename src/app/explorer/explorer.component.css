@@ -3,10 +3,18 @@
   align-items: stretch;
   height: -webkit-fill-available;
   overflow-y: auto;
-  align-items: stretch;
-  position: fixed;
+  position: relative;
   left: 50px;
 }
+
+/* .resizable-sidebar {
+  display: flex;
+  align-items: stretch;
+  height: 100vh;
+  overflow-y: auto;
+  position: relative;
+} */
+
 
 .sidebar2 {
   background-color: #333333;
@@ -19,9 +27,19 @@
   text-overflow: ellipsis;
   position: relative;
     height: -webkit-fill-available;
-    /* top: 44px; */
-    margin-bottom: 24px;
+    /* margin-bottom: 24px; */
+    margin-bottom: 69px;
 }
+
+/* .sidebar2 {
+  background-color: #333333;
+  padding: 10px;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #555 #333;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+} */
 
 .sidebar2-content {
   overflow-x: hidden;

@@ -145,6 +145,7 @@ export class ExplorerComponent implements AfterViewInit, OnDestroy {
   };
 
   @ViewChild('sidebar2', { static: false }) sidebar2!: ElementRef;
+  @ViewChild('sidebarContainer', { static: false }) sidebarContainer!: ElementRef;
   isResizing = false;
 
   isExplorerVisible = false;

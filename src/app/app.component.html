@@ -17,16 +17,66 @@
 
   <app-header></app-header>
 
-  <div class="d-flex flex-row justify-content-start align-items-start">
-    <!-- <app-sidebar></app-sidebar> -->
+    <app-sidebar></app-sidebar>
 
-    <app-explorer></app-explorer>
+    <!-- <div class="container">
+    
+      <app-explorer></app-explorer>
+    
+      <ng-container>
+        <div class="editor">
+          <div class="file-tabs">
+            <div class="file-tab" [class.active]="isActive('/home')" (click)="navigateTo('/home')">Home.ts <fa-icon
+                [icon]="faClose"></fa-icon></div>
+            <div class="file-tab" [class.active]="isActive('/experience')" (click)="navigateTo('/experience')">Experience.ts
+              <fa-icon [icon]="faClose"></fa-icon>
+            </div>
+            <div class="file-tab" [class.active]="isActive('/projects')" (click)="navigateTo('/projects')">Projects.ts
+              <fa-icon [icon]="faClose"></fa-icon>
+            </div>
+            <div class="file-tab" [class.active]="isActive('/skills')" (click)="navigateTo('/skills')">Skills.ts <fa-icon
+                [icon]="faClose"></fa-icon></div>
+            <div class="file-tab" [class.active]="isActive('/education')" (click)="navigateTo('/education')">Education.ts
+              <fa-icon [icon]="faClose"></fa-icon>
+            </div>
+            <div class="file-tab" [class.active]="isActive('/certifications')" (click)="navigateTo('/certifications')">
+              Certifications.ts <fa-icon [icon]="faClose"></fa-icon></div>
+          </div>
+          <div class="file-content">
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+      </ng-container>
+    </div> -->
+
+    <div class="editor-container">
+      <app-explorer></app-explorer>
+      <div class="editor">
+        <!-- Your editor content goes here -->
+        <div class="file-tabs">
+          <div class="file-tab" [class.active]="isActive('/home')" (click)="navigateTo('/home')">Home.ts <fa-icon
+              [icon]="faClose"></fa-icon></div>
+          <div class="file-tab" [class.active]="isActive('/experience')" (click)="navigateTo('/experience')">Experience.ts
+            <fa-icon [icon]="faClose"></fa-icon>
+          </div>
+          <div class="file-tab" [class.active]="isActive('/projects')" (click)="navigateTo('/projects')">Projects.ts
+            <fa-icon [icon]="faClose"></fa-icon>
+          </div>
+          <div class="file-tab" [class.active]="isActive('/skills')" (click)="navigateTo('/skills')">Skills.ts <fa-icon
+              [icon]="faClose"></fa-icon></div>
+          <div class="file-tab" [class.active]="isActive('/education')" (click)="navigateTo('/education')">Education.ts
+            <fa-icon [icon]="faClose"></fa-icon>
+          </div>
+        </div>
+        <div class="file-content">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
   </div>
-  <!-- <app-sidebar></app-sidebar>
 
-  <app-explorer></app-explorer> -->
+    
 
-  <div class="content1">
+  <div class="conent1">
     <!-- <div class="sidebar1">
       <div class="icon-container1">
         <div class="top-sidebar1-icon-container">
@@ -45,7 +95,7 @@
       </div>
     </div> -->
 
-    <app-sidebar></app-sidebar>
+    <!-- <app-sidebar></app-sidebar> -->
     <!-- <app-explorer></app-explorer> -->
 
     <!-- <div *ngIf="isSidebar2Visible" class="resizable-sidebar">
