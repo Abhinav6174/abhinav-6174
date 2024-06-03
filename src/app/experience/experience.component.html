@@ -1,2 +1,79 @@
-<h2>Experience Section</h2>
-<p>This is the content of Experience section.</p>
+<div class="home-container">
+
+
+    <div class="timeline">
+        <div class="outer">
+            <div *ngFor="let experience of experiences" class="card">
+                <div class="info">
+                    <div>{{ experience.dateRange }}</div>
+                    <div>
+                        <h3>{{ experience.role }}</h3>
+                        <h4>{{ experience.company }}, {{ experience.location }}</h4>
+                        <!-- <ul>
+                            <li *ngFor="let desc of experience.description">{{ desc }}</li>
+                        </ul> -->
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    
+
+
+    <!--<div class="timeline">
+        <div class="outer">
+            <div *ngFor="let experience of experiences; let i = index" class="card">
+                <div class="info">
+                    <h3 class="title">{{ experience.title }}</h3>
+                    <p>{{ experience.description }}</p>
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+
+
+    <!-- <div class="timeline">
+        <div class="outer">
+          <div class="card">
+            <div class="info">
+              <h3 class="title">Title 1</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="info">
+              <h3 class="title">Title 2</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="info">
+              <h3 class="title">Title 3</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="info">
+              <h3 class="title">Title 4</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="info">
+              <h3 class="title">Title 5</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+
+
+
+
+
+
+</div>
