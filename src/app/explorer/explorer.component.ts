@@ -116,6 +116,7 @@ import { ToggleExplorerService } from '../service/toggle-service';
 import { Subscription } from 'rxjs';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 import { faFolder, faSearch, faBars, faCode, faClose, faChevronDown, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -146,16 +147,20 @@ export class ExplorerComponent implements AfterViewInit, OnDestroy {
   };
 
   @ViewChild('sidebar2', { static: false }) sidebar2!: ElementRef;
-  @ViewChild('sidebarContainer', { static: false }) sidebarContainer!: ElementRef;
+  // @ViewChild('sidebarContainer', { static: false }) sidebarContainer!: ElementRef;
   isResizing = false;
 
   isExplorerVisible = true;
   private subscription: Subscription;
 
-  constructor(public toggleExplorerService: ToggleExplorerService) {
+  constructor(private router: Router, public toggleExplorerService: ToggleExplorerService) {
     this.subscription = this.toggleExplorerService.toggleExplorer$.subscribe(() => {
       this.toggleExplorer();
     });
+  }
+
+  navigateTo(route: string) {
+    this.router.navigateByUrl(route);
   }
 
   ngAfterViewInit() {

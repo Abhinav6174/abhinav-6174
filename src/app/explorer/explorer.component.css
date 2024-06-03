@@ -17,11 +17,11 @@
 
 
 .sidebar2 {
-  background-color: #333333;
+  background-color: #1f1c1c;
   padding: 10px;
   overflow: auto;
-  scrollbar-width: thin;
-  scrollbar-color: #555 #333;
+  scrollbar-width: none;
+  /* scrollbar-color: #555 #333; */
   white-space: nowrap;
   user-select: none;
   text-overflow: ellipsis;
@@ -52,10 +52,11 @@
   cursor: pointer;
   overflow-x: hidden;
   white-space: nowrap;
+  margin-bottom: 3px;
 }
 
 .sidebar-item2 :hover {
-  background-color: #333;
+  background-color: #00000000;
 }
 
 .sidebar-item2 fa-icon {
@@ -64,8 +65,8 @@
   font-weight: 100;
 }
 
-.sidebar2::-webkit-scrollbar {
-  width: 2px;
+/* .sidebar2::-webkit-scrollbar {
+  width: 0px;
   height: 8px;
 }
 
@@ -80,7 +81,7 @@
 
 .sidebar2::-webkit-scrollbar-track {
   background-color: #333;
-}
+} */
 
 .faClose {
   font-size: 12px;
@@ -125,14 +126,14 @@
 }
 
 .subfolder-dropdown-content {
-  margin-bottom: 0px;
+  margin-bottom: 3px;
   margin-left: 14px;
 }
 
 .resizer {
-  width: 5px;
+  width: 3px;
   cursor: ew-resize;
-  background-color: #ffffff;
+  background-color: #242424;
 }
 
 @media (max-width: 768px) {

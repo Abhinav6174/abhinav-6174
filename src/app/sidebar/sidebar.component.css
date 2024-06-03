@@ -6,7 +6,7 @@
     padding: 12px;
     position: absolute;
     left: 0;
-    top: 43px;
+    top: 29px;
     bottom: 0;
     /* min-height: 100vh; */
     height: -webkit-fill-available;
@@ -38,7 +38,8 @@
   }
   
   .sidebar1-icons {
-    width: 28px;
-    height: 28px;
+    width: 23px;
+    height: 23px;
     margin-top: 10px;
+    margin-bottom: 10px;
   }

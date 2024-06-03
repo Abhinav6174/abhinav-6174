@@ -46,6 +46,7 @@
   .file-tab.active {
     background-color: #1e1e1e;
     color: #ffffff;
+    border-top: solid 2px;
   }
   
   .file-tab .tab-close {
@@ -55,4 +56,11 @@
   
   .file-tab .tab-close:hover {
     color: #fff;
+  }
+
+  .explorer-folder-icon {
+    height: 18px;
+    width: 18px;
+    margin-right: 5px;
+    margin-bottom: 3px;
   }

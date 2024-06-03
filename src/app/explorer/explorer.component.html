@@ -1,39 +1,39 @@
-<div *ngIf="isExplorerVisible" class="resizable-sidebar" #sidebarContainer>
+<div *ngIf="isExplorerVisible" class="resizable-sidebar">
   <div class="sidebar2" #sidebar2>
     <div class="sidebar2-content">
-      <div>EXPLORER</div>
+      <div style="font-size: 16px;">EXPLORER</div>
       <div style="margin-top: 10px;">
         <div class="sidebar-item2" (click)="toggleDropdown('OPENEDITORS')">
           <fa-icon class="icon-arrow" [icon]="dropdownStates['OPENEDITORS'] ? faChevronDown : faChevronRight"></fa-icon>
-          <span>OPEN EDITORS</span>
+          <span style="font-size: 16px;">OPEN EDITORS</span>
         </div>
         <div *ngIf="dropdownStates['OPENEDITORS']" class="dropdown-content">
-          <div class="sidebar-item2 subfolder-dropdown-content">
+          <div class="sidebar-item2 subfolder-dropdown-content" (click)="navigateTo('/home')">
             <fa-icon class="icon-arrow" [icon]="faClose"></fa-icon>
             <img class="explorer-folder-icon" src="../../assets/html.png" />
             <span>Home.html</span>
           </div>
-          <div class="sidebar-item2 subfolder-dropdown-content">
+          <div class="sidebar-item2 subfolder-dropdown-content" (click)="navigateTo('/experience')">
             <fa-icon class="icon-arrow" [icon]="faClose"></fa-icon>
             <img class="explorer-folder-icon" src="../../assets/html.png" />
             <span>Experience.html</span>
           </div>
-          <div class="sidebar-item2 subfolder-dropdown-content">
+          <div class="sidebar-item2 subfolder-dropdown-content" (click)="navigateTo('/projects')">
             <fa-icon class="icon-arrow" [icon]="faClose"></fa-icon>
             <img class="explorer-folder-icon" src="../../assets/html.png" />
             <span>Projects.html</span>
           </div>
-          <div class="sidebar-item2 subfolder-dropdown-content">
+          <div class="sidebar-item2 subfolder-dropdown-content" (click)="navigateTo('/skills')">
             <fa-icon class="icon-arrow" [icon]="faClose"></fa-icon>
             <img class="explorer-folder-icon" src="../../assets/html.png" />
             <span>Skills.html</span>
           </div>
-          <div class="sidebar-item2 subfolder-dropdown-content">
+          <div class="sidebar-item2 subfolder-dropdown-content" (click)="navigateTo('/education')">
             <fa-icon class="icon-arrow" [icon]="faClose"></fa-icon>
             <img class="explorer-folder-icon" src="../../assets/html.png" />
             <span>Education.html</span>
           </div>
-          <div class="sidebar-item2 subfolder-dropdown-content">
+          <div class="sidebar-item2 subfolder-dropdown-content" (click)="navigateTo('/certifications')">
             <fa-icon class="icon-arrow" [icon]="faClose"></fa-icon>
             <img class="explorer-folder-icon" src="../../assets/html.png" />
             <span>Certifications.html</span>
@@ -43,7 +43,7 @@
       <div style="margin-top: 4px;">
         <div class="sidebar-item2" (click)="toggleDropdown('MYPORTFOLIO')">
           <fa-icon class="icon-arrow" [icon]="dropdownStates['MYPORTFOLIO'] ? faChevronDown : faChevronRight"></fa-icon>
-          <span>MY-PORTFOLIO</span>
+          <span style="font-size: 16px;">MY-PORTFOLIO</span>
         </div>
         <div *ngIf="dropdownStates['MYPORTFOLIO']" class="dropdown-content">
           <div class="sidebar-item2" (click)="toggleDropdown('angular')">
@@ -142,9 +142,8 @@
                     <img class="explorer-folder-icon" src="../../assets/folder.png" />
                     <span>Home</span>
                   </div>
-
                   <div *ngIf="dropdownStates['home']" class="dropdown-content">
-                    <div class="sidebar-item2 subfolder-dropdown-content">
+                    <div class="sidebar-item2 subfolder-dropdown-content" (click)="navigateTo('/home')">
                       <!-- <fa-icon class="icon-folder" [icon]="faFolder"></fa-icon> -->
                     <img class="explorer-folder-icon" src="../../assets/html.png" />
                       <span>home.component.html</span>
@@ -161,6 +160,31 @@
                     </div>
                   </div>
 
+                  <div class="sidebar-item2" (click)="toggleDropdown('experience')">
+                    <fa-icon class="icon-arrow"
+                      [icon]="dropdownStates['experience'] ? faChevronDown : faChevronRight"></fa-icon>
+                    <!-- <fa-icon class="icon-folder" [icon]="faFolder"></fa-icon> -->
+                    <img class="explorer-folder-icon" src="../../assets/folder.png" />
+                    <span>Experience</span>
+                  </div>
+                  <div *ngIf="dropdownStates['experience']" class="dropdown-content">
+                    <div class="sidebar-item2 subfolder-dropdown-content" (click)="navigateTo('/experience')">
+                      <!-- <fa-icon class="icon-folder" [icon]="faFolder"></fa-icon> -->
+                    <img class="explorer-folder-icon" src="../../assets/html.png" />
+                      <span>experience.component.html</span>
+                    </div>
+                    <div class="sidebar-item2 subfolder-dropdown-content">
+                      <!-- <fa-icon class="icon-folder" [icon]="faFolder"></fa-icon> -->
+                    <img class="explorer-folder-icon" src="../../assets/css.png" />
+                      <span>experience.component.css</span>
+                    </div>
+                    <div class="sidebar-item2 subfolder-dropdown-content">
+                      <!-- <fa-icon class="icon-folder" [icon]="faFolder"></fa-icon> -->
+                    <img class="explorer-folder-icon" src="../../assets/anular.png" />
+                      <span>experience.component.ts</span>
+                    </div>
+                  </div>
+
                   <div class="sidebar-item2" (click)="toggleDropdown('projects')">
                     <fa-icon class="icon-arrow"
                       [icon]="dropdownStates['projects'] ? faChevronDown : faChevronRight"></fa-icon>
@@ -169,7 +193,7 @@
                     <span>Projects</span>
                   </div>
                   <div *ngIf="dropdownStates['projects']" class="dropdown-content">
-                    <div class="sidebar-item2 subfolder-dropdown-content">
+                    <div class="sidebar-item2 subfolder-dropdown-content" (click)="navigateTo('/projects')">
                       <!-- <fa-icon class="icon-folder" [icon]="faFolder"></fa-icon> -->
                     <img class="explorer-folder-icon" src="../../assets/html.png" />
                       <span>projects.component.html</span>
@@ -194,7 +218,7 @@
                     <span>Skills</span>
                   </div>
                   <div *ngIf="dropdownStates['skills']" class="dropdown-content">
-                    <div class="sidebar-item2 subfolder-dropdown-content">
+                    <div class="sidebar-item2 subfolder-dropdown-content" (click)="navigateTo('/skills')">
                       <!-- <fa-icon class="icon-folder" [icon]="faFolder"></fa-icon> -->
                     <img class="explorer-folder-icon" src="../../assets/html.png" />
                       <span>skills.component.html</span>
@@ -219,7 +243,7 @@
                     <span>Education</span>
                   </div>
                   <div *ngIf="dropdownStates['education']" class="dropdown-content">
-                    <div class="sidebar-item2 subfolder-dropdown-content">
+                    <div class="sidebar-item2 subfolder-dropdown-content" (click)="navigateTo('/education')">
                       <!-- <fa-icon class="icon-folder" [icon]="faFolder"></fa-icon> -->
                     <img class="explorer-folder-icon" src="../../assets/html.png" />
                       <span>education.component.html</span>
@@ -244,7 +268,7 @@
                     <span>Certifications</span>
                   </div>
                   <div *ngIf="dropdownStates['certifications']" class="dropdown-content">
-                    <div class="sidebar-item2 subfolder-dropdown-content">
+                    <div class="sidebar-item2 subfolder-dropdown-content" (click)="navigateTo('/certifications')">
                      <!-- <fa-icon class="icon-folder" [icon]="faFolder"></fa-icon> -->
                     <img class="explorer-folder-icon" src="../../assets/html.png" />
                       <span>certifications.component.html</span>
