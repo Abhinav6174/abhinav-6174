@@ -9,7 +9,7 @@ import { SkillsComponent } from './skills/skills.component';
 export const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'home', component: HomeComponent },
-    { path: 'certifications', component: CertificationsComponent },
+    // { path: 'certifications', component: CertificationsComponent },
     { path: 'education', component: EducationComponent },
     { path: 'experience', component: ExperienceComponent },
     { path: 'projects', component: ProjectsComponent },

@@ -1,0 +1,75 @@
+.skills-container {
+    max-height: 77vh;
+    overflow-y: auto;
+    background-color: 1e1e1e;
+    margin: 0px;
+    padding: 17px;
+    /* display: flex; */
+    scrollbar-width: none;
+    /* flex-direction: column; */
+    /* background-color: blueviolet; */
+    /* #1f1c1c; */
+}
+
+.home-container {
+    max-height: 77vh;
+    overflow-y: auto;
+    background-color: 1e1e1e;
+    margin: 0px;
+    padding: 0px;
+    scrollbar-width: none;
+    /* background-color: blueviolet; */
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+.links-container {
+    border-radius: 14px;
+    margin: 8px;
+    background-color: #333333;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    padding: 8px;
+    font-size: 16px;
+    transition: transform .3s;
+    box-shadow: -2px -2px 8px rgba(0, 0, 0, 0), -2px -2px 12px rgba(1, 1, 1, 0.5), inset 2px 2px 4px rgba(1, 1, 1, 0.1), 2px 2px 8px rgba(1, 1, 1, 0.15);
+}
+
+.links-container:hover {
+    -ms-transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+}
+
+.skills-icons {
+    height: 50px;
+    width: 50px;
+    margin: 14px;
+}
+
+.row{
+    margin-right: none;
+    margin-left: none;
+  }  
+
+  @media (min-width: 768px) {
+      .container,
+      .container-md,
+      .container-sm {
+            max-width: fit-content;
+      }
+  }
+
+  @media (min-width: 576px) {
+    .container,
+    .container-md,
+    .container-sm {
+          max-width: fit-content;
+    }
+}

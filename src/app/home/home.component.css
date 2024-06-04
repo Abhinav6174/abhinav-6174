@@ -4,6 +4,7 @@
     background-color: 1e1e1e;
     margin: 0px;
     padding: 0px;
+    scrollbar-width: none;
     /* background-color: blueviolet; */
 }
 
@@ -26,6 +27,15 @@
     height: 180px;
     border-radius: 50%;
     margin-bottom: 15px;
+    /* border: solid 5px #555555; */
+    transition: transform .3s;
+    box-shadow: -2px -2px 8px rgba(0, 0, 0, 0), -2px -2px 12px rgba(1, 1, 1, 0.5), inset 2px 2px 4px rgba(1, 1, 1, 0.1), 2px 2px 8px rgba(1, 1, 1, 0.15);
+}
+
+.profile-image:hover {
+    -ms-transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
 }
 
 .name {
@@ -70,6 +80,18 @@
     display: flex;
     justify-content: center;
     gap: 5px;
+    
+}
+
+button{
+    transition: transform .3s;
+    box-shadow: -2px -2px 8px rgba(0, 0, 0, 0), -2px -2px 12px rgba(1, 1, 1, 0.5), inset 2px 2px 4px rgba(1, 1, 1, 0.1), 2px 2px 8px rgba(1, 1, 1, 0.15);
+}
+
+button:hover {
+    -ms-transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
 }
 
 @media (min-width: 768px) {
