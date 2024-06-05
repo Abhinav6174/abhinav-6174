@@ -5,8 +5,13 @@
     margin: 0px;
     padding: 0px;
     scrollbar-width: none;
+    -ms-overflow-style: none;
     /* background-color: blueviolet; */
 }
+
+.home-container::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+  }
 
 .profile-container {
     display: flex;

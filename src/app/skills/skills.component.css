@@ -6,20 +6,24 @@
     padding: 17px;
     /* display: flex; */
     scrollbar-width: none;
+    -ms-overflow-style: none;
     /* flex-direction: column; */
     /* background-color: blueviolet; */
     /* #1f1c1c; */
 }
 
-.home-container {
+.skills-container ::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+  }
+
+/* .home-container {
     max-height: 77vh;
     overflow-y: auto;
     background-color: 1e1e1e;
     margin: 0px;
     padding: 0px;
     scrollbar-width: none;
-    /* background-color: blueviolet; */
-}
+} */
 
 .cards-container {
     display: flex;

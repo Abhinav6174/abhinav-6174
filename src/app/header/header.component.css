@@ -24,11 +24,16 @@
     align-items: center;
     user-select: none;
     overflow-x: auto;
+    overflow-y: hidden;
     background-color: #171717;
     /* background: linear-gradient(to right, #353535, #171717); */
     scrollbar-width: none;
-    /* -ms-overflow-style: none; */
+    -ms-overflow-style: none;
     height: 25px;
+  }
+
+  .header1::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
   }
   
   .vscode-icon {

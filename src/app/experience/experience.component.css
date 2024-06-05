@@ -6,7 +6,13 @@
   padding: 17px;
   display: flex;
   flex-direction: column;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   /* background-color: blueviolet; */
+}
+
+.experience-container::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
 }
 
 /* Timeline Container */
@@ -68,7 +74,7 @@
 .card:nth-child(even)::before {
   right: 0;
   /* top: 0; */
-  top: -5px;
+  top: -4px;
   bottom: 0;
   border-width: 5px 5px 5px 0;
   border-radius: 0 50px 50px 0;
@@ -121,7 +127,7 @@
 .title {
   color: ffffff;
   position: relative;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: bold;
 }
 

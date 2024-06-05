@@ -6,8 +6,14 @@
     padding: 17px;
     display: flex;
     flex-direction: column;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     /* background-color: blueviolet; */
   }
+
+  .education-container::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
   
   /* Timeline Container */
   .timeline {
@@ -121,7 +127,7 @@
   .title {
     color: ffffff;
     position: relative;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: bold;
   }
   

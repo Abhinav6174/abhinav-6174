@@ -21,6 +21,7 @@
   padding: 10px;
   overflow: auto;
   scrollbar-width: none;
+  -ms-overflow-style: none;
   /* scrollbar-color: #555 #333; */
   white-space: nowrap;
   user-select: none;
@@ -29,6 +30,10 @@
     height: -webkit-fill-available;
     /* margin-bottom: 24px; */
     margin-bottom: 69px;
+}
+
+.sidebar2::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
 }
 
 /* .sidebar2 {
