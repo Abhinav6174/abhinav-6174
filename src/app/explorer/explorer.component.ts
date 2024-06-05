@@ -150,7 +150,7 @@ export class ExplorerComponent implements AfterViewInit, OnDestroy {
   // @ViewChild('sidebarContainer', { static: false }) sidebarContainer!: ElementRef;
   isResizing = false;
 
-  isExplorerVisible = true;
+  isExplorerVisible = false;
   private subscription: Subscription;
 
   constructor(private router: Router, public toggleExplorerService: ToggleExplorerService) {
