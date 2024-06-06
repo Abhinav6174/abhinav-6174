@@ -25,11 +25,11 @@
     scrollbar-width: none;
 } */
 
-.cards-container {
+/* .cards-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-}
+} */
 
 
 .links-container {
@@ -56,6 +56,8 @@
     width: 50px;
     margin: 14px;
 }
+
+
 
 .row{
     margin-right: none;

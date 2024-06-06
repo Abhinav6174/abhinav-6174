@@ -12,26 +12,47 @@
     /* #1f1c1c; */
 }
 
-.contaier1 {
-    margin: 1.5rem 0;
+.container1 {
+    /* margin: 1.5rem 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     grid-gap: 1.5rem;
-    gap: 1.5rem;
+    gap: 1.5rem; */
+    /* display: flex;
+    justify-content: center; */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Ensure the items wrap if they overflow */
+    gap: 1.5rem; /* Add spacing between the cards */
+    max-width: 1200px; /* Set a max-width to center the container */
+    margin: 0 auto;
   }
 
   .card1 {
-    width: 315px;
+    max-width: 340px;
     /* height: fit-content; */
-    background-color: #fff;
+    background-color: #323232;
     margin: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    color: #000000;
+    /* color: #000000; */
   }
+
+    @media (max-width: 768px) {
+      .container1 {
+         max-width: 380px;
+      }
+  }
+
+  /* @media (max-width: 576px) {
+    .container1 {
+          max-width: 380px;
+
+    }
+} */
 
   .card1 img {
     width: 100%;
@@ -68,26 +89,49 @@ margin-bottom: 8px;
 }
 
 .ProjectCard-tech p {
-    border: solid 1px #555555;
-    border-radius: 8px;
-    padding: 5px 12px;
-    display: inline-block;
-    text-align: center;
-    font-size: 12px;
+  border: solid 1px #555555;
+  border-radius: 8px;
+  padding: 5px 12px;
+  /* display: inline-block; */
+  text-align: center;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
     /* flex-wrap: wrap; */
     }
+
+
+
+    .button-grp {
+      display: flex;
+      justify-content: space-around;
+      
+  }
+
+
+  .button-grp a{
+    color: #ffffff;
+    text-decoration: none;
+    
+}
 
   .btn {
     text-decoration: none;
     background-color: #007bff;
     color: white;
-    padding: 10px 15px;
+    /* padding: 10px 15px; */
     text-align: center;
-    border-radius: 4px;
+    border-radius: 8px;
+    width: 125px;
     display: inline-block;
     margin-top: auto;
-  }
+  } 
 
   .btn:hover {
     background-color: #0056b3;
-  }
+  } 
+
+
+  /* *{
+    border: solid 1px red;
+  } */
