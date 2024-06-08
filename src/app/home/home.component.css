@@ -1,7 +1,8 @@
 .home-container {
-    max-height: 77vh;
+    max-height: 80vh;
     overflow-y: auto;
-    background-color: 1e1e1e;
+    /* background-color: #15161A; */
+    background-color: #121116;
     margin: 0px;
     padding: 0px;
     scrollbar-width: none;

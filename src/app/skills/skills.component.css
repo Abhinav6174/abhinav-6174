@@ -1,7 +1,7 @@
 .skills-container {
-    max-height: 77vh;
+    max-height: 80vh;
     overflow-y: auto;
-    background-color: 1e1e1e;
+    /* background-color: 1e1e1e; */
     margin: 0px;
     padding: 17px;
     /* display: flex; */
@@ -35,14 +35,14 @@
 .links-container {
     border-radius: 14px;
     margin: 8px;
-    background-color: #333333;
+    background-color: #222127;
     text-align: center;
     vertical-align: middle;
     font-weight: bold;
     padding: 8px;
     font-size: 16px;
     transition: transform .3s;
-    box-shadow: -2px -2px 8px rgba(0, 0, 0, 0), -2px -2px 12px rgba(1, 1, 1, 0.5), inset 2px 2px 4px rgba(1, 1, 1, 0.1), 2px 2px 8px rgba(1, 1, 1, 0.15);
+    /* box-shadow: -2px -2px 8px rgba(0, 0, 0, 0), -2px -2px 12px rgba(1, 1, 1, 0.5), inset 2px 2px 4px rgba(1, 1, 1, 0.1), 2px 2px 8px rgba(1, 1, 1, 0.15); */
 }
 
 .links-container:hover {

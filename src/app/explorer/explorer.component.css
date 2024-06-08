@@ -17,7 +17,8 @@
 
 
 .sidebar2 {
-  background-color: #1f1c1c;
+  /* background-color: #1f1c1c; */
+  background-color: #15161A;
   padding: 10px;
   overflow: auto;
   scrollbar-width: none;
@@ -29,7 +30,8 @@
   position: relative;
     height: -webkit-fill-available;
     /* margin-bottom: 24px; */
-    margin-bottom: 69px;
+    /* margin-bottom: 69px; */
+    margin-bottom: 55px;
 }
 
 .sidebar2::-webkit-scrollbar {

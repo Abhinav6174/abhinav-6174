@@ -1,5 +1,5 @@
 .skills-container {
-    max-height: 77vh;
+    max-height: 80vh;
     overflow-y: auto;
     background-color: 1e1e1e;
     margin: 0px;
@@ -31,12 +31,13 @@
   .card1 {
     max-width: 340px;
     /* height: fit-content; */
-    background-color: #323232;
+    background-color: #222127;
     margin: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    border-radius: 18px;
     overflow: hidden;
     display: flex;
+    padding: 12px;
     flex-direction: column;
     /* color: #000000; */
   }
@@ -62,12 +63,12 @@
     width: 100%;
     height: 150px;
     object-fit: cover;
-    margin-top: 12px;
+    /* margin-top: 12px; */
     border-radius: 8px;
   }
 
   .card-body1 {
-    padding: 15px;
+    padding: 12px;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -93,8 +94,8 @@ margin-bottom: 8px;
 }
 
 .ProjectCard-tech p {
-  border: solid 1px #555555;
-  border-radius: 8px;
+  border: solid 2px #555555;
+  border-radius: 14px;
   padding: 5px 12px;
   /* display: inline-block; */
   text-align: center;
@@ -107,6 +108,7 @@ margin-bottom: 8px;
 
 
     .button-grp {
+      margin-top: 16px;
       display: flex;
       justify-content: space-around;
       
@@ -123,16 +125,20 @@ margin-bottom: 8px;
     text-decoration: none;
     background-color: #007bff;
     color: white;
+    border: none;
+    /* background-color: #5E29F5; */
+    background-color: #6600CD;
     /* padding: 10px 15px; */
     text-align: center;
     border-radius: 8px;
+    height: 24px;
     width: 125px;
     display: inline-block;
     margin-top: auto;
   } 
 
   .btn:hover {
-    background-color: #0056b3;
+    background-color: #6600CD;
   } 
 
 

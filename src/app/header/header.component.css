@@ -7,7 +7,9 @@
   user-select: none;
   overflow-x: auto;
   overflow-y: hidden;
-  background-color: #171717;
+  background-color: #15161A;
+  /* background: radial-gradient(circle, #353535, #171717); */
+
   /* background: linear-gradient(to right, #353535, #171717); */
   scrollbar-width: none;
   -ms-overflow-style: none;
