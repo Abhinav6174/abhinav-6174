@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Experience, EXPERIENCES } from './experience-const';
 
 @Component({
   selector: 'app-experience',
@@ -9,8 +8,6 @@ import { Experience, EXPERIENCES } from './experience-const';
   templateUrl: './experience.component.html',
   styleUrl: './experience.component.css'
 })
-export class ExperienceComponent {
-
-  experiences: Experience[] = EXPERIENCES;
+export class ExperienceComponent { 
 
 }

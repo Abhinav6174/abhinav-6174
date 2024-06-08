@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ToggleExplorerService } from '../service/toggle-service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
@@ -11,7 +12,7 @@ import { ToggleExplorerService } from '../service/toggle-service';
 export class SidebarComponent {
   isSidebar2Visible = true;
 
-  constructor(public toggleExplorer: ToggleExplorerService) {
+  constructor(public toggleExplorer: ToggleExplorerService, private router: Router) {
     
   }
 
@@ -19,11 +20,8 @@ export class SidebarComponent {
     this.toggleExplorer.toggleExplorer();
   }
 
-  
-
-  // toggleSidebar2() {
-  //   this.isSidebar2Visible = !this.isSidebar2Visible;
-  // }
-
+  navigateTo(route: string) {
+    this.router.navigateByUrl(route);
+  }
 
 }

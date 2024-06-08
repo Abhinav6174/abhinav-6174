@@ -1,147 +1,120 @@
-.skills-container {
-    max-height: 80vh;
-    overflow-y: auto;
-    background-color: 1e1e1e;
-    margin: 0px;
-    padding: 17px;
-    /* display: flex; */
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    /* flex-direction: column; */
-    /* background-color: blueviolet; */
-    /* #1f1c1c; */
+.projects-container {
+  max-height: 80vh;
+  overflow-y: auto;
+  background-color: 1e1e1e;
+  margin: 0px;
+  padding: 17px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .container1 {
-    /* margin: 1.5rem 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    grid-gap: 1.5rem;
-    gap: 1.5rem; */
-    /* display: flex;
-    justify-content: center; */
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* Ensure the items wrap if they overflow */
-    gap: 1.5rem; /* Add spacing between the cards */
-    max-width: 1200px; /* Set a max-width to center the container */
-    margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card1 {
+  max-width: 340px;
+  background-color: #222127;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  padding: 12px;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .container1 {
+    max-width: 380px;
   }
 
   .card1 {
-    max-width: 340px;
-    /* height: fit-content; */
-    background-color: #222127;
-    margin: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 18px;
-    overflow: hidden;
-    display: flex;
-    padding: 12px;
-    flex-direction: column;
-    /* color: #000000; */
+    max-width: 100vw;
   }
+}
 
-    @media (max-width: 768px) {
-      .container1 {
-         max-width: 380px;
-      }
+.card1 img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
 
-      .card1 {
-        max-width: 100vw;
-      }
-  }
+.card-body1 {
+  padding: 12px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
-  /* @media (max-width: 576px) {
-    .container1 {
-          max-width: 380px;
+.card-title1 {
+  font-size: 1.25em;
+  margin: 0 0 10px;
+}
 
-    }
-} */
-
-  .card1 img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    /* margin-top: 12px; */
-    border-radius: 8px;
-  }
-
-  .card-body1 {
-    padding: 12px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  .card-title1 {
-    font-size: 1.25em;
-    margin: 0 0 10px;
-  }
-
-  .card-text1 {
-    flex: 1;
-    font-size: 0.95em;
-    margin-bottom: 10px;
-  }
-
+.card-text1 {
+  flex: 1;
+  font-size: 0.95em;
+  margin-bottom: 10px;
+}
 
 .ProjectCard-tech {
-margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 .ProjectCard-tech p {
   border: solid 2px #555555;
   border-radius: 14px;
   padding: 5px 12px;
-  /* display: inline-block; */
   text-align: center;
   font-size: 12px;
   display: flex;
   justify-content: center;
-    /* flex-wrap: wrap; */
-    }
-
-
-
-    .button-grp {
-      margin-top: 16px;
-      display: flex;
-      justify-content: space-around;
-      
-  }
-
-
-  .button-grp a{
-    color: #ffffff;
-    text-decoration: none;
-    
 }
 
-  .btn {
-    text-decoration: none;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    /* background-color: #5E29F5; */
-    background-color: #6600CD;
-    /* padding: 10px 15px; */
-    text-align: center;
-    border-radius: 8px;
-    height: 24px;
-    width: 125px;
-    display: inline-block;
-    margin-top: auto;
-  } 
+.button-grp {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-around;
 
-  .btn:hover {
-    background-color: #6600CD;
-  } 
+}
 
+.button-grp a {
+  color: #ffffff;
+  text-decoration: none;
 
-  /* *{
+}
+
+.btn {
+  text-decoration: none;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  background-color: #6600CD;
+  text-align: center;
+  border-radius: 8px;
+  height: 24px;
+  width: 125px;
+  display: inline-block;
+  margin-top: auto;
+}
+
+.btn:hover {
+  background-color: #6600CD;
+}
+
+/* *{
     border: solid 1px red;
   } */

@@ -1,8 +1,6 @@
 .editor-container {
   flex-grow: 1;
-  /* background-color: #1e1e1e;141414 */
-  /* background-color: #15161A; */
-  background-color: #121116; 
+  background-color: #121116;
   overflow-y: auto;
   display: flex;
   height: 100vh;
@@ -10,12 +8,9 @@
 
 .editor {
   flex-grow: 1;
-  /* background-color: #1e1e1e; */
-  /* background-color: #15161A; */
   background-color: #121116;
   color: #d4d4d4;
   padding: 10px;
   overflow: hidden;
-  /* background: linear-gradient(to left, #353535, #171717); */
   margin-left: 49px
 }

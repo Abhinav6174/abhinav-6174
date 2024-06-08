@@ -1,19 +1,19 @@
 <div class="sidebar1">
-    <!-- <div class="icon-container1"> -->
-      <div class="top-sidebar1-icon-container">
-        <img (click)="toggleexplorer()" class="sidebar1-icons" src="../assets/hamburger.png" />
-        <img class="sidebar1-icons" src="../assets/search.png" />
-        <img class="sidebar1-icons" src="../assets/git-branch.png" />
-        <img class="sidebar1-icons" src="../assets/debug.png" />
-        <img class="sidebar1-icons" src="../assets/extension.png" />
-        <img class="sidebar1-icons" src="../assets/github.png" />
-        <img class="sidebar1-icons" src="../assets/live-share.png" />
-      </div>
-      <div>
-        <div class="bottom-sidebar1-icon-container">
-            <img class="sidebar1-icons" src="../assets/profile.png" />
-            <img class="sidebar1-icons" src="../assets/settings.png" />
-          </div>
-      </div>
-    <!-- </div> -->
+  <div class="top-sidebar1-icon-container">
+    <img (click)="toggleexplorer()" class="sidebar1-icons" src="../assets/hamburger.png" title="Toggle Explorer" />
+    <img class="sidebar1-icons" src="../assets/search.png" title="Search" />
+    <img class="sidebar1-icons" src="../assets/git-branch.png" title="Git" />
+    <img class="sidebar1-icons" src="../assets/debug.png" title="Debug" />
+    <img class="sidebar1-icons" src="../assets/extension.png" title="Extensions" />
+    <a href="https://github.com/Abhinav6174" target="_blank" title="GitHub">
+      <img class="sidebar1-icons" src="../assets/github.png" alt="GitHub" />
+    </a>
+    <img class="sidebar1-icons" src="../assets/live-share.png" title="Live Share" />
   </div>
+  <div>
+    <div class="bottom-sidebar1-icon-container">
+      <img class="sidebar1-icons" (click)="navigateTo('/home')" src="../assets/profile.png" />
+      <img class="sidebar1-icons" src="../assets/settings.png" />
+    </div>
+  </div>
+</div>

@@ -1,4 +1,4 @@
-.resizable-sidebar {
+.resizable-explorer {
   display: flex;
   align-items: stretch;
   height: -webkit-fill-available;
@@ -7,53 +7,30 @@
   left: 50px;
 }
 
-/* .resizable-sidebar {
-  display: flex;
-  align-items: stretch;
-  height: 100vh;
-  overflow-y: auto;
-  position: relative;
-} */
-
-
-.sidebar2 {
-  /* background-color: #1f1c1c; */
+.explorer {
   background-color: #15161A;
   padding: 10px;
   overflow: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  /* scrollbar-color: #555 #333; */
   white-space: nowrap;
   user-select: none;
   text-overflow: ellipsis;
   position: relative;
     height: -webkit-fill-available;
-    /* margin-bottom: 24px; */
-    /* margin-bottom: 69px; */
     margin-bottom: 55px;
 }
 
-.sidebar2::-webkit-scrollbar {
-  display: none; /* For Chrome, Safari, and Opera */
+.explorer::-webkit-scrollbar {
+  display: none;
 }
 
-/* .sidebar2 {
-  background-color: #333333;
-  padding: 10px;
-  overflow: auto;
-  scrollbar-width: thin;
-  scrollbar-color: #555 #333;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-} */
-
-.sidebar2-content {
+.explorer-content {
   overflow-x: hidden;
   white-space: nowrap;
 }
 
-.sidebar-item2 {
+.explorer-item2 {
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -62,33 +39,15 @@
   margin-bottom: 3px;
 }
 
-.sidebar-item2 :hover {
+.explorer-item2 :hover {
   background-color: #00000000;
 }
 
-.sidebar-item2 fa-icon {
+.explorer-item2 fa-icon {
   margin-right: 4px;
   font-size: 12px;
   font-weight: 100;
 }
-
-/* .sidebar2::-webkit-scrollbar {
-  width: 0px;
-  height: 8px;
-}
-
-.sidebar2::-webkit-scrollbar-thumb {
-  background-color: #888;
-  border-radius: 4px;
-}
-
-.sidebar2::-webkit-scrollbar-thumb:hover {
-  background-color: #555;
-}
-
-.sidebar2::-webkit-scrollbar-track {
-  background-color: #333;
-} */
 
 .faClose {
   font-size: 12px;
@@ -144,7 +103,7 @@
 }
 
 @media (max-width: 768px) {
-  .sidebar2 {
+  .explorer {
     display: none;
   }
 
@@ -152,118 +111,3 @@
     display: none;
   }
 }
-
-
-
-
-/* 
-   .resizable-sidebar {
-    display: flex;
-    align-items: stretch;
-}
-  
-.sidebar2 {
-    background-color: #333333;
-    padding: 10px;
-    overflow-y: auto;
-    overflow-x: hidden;
-    scrollbar-width: thin;
-    scrollbar-color: #555 #333;
-    white-space: nowrap;
-    user-select: none;
-    text-overflow: ellipsis;
-    position: relative;
-}
-  
-.sidebar2-content {
-    overflow-x: hidden;
-    white-space: nowrap;
-}
-  
-.sidebar-item2 {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    overflow-x: hidden;
-    white-space: nowrap;
-}
-  
-.sidebar-item2:hover {
-    background-color: #1e1e1e;
-}
-  
-.sidebar-item2 fa-icon {
-    margin-right: 4px;
-    font-size: 12px;
-    font-weight: 100;
-}
-  
-.sidebar2::-webkit-scrollbar {
-    width: 2px;
-    height: 8px;
-}
-  
-.sidebar2::-webkit-scrollbar-thumb {
-    background-color: #888;
-    border-radius: 4px;
-}
-  
-.sidebar2::-webkit-scrollbar-thumb:hover {
-    background-color: #555;
-}
-  
-.sidebar2::-webkit-scrollbar-track {
-    background-color: #333;
-}
-  
-.icon-arrow {
-    width: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-  
-.icon-folder {
-    width: 15px;
-    font-size: 15px !important;
-    margin-right: 6px !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-  
-.dropdown-content {
-    margin-left: 20px;
-    display: flex;
-    flex-direction: column;
-}
-  
-.dropdown-content a {
-    padding: 5px 0;
-    text-decoration: none;
-    color: inherit;
-}
-  
-.dropdown-content a:hover {
-    background-color: #1e1e1e;
-}
-  
-.subfolder-dropdown-content {
-    margin-bottom: 0px;
-}
-  
-.resizer {
-    width: 5px;
-    cursor: ew-resize;
-    background-color: #ffffff;
-}
-  
-@media (max-width: 768px) {
-    .sidebar2 {
-        display: none;
-    }
-  
-    .resizer {
-        display: none;
-    }
-} */

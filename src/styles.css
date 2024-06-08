@@ -3,8 +3,9 @@
 *,
 *::before,
 *::after {
-    box-sizing: content-box;
+  box-sizing: content-box;
 }
+
 body {
   /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
   /* font-family: 'patrick-hand'; */
@@ -15,11 +16,6 @@ body {
   color: #d4d4d4;
   overflow: hidden;
   scroll-behavior: smooth !important;
-  /* background: linear-gradient(to right, #353535, #171717); */
-  /* display: flex; */
-  /* width: 100vw; */
-  /* height: 100vh!important;
-  flex-direction: column; */
 }
 
 /* 

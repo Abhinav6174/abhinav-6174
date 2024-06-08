@@ -1,36 +1,17 @@
 .skills-container {
     max-height: 80vh;
     overflow-y: auto;
-    /* background-color: 1e1e1e; */
     margin: 0px;
     padding: 17px;
-    /* display: flex; */
     scrollbar-width: none;
     -ms-overflow-style: none;
-    /* flex-direction: column; */
-    /* background-color: blueviolet; */
-    /* #1f1c1c; */
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
-
 .skills-container ::-webkit-scrollbar {
-    display: none; /* For Chrome, Safari, and Opera */
-  }
-
-/* .home-container {
-    max-height: 77vh;
-    overflow-y: auto;
-    background-color: 1e1e1e;
-    margin: 0px;
-    padding: 0px;
-    scrollbar-width: none;
-} */
-
-/* .cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-} */
-
+    display: none;
+}
 
 .links-container {
     border-radius: 14px;
@@ -57,25 +38,25 @@
     margin: 14px;
 }
 
-
-
-.row{
+.row {
     margin-right: none;
     margin-left: none;
-  }  
+}
 
-  @media (min-width: 768px) {
-      .container,
-      .container-md,
-      .container-sm {
-            max-width: fit-content;
-      }
-  }
+@media (min-width: 768px) {
 
-  @media (min-width: 576px) {
     .container,
     .container-md,
     .container-sm {
-          max-width: fit-content;
+        max-width: fit-content;
+    }
+}
+
+@media (min-width: 576px) {
+
+    .container,
+    .container-md,
+    .container-sm {
+        max-width: fit-content;
     }
 }

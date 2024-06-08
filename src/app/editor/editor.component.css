@@ -1,52 +1,49 @@
-
 .file-tabs {
-    display: flex;
-    overflow-x: auto;
-    /* padding-bottom: 10px; */
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    user-select: none;
-    margin: -10px;
-  }
-
-  .file-tabs::-webkit-scrollbar {
-    display: none; /* For Chrome, Safari, and Opera */
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  user-select: none;
+  margin: -10px;
 }
-  
-  .file-tab {
-    background-color: #212121;
-    padding: 2px 10px;
-    /* border-radius: 5px 5px 0 0; */
-    margin-right: 1px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    max-width: fit-content;
-    min-width: fit-content;
-    z-index: 999;
-  }
-  
-  .file-tab:hover {
-    background-color: #3a3a3a;
-  }
-  
-  .file-tab.active {
-    background-color: #121116;
-    color: #ffffff;
-    border-top: solid 2px #888888;
-  }
-  
-  .file-tab .tab-close {
-    margin-left: 5px;
-    color: #d4d4d4;
-  }
-  
-  .file-tab .tab-close:hover {
-    color: #fff;
-  }
 
-  .explorer-folder-icon {
-    height: 18px;
-    width: 18px;
-    margin-right: 5px;
-    margin-bottom: 3px;
-  }
+.file-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.file-tab {
+  background-color: #212121;
+  padding: 2px 10px;
+  margin-right: 1px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  max-width: fit-content;
+  min-width: fit-content;
+  z-index: 999;
+}
+
+.file-tab:hover {
+  background-color: #3a3a3a;
+}
+
+.file-tab.active {
+  background-color: #121116;
+  color: #ffffff;
+  border-top: solid 2px #888888;
+}
+
+.file-tab .tab-close {
+  margin-left: 5px;
+  color: #d4d4d4;
+}
+
+.file-tab .tab-close:hover {
+  color: #fff;
+}
+
+.explorer-folder-icon {
+  height: 18px;
+  width: 18px;
+  margin-right: 5px;
+  margin-bottom: 3px;
+}

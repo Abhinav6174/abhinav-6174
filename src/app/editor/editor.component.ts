@@ -9,19 +9,20 @@ import { faClose } from '@fortawesome/free-solid-svg-icons';
   standalone: true,
   imports: [RouterOutlet, FontAwesomeModule],
   templateUrl: './editor.component.html',
-  styleUrl: './editor.component.css'
+  styleUrl: './editor.component.css',
 })
 export class EditorComponent {
   faClose = faClose;
   @ViewChild('fileTabs') fileTabs!: ElementRef;
 
-  constructor(private router: Router){}
+  constructor(private router: Router) {}
 
   ngAfterViewInit(): void {
-    this.fileTabs.nativeElement.addEventListener('wheel', this.onWheelEvent.bind(this));
+    this.fileTabs.nativeElement.addEventListener(
+      'wheel',
+      this.onWheelEvent.bind(this)
+    );
   }
-
-  
 
   onWheelEvent(event: WheelEvent): void {
     if (event.deltaY !== 0) {
@@ -37,5 +38,4 @@ export class EditorComponent {
   navigateTo(route: string) {
     this.router.navigateByUrl(route);
   }
-
 }

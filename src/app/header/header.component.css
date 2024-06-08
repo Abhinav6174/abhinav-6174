@@ -8,23 +8,19 @@
   overflow-x: auto;
   overflow-y: hidden;
   background-color: #15161A;
-  /* background: radial-gradient(circle, #353535, #171717); */
-
-  /* background: linear-gradient(to right, #353535, #171717); */
   scrollbar-width: none;
   -ms-overflow-style: none;
   height: 25px;
-  /* position: relative; */
 }
 
 .header1::-webkit-scrollbar {
   display: none;
-  /* For Chrome, Safari, and Opera */
 }
 
 .vscode-icon {
   height: 16px;
   margin-top: 5px;
+  margin-left: 8px;
 }
 
 .tabs1 {
@@ -40,7 +36,6 @@
 .tab:hover {
   background-color: #3a3a3a;
 }
-
 
 .search-box {
   display: flex;
@@ -83,15 +78,14 @@
   white-space: nowrap;
 }
 
-/* Media query for small screens */
 @media (max-width: 768px) {
+
   .arrow-box,
   .search-box,
   .window-controls {
     display: none !important;
   }
 }
-
 
 .search-box {
   border: solid 1px #999999;
@@ -106,12 +100,9 @@
 
 .arrow-box {
   font-size: 14px;
-  /* margin-top: 5px; */
   text-align: center;
   display: inline-flex;
   align-items: center;
-
-
 }
 
 .window-controls {
