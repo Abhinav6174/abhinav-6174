@@ -3,7 +3,8 @@
     overflow-y: auto;
     /* background-color: #15161A; */
     background-color: #121116;
-    margin: 0px;
+    /* margin: 0px; */
+    margin-top: 50px;
     padding: 0px;
     scrollbar-width: none;
     -ms-overflow-style: none;
