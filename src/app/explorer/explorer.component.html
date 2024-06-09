@@ -10,32 +10,32 @@
         <div *ngIf="dropdownStates['OPENEDITORS']" class="dropdown-content">
           <div class="explorer-item2 subfolder-dropdown-content" (click)="navigateTo('/home')">
             <fa-icon class="icon-arrow" [icon]="faClose"></fa-icon>
-            <img class="explorer-folder-icon" src="../../assets/html.png" />
+            <img class="explorer-folder-icon" src="assets/html.png" />
             <span>Home.html</span>
           </div>
           <div class="explorer-item2 subfolder-dropdown-content" (click)="navigateTo('/experience')">
             <fa-icon class="icon-arrow" [icon]="faClose"></fa-icon>
-            <img class="explorer-folder-icon" src="../../assets/html.png" />
+            <img class="explorer-folder-icon" src="assets/html.png" />
             <span>Experience.html</span>
           </div>
           <div class="explorer-item2 subfolder-dropdown-content" (click)="navigateTo('/projects')">
             <fa-icon class="icon-arrow" [icon]="faClose"></fa-icon>
-            <img class="explorer-folder-icon" src="../../assets/html.png" />
+            <img class="explorer-folder-icon" src="assets/html.png" />
             <span>Projects.html</span>
           </div>
           <div class="explorer-item2 subfolder-dropdown-content" (click)="navigateTo('/skills')">
             <fa-icon class="icon-arrow" [icon]="faClose"></fa-icon>
-            <img class="explorer-folder-icon" src="../../assets/html.png" />
+            <img class="explorer-folder-icon" src="assets/html.png" />
             <span>Skills.html</span>
           </div>
           <div class="explorer-item2 subfolder-dropdown-content" (click)="navigateTo('/education')">
             <fa-icon class="icon-arrow" [icon]="faClose"></fa-icon>
-            <img class="explorer-folder-icon" src="../../assets/html.png" />
+            <img class="explorer-folder-icon" src="assets/html.png" />
             <span>Education.html</span>
           </div>
           <!-- <div class="explorer-item2 subfolder-dropdown-content" (click)="navigateTo('/certifications')">
             <fa-icon class="icon-arrow" [icon]="faClose"></fa-icon>
-            <img class="explorer-folder-icon" src="../../assets/html.png" />
+            <img class="explorer-folder-icon" src="assets/html.png" />
             <span>Certifications.html</span>
           </div> -->
         </div>
@@ -48,18 +48,18 @@
         <div *ngIf="dropdownStates['MYPORTFOLIO']" class="dropdown-content">
           <div class="explorer-item2" (click)="toggleDropdown('angular')">
             <fa-icon class="icon-arrow" [icon]="dropdownStates['angular'] ? faChevronDown : faChevronRight"></fa-icon>
-            <img class="explorer-folder-icon" src="../../assets/folder.png" />
+            <img class="explorer-folder-icon" src="assets/folder.png" />
             <span>.angular</span>
           </div>
           <div *ngIf="dropdownStates['angular']" class="dropdown-content">
             <div class="explorer-item2 subfolder-dropdown-content">
               <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
-              <img class="explorer-folder-icon" src="../../assets/folder.png" />
+              <img class="explorer-folder-icon" src="assets/folder.png" />
               <span>myapp</span>
             </div>
             <div class="explorer-item2 subfolder-dropdown-content">
               <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
-              <img class="explorer-folder-icon" src="../../assets/folder.png" />
+              <img class="explorer-folder-icon" src="assets/folder.png" />
               <span>vite</span>
             </div>
           </div>
@@ -67,20 +67,20 @@
           <div style="margin-top: 4px;">
             <div class="explorer-item2" (click)="toggleDropdown('vscode')">
               <fa-icon class="icon-arrow" [icon]="dropdownStates['vscode'] ? faChevronDown : faChevronRight"></fa-icon>
-              <img class="explorer-folder-icon" src="../../assets/folder.png" />
+              <img class="explorer-folder-icon" src="assets/folder.png" />
               <span>.vscode</span>
             </div>
             <div *ngIf="dropdownStates['vscode']" class="dropdown-content">
               <div class="explorer-item2 subfolder-dropdown-content">
-                <img class="explorer-folder-icon" src="../../assets/json.png" />
+                <img class="explorer-folder-icon" src="assets/json.png" />
                 <span>extensions.json</span>
               </div>
               <div class="explorer-item2 subfolder-dropdown-content">
-                <img class="explorer-folder-icon" src="../../assets/json.png" />
+                <img class="explorer-folder-icon" src="assets/json.png" />
                 <span>launch.json</span>
               </div>
               <div class="explorer-item2 subfolder-dropdown-content">
-                <img class="explorer-folder-icon" src="../../assets/json.png" />
+                <img class="explorer-folder-icon" src="assets/json.png" />
                 <span>tasks.json</span>
               </div>
             </div>
@@ -90,7 +90,7 @@
             <div class="explorer-item2">
               <fa-icon class="icon-arrow"
                 [icon]="dropdownStates['nodemodules'] ? faChevronDown : faChevronRight"></fa-icon>
-              <img class="explorer-folder-icon" src="../../assets/folder.png" />
+              <img class="explorer-folder-icon" src="assets/folder.png" />
               <span>node_modules</span>
             </div>
           </div>
@@ -98,12 +98,12 @@
           <div style="margin-top: 4px;">
             <div class="explorer-item2" (click)="toggleDropdown('public')">
               <fa-icon class="icon-arrow" [icon]="dropdownStates['public'] ? faChevronDown : faChevronRight"></fa-icon>
-              <img class="explorer-folder-icon" src="../../assets/folder.png" />
+              <img class="explorer-folder-icon" src="assets/folder.png" />
               <span>public</span>
             </div>
             <div *ngIf="dropdownStates['public']" class="dropdown-content">
               <div class="explorer-item2 subfolder-dropdown-content">
-                <img class="explorer-folder-icon" src="../../assets/ico.png" />
+                <img class="explorer-folder-icon" src="assets/ico.png" />
                 <span>favicon.ico</span>
               </div>
             </div>
@@ -112,7 +112,7 @@
           <div style="margin-top: 4px;">
             <div class="explorer-item2" (click)="toggleDropdown('src')">
               <fa-icon class="icon-arrow" [icon]="dropdownStates['src'] ? faChevronDown : faChevronRight"></fa-icon>
-              <img class="explorer-folder-icon" src="../../assets/folder.png" />
+              <img class="explorer-folder-icon" src="assets/folder.png" />
               <span>src</span>
             </div>
             <div *ngIf="dropdownStates['src']" class="dropdown-content">
@@ -120,7 +120,7 @@
               <div style="margin-top: 5px;">
                 <div class="explorer-item2" (click)="toggleDropdown('app')">
                   <fa-icon class="icon-arrow" [icon]="dropdownStates['app'] ? faChevronDown : faChevronRight"></fa-icon>
-                  <img class="explorer-folder-icon" src="../../assets/folder.png" />
+                  <img class="explorer-folder-icon" src="assets/folder.png" />
                   <span>app</span>
                 </div>
                 <div *ngIf="dropdownStates['app']" class="dropdown-content">
@@ -128,20 +128,20 @@
                   <div class="explorer-item2" (click)="toggleDropdown('home')">
                     <fa-icon class="icon-arrow"
                       [icon]="dropdownStates['home'] ? faChevronDown : faChevronRight"></fa-icon>
-                    <img class="explorer-folder-icon" src="../../assets/folder.png" />
+                    <img class="explorer-folder-icon" src="assets/folder.png" />
                     <span>Home</span>
                   </div>
                   <div *ngIf="dropdownStates['home']" class="dropdown-content">
                     <div class="explorer-item2 subfolder-dropdown-content" (click)="navigateTo('/home')">
-                      <img class="explorer-folder-icon" src="../../assets/html.png" />
+                      <img class="explorer-folder-icon" src="assets/html.png" />
                       <span>home.component.html</span>
                     </div>
                     <div class="explorer-item2 subfolder-dropdown-content">
-                      <img class="explorer-folder-icon" src="../../assets/css.png" />
+                      <img class="explorer-folder-icon" src="assets/css.png" />
                       <span>home.component.css</span>
                     </div>
                     <div class="explorer-item2 subfolder-dropdown-content">
-                      <img class="explorer-folder-icon" src="../../assets/anular.png" />
+                      <img class="explorer-folder-icon" src="assets/anular.png" />
                       <span>home.component.ts</span>
                     </div>
                   </div>
@@ -149,20 +149,20 @@
                   <div class="explorer-item2" (click)="toggleDropdown('experience')">
                     <fa-icon class="icon-arrow"
                       [icon]="dropdownStates['experience'] ? faChevronDown : faChevronRight"></fa-icon>
-                    <img class="explorer-folder-icon" src="../../assets/folder.png" />
+                    <img class="explorer-folder-icon" src="assets/folder.png" />
                     <span>Experience</span>
                   </div>
                   <div *ngIf="dropdownStates['experience']" class="dropdown-content">
                     <div class="explorer-item2 subfolder-dropdown-content" (click)="navigateTo('/experience')">
-                      <img class="explorer-folder-icon" src="../../assets/html.png" />
+                      <img class="explorer-folder-icon" src="assets/html.png" />
                       <span>experience.component.html</span>
                     </div>
                     <div class="explorer-item2 subfolder-dropdown-content">
-                      <img class="explorer-folder-icon" src="../../assets/css.png" />
+                      <img class="explorer-folder-icon" src="assets/css.png" />
                       <span>experience.component.css</span>
                     </div>
                     <div class="explorer-item2 subfolder-dropdown-content">
-                      <img class="explorer-folder-icon" src="../../assets/anular.png" />
+                      <img class="explorer-folder-icon" src="assets/anular.png" />
                       <span>experience.component.ts</span>
                     </div>
                   </div>
@@ -170,20 +170,20 @@
                   <div class="explorer-item2" (click)="toggleDropdown('projects')">
                     <fa-icon class="icon-arrow"
                       [icon]="dropdownStates['projects'] ? faChevronDown : faChevronRight"></fa-icon>
-                    <img class="explorer-folder-icon" src="../../assets/folder.png" />
+                    <img class="explorer-folder-icon" src="assets/folder.png" />
                     <span>Projects</span>
                   </div>
                   <div *ngIf="dropdownStates['projects']" class="dropdown-content">
                     <div class="explorer-item2 subfolder-dropdown-content" (click)="navigateTo('/projects')">
-                      <img class="explorer-folder-icon" src="../../assets/html.png" />
+                      <img class="explorer-folder-icon" src="assets/html.png" />
                       <span>projects.component.html</span>
                     </div>
                     <div class="explorer-item2 subfolder-dropdown-content">
-                      <img class="explorer-folder-icon" src="../../assets/css.png" />
+                      <img class="explorer-folder-icon" src="assets/css.png" />
                       <span>projects.component.css</span>
                     </div>
                     <div class="explorer-item2 subfolder-dropdown-content">
-                      <img class="explorer-folder-icon" src="../../assets/anular.png" />
+                      <img class="explorer-folder-icon" src="assets/anular.png" />
                       <span>projects.component.ts</span>
                     </div>
                   </div>
@@ -191,20 +191,20 @@
                   <div class="explorer-item2" (click)="toggleDropdown('skills')">
                     <fa-icon class="icon-arrow"
                       [icon]="dropdownStates['skills'] ? faChevronDown : faChevronRight"></fa-icon>
-                    <img class="explorer-folder-icon" src="../../assets/folder.png" />
+                    <img class="explorer-folder-icon" src="assets/folder.png" />
                     <span>Skills</span>
                   </div>
                   <div *ngIf="dropdownStates['skills']" class="dropdown-content">
                     <div class="explorer-item2 subfolder-dropdown-content" (click)="navigateTo('/skills')">
-                      <img class="explorer-folder-icon" src="../../assets/html.png" />
+                      <img class="explorer-folder-icon" src="assets/html.png" />
                       <span>skills.component.html</span>
                     </div>
                     <div class="explorer-item2 subfolder-dropdown-content">
-                      <img class="explorer-folder-icon" src="../../assets/css.png" />
+                      <img class="explorer-folder-icon" src="assets/css.png" />
                       <span>skills.component.css</span>
                     </div>
                     <div class="explorer-item2 subfolder-dropdown-content">
-                      <img class="explorer-folder-icon" src="../../assets/anular.png" />
+                      <img class="explorer-folder-icon" src="assets/anular.png" />
                       <span>skills.component.ts</span>
                     </div>
                   </div>
@@ -212,70 +212,70 @@
                   <div class="explorer-item2" (click)="toggleDropdown('education')">
                     <fa-icon class="icon-arrow"
                       [icon]="dropdownStates['education'] ? faChevronDown : faChevronRight"></fa-icon>
-                    <img class="explorer-folder-icon" src="../../assets/folder.png" />
+                    <img class="explorer-folder-icon" src="assets/folder.png" />
                     <span>Education</span>
                   </div>
                   <div *ngIf="dropdownStates['education']" class="dropdown-content">
                     <div class="explorer-item2 subfolder-dropdown-content" (click)="navigateTo('/education')">
-                      <img class="explorer-folder-icon" src="../../assets/html.png" />
+                      <img class="explorer-folder-icon" src="assets/html.png" />
                       <span>education.component.html</span>
                     </div>
                     <div class="explorer-item2 subfolder-dropdown-content">
-                      <img class="explorer-folder-icon" src="../../assets/css.png" />
+                      <img class="explorer-folder-icon" src="assets/css.png" />
                       <span>education.component.css</span>
                     </div>
                     <div class="explorer-item2 subfolder-dropdown-content">
-                      <img class="explorer-folder-icon" src="../../assets/anular.png" />
+                      <img class="explorer-folder-icon" src="assets/anular.png" />
                       <span>education.component.ts</span>
                     </div>
                   </div>
                   <div class="explorer-item2">
-                    <img class="explorer-folder-icon" src="../../assets/css.png" />
+                    <img class="explorer-folder-icon" src="assets/css.png" />
                     <span>app.component.css</span>
                   </div>
                   <div class="explorer-item2">
-                    <img class="explorer-folder-icon" src="../../assets/html.png" />
+                    <img class="explorer-folder-icon" src="assets/html.png" />
                     <span>app.component.html</span>
                   </div>
                   <div class="explorer-item2">
-                    <img class="explorer-folder-icon" src="../../assets/anular.png" />
+                    <img class="explorer-folder-icon" src="assets/anular.png" />
                     <span>app.component.ts</span>
                   </div>
                   <div class="explorer-item2">
-                    <img class="explorer-folder-icon" src="../../assets/ts.png" />
+                    <img class="explorer-folder-icon" src="assets/ts.png" />
                     <span>app.config.ts</span>
                   </div>
                   <div class="explorer-item2">
-                    <img class="explorer-folder-icon" src="../../assets/ts.png" />
+                    <img class="explorer-folder-icon" src="assets/ts.png" />
                     <span>app.module.ts</span>
                   </div>
                   <div class="explorer-item2">
-                    <img class="explorer-folder-icon" src="../../assets/ts.png" />
+                    <img class="explorer-folder-icon" src="assets/ts.png" />
                     <span>app.routes.ts</span>
                   </div>
                 </div>
                 <div class="explorer-item2" (click)="toggleDropdown('assets')">
                   <fa-icon class="icon-arrow"
                     [icon]="dropdownStates['assets'] ? faChevronDown : faChevronRight"></fa-icon>
-                  <img class="explorer-folder-icon" src="../../assets/folder.png" />
+                  <img class="explorer-folder-icon" src="assets/folder.png" />
                   <span>assets</span>
                 </div>
                 <div *ngIf="dropdownStates['assets']" class="dropdown-content">
                   <div class="explorer-item2 subfolder-dropdown-content">
-                    <img class="explorer-folder-icon" src="../../assets/png.png" />
+                    <img class="explorer-folder-icon" src="assets/png.png" />
                     <span>vscode.png</span>
                   </div>
                 </div>
                 <div class="explorer-item2">
-                  <img class="explorer-folder-icon" src="../../assets/html.png" />
+                  <img class="explorer-folder-icon" src="assets/html.png" />
                   <span>index.html</span>
                 </div>
                 <div class="explorer-item2">
-                  <img class="explorer-folder-icon" src="../../assets/ts.png" />
+                  <img class="explorer-folder-icon" src="assets/ts.png" />
                   <span>main.ts</span>
                 </div>
                 <div class="explorer-item2">
-                  <img class="explorer-folder-icon" src="../../assets/css.png" />
+                  <img class="explorer-folder-icon" src="assets/css.png" />
                   <span>styles.css</span>
                 </div>
               </div>
@@ -283,47 +283,47 @@
           </div>
 
           <div class="explorer-item2">
-            <img class="explorer-folder-icon" src="../../assets/config.png" />
+            <img class="explorer-folder-icon" src="assets/config.png" />
             <span>.editorconfig</span>
           </div>
           <div class="explorer-item2">
-            <img class="explorer-folder-icon" src="../../assets/git-ignore.png" />
+            <img class="explorer-folder-icon" src="assets/git-ignore.png" />
             <span>.gitignore</span>
           </div>
           <div class="explorer-item2">
-            <img class="explorer-folder-icon" src="../../assets/anular.png" />
+            <img class="explorer-folder-icon" src="assets/anular.png" />
             <span>angular.json</span>
           </div>
           <div class="explorer-item2">
-            <img class="explorer-folder-icon" src="../../assets/js-file.png" />
+            <img class="explorer-folder-icon" src="assets/js-file.png" />
             <span>karma.config.js</span>
           </div>
           <div class="explorer-item2">
-            <img class="explorer-folder-icon" src="../../assets/node.png" />
+            <img class="explorer-folder-icon" src="assets/node.png" />
             <span>package-lock.json</span>
           </div>
           <div class="explorer-item2">
-            <img class="explorer-folder-icon" src="../../assets/node.png" />
+            <img class="explorer-folder-icon" src="assets/node.png" />
             <span>package.json</span>
           </div>
           <div class="explorer-item2">
-            <img class="explorer-folder-icon" src="../../assets/json-brackets.png" />
+            <img class="explorer-folder-icon" src="assets/json-brackets.png" />
             <span>proxy.config.js</span>
           </div>
           <div class="explorer-item2">
-            <img class="explorer-folder-icon" src="../../assets/md.png" />
+            <img class="explorer-folder-icon" src="assets/md.png" />
             <span>README.md</span>
           </div>
           <div class="explorer-item2">
-            <img class="explorer-folder-icon" src="../../assets/ts.png" />
+            <img class="explorer-folder-icon" src="assets/ts.png" />
             <span>tsconfig.app.json</span>
           </div>
           <div class="explorer-item2">
-            <img class="explorer-folder-icon" src="../../assets/ts.png" />
+            <img class="explorer-folder-icon" src="assets/ts.png" />
             <span>tsconfig.json</span>
           </div>
           <div class="explorer-item2">
-            <img class="explorer-folder-icon" src="../../assets/ts.png" />
+            <img class="explorer-folder-icon" src="assets/ts.png" />
             <span>tsconfig.spec.json</span>
           </div>
         </div>

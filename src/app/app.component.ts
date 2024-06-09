@@ -5,6 +5,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { ExplorerComponent } from './explorer/explorer.component';
 import { FooterComponent } from './footer/footer.component';
 import { EditorComponent } from "./editor/editor.component";
+import { Inject } from '@angular/core';
+import { APP_BASE_HREF } from '@angular/common';
 
 @Component({
     selector: 'app-root',
@@ -22,4 +24,7 @@ import { EditorComponent } from "./editor/editor.component";
 })
 export class AppComponent {
 
+    // constructor(@Inject(APP_BASE_HREF) public baseHref: string) {
+        
+    // }
 }

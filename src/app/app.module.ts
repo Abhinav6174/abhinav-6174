@@ -14,6 +14,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { SkillsComponent } from './skills/skills.component';
 import { FooterComponent } from './footer/footer.component';
 import { EditorComponent } from './editor/editor.component';
+import { APP_BASE_HREF } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,9 @@ import { EditorComponent } from './editor/editor.component';
     FooterComponent,
     EditorComponent
   ],
-  providers: [],
+  providers: [
+    // { provide: APP_BASE_HREF, useValue: '/' }
+  ],
   bootstrap: []
 })
 export class AppModule { }
