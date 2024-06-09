@@ -16,7 +16,7 @@ import { FooterComponent } from './footer/footer.component';
 import { EditorComponent } from './editor/editor.component';
 import { APP_BASE_HREF } from '@angular/common';
 import { routes } from './app.routes';
-import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { LocationStrategy, HashLocationStrategy, PathLocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -39,7 +39,8 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
   ],
   providers: [
     // { provide: APP_BASE_HREF, useValue: '/' }
-    { provide: LocationStrategy, useClass: HashLocationStrategy }
+    //{ provide: LocationStrategy, useClass: HashLocationStrategy }
+    { provide: LocationStrategy, useClass: PathLocationStrategy }
   ],
   bootstrap: [],
   exports: [RouterModule]
