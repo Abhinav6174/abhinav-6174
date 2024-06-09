@@ -15,6 +15,8 @@ import { SkillsComponent } from './skills/skills.component';
 import { FooterComponent } from './footer/footer.component';
 import { EditorComponent } from './editor/editor.component';
 import { APP_BASE_HREF } from '@angular/common';
+import { routes } from './app.routes';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -32,11 +34,14 @@ import { APP_BASE_HREF } from '@angular/common';
     ProjectsComponent,
     SkillsComponent,
     FooterComponent,
-    EditorComponent
+    EditorComponent,
+    RouterModule.forRoot(routes)
   ],
   providers: [
     // { provide: APP_BASE_HREF, useValue: '/' }
+    { provide: LocationStrategy, useClass: HashLocationStrategy }
   ],
-  bootstrap: []
+  bootstrap: [],
+  exports: [RouterModule]
 })
 export class AppModule { }
