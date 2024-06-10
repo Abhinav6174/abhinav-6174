@@ -5,6 +5,7 @@
   -ms-overflow-style: none;
   user-select: none;
   margin: -10px;
+  /* cursor: url('/assets/cursor.png'), pointer; */
 }
 
 .file-tabs::-webkit-scrollbar {
@@ -15,7 +16,8 @@
   background-color: #212121;
   padding: 2px 10px;
   margin-right: 1px;
-  cursor: pointer;
+  margin-left: 1px;
+  /* cursor: pointer; */
   transition: background-color 0.3s ease;
   max-width: fit-content;
   min-width: fit-content;
@@ -23,7 +25,7 @@
 }
 
 .file-tab:hover {
-  background-color: #3a3a3a;
+  background-color: #333333;
 }
 
 .file-tab.active {

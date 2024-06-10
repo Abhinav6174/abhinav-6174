@@ -29,7 +29,7 @@
 
 .tab1 {
   padding: 1px 8px;
-  cursor: pointer;
+  /* cursor: pointer; */
   transition: background-color 0.3s ease;
 }
 
@@ -57,7 +57,7 @@
 
 .menu-icon {
   display: none;
-  cursor: pointer;
+  /* cursor: pointer; */
   padding: 1px 8px;
 }
 
@@ -118,7 +118,7 @@
 
 .window-controls img {
   padding: 0 10px;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .window-controls i:hover {

@@ -24,6 +24,8 @@ export class RippleEffectComponent implements AfterViewInit {
     this.renderer.setStyle(ripple, 'top', `${event.clientY}px`);
     this.renderer.setStyle(ripple, 'animation', 'ripple-effect .4s linear');
 
+    this.renderer.setStyle(ripple, 'cursor', 'url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgawujXWquSQp7BjdSzXnbPbpg6L4_xgBgt4dOM8Cr4F3oMaawiyLDh_8WWr4FwcVbKv5uyW2I9r8YPyfky5L7nSR3j9lKs2QGc8pF-MiOYWfL2zZT3pnW8kzRVPxRDQJSbG5ekiXeFtqWbkGvHdPSCSYcRFlEUG4I4BUlj4FYDG62BPaTFqFhllYxp6mE/s1600/cursor1.png), pointer');
+
     this.renderer.listen(ripple, 'animationend', () => {
       this.renderer.removeChild(document.body, ripple);
     });

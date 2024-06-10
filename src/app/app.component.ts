@@ -36,6 +36,5 @@ export class AppComponent {
     }
 
     ngOnInit() {
-        document.body.style.cursor = 'url("assets/cursor.png"), auto';
       }
 }

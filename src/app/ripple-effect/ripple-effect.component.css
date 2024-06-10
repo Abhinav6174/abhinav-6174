@@ -5,6 +5,7 @@
     position: fixed;
     border-radius: 50%;
     border: 1px solid #ffffff59;
+    pointer-events: none;
   }
 
   @keyframes ripple-effect {

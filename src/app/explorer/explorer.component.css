@@ -33,7 +33,7 @@
 .explorer-item2 {
   display: flex;
   align-items: center;
-  cursor: pointer;
+  /* cursor: pointer; */
   overflow-x: hidden;
   white-space: nowrap;
   margin-bottom: 3px;
