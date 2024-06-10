@@ -24,4 +24,33 @@ export class SidebarComponent {
     this.router.navigateByUrl(route);
   }
 
+  share(){
+    const shareData = {
+      // title: 'Check this out',
+      // text: 'This is a cool app!',
+      url: 'https://abhinav6174.github.io/abhinav-6174'
+    };
+
+    // Check if the device is a mobile device
+    const isMobileDevice = /Mobi|Android/i.test(navigator.userAgent);
+
+    if (isMobileDevice && navigator.share) {
+      navigator.share(shareData)
+        .then(() => console.log('Successful share'))
+        .catch(error => console.log('Error sharing', error));
+    } else {
+      this.copyToClipboard(shareData.url);
+      alert('Link copied to clipboard.');
+    }
+  }
+
+  copyToClipboard(text: string) {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+  }
+
 }

@@ -5,8 +5,10 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { ExplorerComponent } from './explorer/explorer.component';
 import { FooterComponent } from './footer/footer.component';
 import { EditorComponent } from "./editor/editor.component";
+import { RippleEffectComponent } from './ripple-effect/ripple-effect.component';
 import { Inject } from '@angular/core';
 import { APP_BASE_HREF } from '@angular/common';
+import { GoogleAnalyticsService } from './service/google-analytics.service';
 
 @Component({
     selector: 'app-root',
@@ -19,7 +21,8 @@ import { APP_BASE_HREF } from '@angular/common';
         SidebarComponent,
         ExplorerComponent,
         EditorComponent,
-        FooterComponent
+        FooterComponent,
+        RippleEffectComponent
     ]
 })
 export class AppComponent {
@@ -27,4 +30,12 @@ export class AppComponent {
     // constructor(@Inject(APP_BASE_HREF) public baseHref: string) {
         
     // }
+
+    constructor(private googleAnalyticsService: GoogleAnalyticsService) {
+        
+    }
+
+    ngOnInit() {
+        document.body.style.cursor = 'url("assets/cursor.png"), auto';
+      }
 }

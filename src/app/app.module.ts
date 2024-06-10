@@ -14,9 +14,11 @@ import { ProjectsComponent } from './projects/projects.component';
 import { SkillsComponent } from './skills/skills.component';
 import { FooterComponent } from './footer/footer.component';
 import { EditorComponent } from './editor/editor.component';
+import { RippleEffectComponent } from './ripple-effect/ripple-effect.component';
 import { APP_BASE_HREF } from '@angular/common';
 import { routes } from './app.routes';
 import { LocationStrategy, HashLocationStrategy, PathLocationStrategy } from '@angular/common';
+import { GoogleAnalyticsService } from './service/google-analytics.service';
 
 @NgModule({
   declarations: [
@@ -35,9 +37,11 @@ import { LocationStrategy, HashLocationStrategy, PathLocationStrategy } from '@a
     SkillsComponent,
     FooterComponent,
     EditorComponent,
+    RippleEffectComponent,
     RouterModule.forRoot(routes)
   ],
   providers: [
+    GoogleAnalyticsService,
     // { provide: APP_BASE_HREF, useValue: '/' }
     //{ provide: LocationStrategy, useClass: HashLocationStrategy }
     { provide: LocationStrategy, useClass: PathLocationStrategy }
