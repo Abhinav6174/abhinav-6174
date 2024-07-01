@@ -35,7 +35,7 @@ export class ExplorerComponent implements AfterViewInit, OnDestroy {
   @ViewChild('explorer', { static: false }) explorer!: ElementRef;
   isResizing = false;
 
-  isExplorerVisible = false;
+  isExplorerVisible = true;
   private subscription: Subscription;
 
   constructor(
