@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-education',
@@ -8,5 +9,9 @@ import { Component } from '@angular/core';
   styleUrl: './education.component.css'
 })
 export class EducationComponent {
+
+  constructor(private title: Title){
+    title.setTitle('My Portfolio - Education');
+  }
 
 }
