@@ -25,10 +25,12 @@ export class SidebarComponent {
   }
 
   share(){
+    let url = window.location.href;
     const shareData = {
-      // title: 'Check this out',
-      // text: 'This is a cool app!',
-      url: 'https://abhinav6174.github.io/abhinav-6174'
+      //title: 'Check this out',
+      //text: 'My Portfolio',
+      //url: 'https://abhinav6174.github.io/abhinav-6174',
+      url: url
     };
 
     // Check if the device is a mobile device

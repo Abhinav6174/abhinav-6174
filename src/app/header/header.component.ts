@@ -10,9 +10,9 @@ import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angula
 export class HeaderComponent {
   @ViewChild('header') header!: ElementRef;
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   ngAfterViewInit(): void {
     this.header.nativeElement.addEventListener(
@@ -25,4 +25,13 @@ export class HeaderComponent {
     event.preventDefault();
     this.header.nativeElement.scrollLeft += event.deltaY;
   }
+
+  next() {
+    window.history.forward();
+  }
+
+  previous() {
+    window.history.back();
+  }
+  
 }
