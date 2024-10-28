@@ -30,6 +30,6 @@ export class RippleEffectComponent implements AfterViewInit {
       this.renderer.removeChild(document.body, ripple);
     });
 
-    navigator.vibrate(35);
+    navigator.vibrate(50);
   }
 }
