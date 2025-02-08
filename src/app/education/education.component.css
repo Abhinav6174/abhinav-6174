@@ -8,6 +8,9 @@
   flex-direction: column;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .education-container::-webkit-scrollbar {
