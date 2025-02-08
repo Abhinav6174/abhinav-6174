@@ -18,7 +18,7 @@ export class HomeComponent {
   }
 
   ngOnInit() {
-    this.driveLink = "https://drive.google.com/file/d/1XA2QjoR4lHetvOOc3RAsVLM0tXfmb-Tk/view?usp=sharing";
+    this.driveLink = "https://drive.google.com/file/d/1aLDLfIGsDNxPMk9lddl00gmulqueHeHi/view?usp=sharing";
     this.documentId = this.extractGoogleDriveId(this.driveLink);
   }
 
