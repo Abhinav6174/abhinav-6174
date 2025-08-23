@@ -18,7 +18,7 @@ export class HomeComponent {
   }
 
   ngOnInit() {
-    // this.driveLink = "https://drive.google.com/file/d/1Gri_uSXKNHTYpxtJAYiil-zJoaQDtor8/view?usp=drive_link";
+    // this.driveLink = "https://drive.google.com/file/d/1fl2dOGNfMTyxg2OxDokVFyDSdhtvg3kX/view?usp=sharing";
     // this.documentId = this.extractGoogleDriveId(this.driveLink);
   }
 
