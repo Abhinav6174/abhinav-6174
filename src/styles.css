@@ -150,4 +150,26 @@ a:-webkit-any-link {
 .icon-settings {
   mask-image: url('assets/icons/settings.svg');
   -webkit-mask-image: url('assets/icons/settings.svg');
+}
+
+/* Shared Page Header Styles (follows project page style) */
+.page-header {
+  margin-bottom: 24px;
+  padding-left: 12px;
+}
+
+.page-header h2 {
+  font-family: 'Google Sans', 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 4px;
+  color: var(--md-sys-color-primary);
+  transition: color var(--transition-speed) ease;
+}
+
+.page-header .subtitle {
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: 1rem;
+  transition: color var(--transition-speed) ease;
+  margin: 0;
 }

@@ -1,32 +1,32 @@
 <div class="projects-container">
-    <div class="projects-header">
-      <h2>Projects I've Built So Far</h2>
-      <p class="subtitle">A collection of my recent work</p>
-    </div>
-    <div class="container1">
-      @for (project of projects; track project.title) {
-        <div class="card1">
-            <div class="card-image-wrapper">
-              <img [src]="project.image" [alt]="project.title">
-            </div>
-            <div class="card-body1">
-                <h5 class="card-title1">{{ project.title }}</h5>
-                <p class="card-text1">{{ project.description }}</p>
-                <div class="ProjectCard-tech">
-                    @for (tech of project.technologies; track tech) {
-                      <span class="tech-chip">{{ tech }}</span>
-                    }
-                </div>
-                <div class="button-grp">
-                    <a [href]="project.githubUrl" target="_blank" class="btn primary-btn" [class.disabled]="!project.githubUrl || project.githubUrl === '#'">
-                        <i class="fa-brands fa-github"></i> GitHub
-                    </a>
-                    <a [href]="project.liveUrl" target="_blank" class="btn secondary-btn" [class.disabled]="!project.liveUrl || project.liveUrl === '#'">
-                        <i class="fa-solid fa-laptop"></i> Live
-                    </a>
-                </div>
-            </div>
+  <div class="page-header">
+    <h2>Projects I've Built So Far</h2>
+    <p class="subtitle">A collection of my recent work</p>
+  </div>
+  <div class="container1">
+    @for (project of projects; track project.title) {
+      <div class="card1">
+        <div class="card-image-wrapper">
+          <img [src]="project.image" [alt]="project.title">
         </div>
-      }
-    </div>
+        <div class="card-body1">
+          <h5 class="card-title1">{{ project.title }}</h5>
+          <p class="card-text1">{{ project.description }}</p>
+          <div class="ProjectCard-tech">
+            @for (tech of project.technologies; track tech) {
+              <span class="tech-chip">{{ tech }}</span>
+            }
+          </div>
+          <div class="button-grp">
+            <a [href]="project.githubUrl" target="_blank" class="btn primary-btn" [class.disabled]="!project.githubUrl || project.githubUrl === '#'">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+            <a [href]="project.liveUrl" target="_blank" class="btn secondary-btn" [class.disabled]="!project.liveUrl || project.liveUrl === '#'">
+              <i class="fa-solid fa-laptop"></i> Live
+            </a>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
 </div>

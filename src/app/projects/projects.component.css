@@ -11,25 +11,6 @@
   user-select: none;
   transition: background-color var(--transition-speed) ease;
 }
-
-.projects-header {
-  margin-bottom: 24px;
-  color: var(--vscode-text);
-  padding-left: 12px;
-}
-
-.projects-header h2 {
-  font-family: 'Google Sans', 'Outfit', sans-serif;
-  font-weight: 700;
-  font-size: 2rem;
-  margin-bottom: 4px;
-}
-
-.projects-header .subtitle {
-  color: var(--md-sys-color-outline);
-  font-size: 1rem;
-}
-
 .container1 {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
