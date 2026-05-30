@@ -5,11 +5,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faClose } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'app-editor',
-  standalone: true,
-  imports: [RouterOutlet, FontAwesomeModule],
-  templateUrl: './editor.component.html',
-  styleUrl: './editor.component.css',
+    selector: 'app-editor',
+    imports: [RouterOutlet, FontAwesomeModule],
+    templateUrl: './editor.component.html',
+    styleUrl: './editor.component.css'
 })
 export class EditorComponent {
   faClose = faClose;

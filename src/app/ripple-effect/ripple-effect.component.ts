@@ -1,11 +1,10 @@
 import { Component, AfterViewInit, Renderer2 } from '@angular/core';
 
 @Component({
-  selector: 'app-ripple-effect',
-  standalone: true,
-  imports: [],
-  templateUrl: './ripple-effect.component.html',
-  styleUrl: './ripple-effect.component.css'
+    selector: 'app-ripple-effect',
+    imports: [],
+    templateUrl: './ripple-effect.component.html',
+    styleUrl: './ripple-effect.component.css'
 })
 export class RippleEffectComponent implements AfterViewInit {
 

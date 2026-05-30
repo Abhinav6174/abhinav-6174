@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "abhinav-6174",
     "public": "docs/browser",
     "ignore": [
       "firebase.json",
