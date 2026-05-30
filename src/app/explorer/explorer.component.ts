@@ -2,16 +2,15 @@ import { Component, AfterViewInit, OnDestroy, HostListener, ViewChild, ElementRe
 import { ToggleExplorerService } from '../service/toggle-service';
 import { Subscription } from 'rxjs';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { CommonModule } from '@angular/common';
+
 import { Router } from '@angular/router';
 import { faFolder, faSearch, faBars, faCode, faClose, faChevronDown, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'app-explorer',
-  standalone: true,
-  imports: [FontAwesomeModule, CommonModule],
-  templateUrl: './explorer.component.html',
-  styleUrls: ['./explorer.component.css'],
+    selector: 'app-explorer',
+    imports: [FontAwesomeModule],
+    templateUrl: './explorer.component.html',
+    styleUrls: ['./explorer.component.css']
 })
 export class ExplorerComponent implements AfterViewInit, OnDestroy {
   faFolder = faFolder;

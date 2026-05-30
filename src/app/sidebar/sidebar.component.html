@@ -1,19 +1,50 @@
 <div class="sidebar1">
   <div class="top-sidebar1-icon-container">
-    <img (click)="toggleexplorer()" class="sidebar1-icons" src="assets/hamburger.png" title="Toggle Explorer" />
-    <img class="sidebar1-icons" src="assets/search.png" title="Search" />
-    <img class="sidebar1-icons" src="assets/git-branch.png" title="Git" />
-    <img class="sidebar1-icons" src="assets/debug.png" title="Debug" />
-    <img class="sidebar1-icons" src="assets/extension.png" title="Extensions" />
-    <a href="https://github.com/Abhinav6174" target="_blank" title="GitHub">
-      <img class="sidebar1-icons" src="assets/github.png" alt="GitHub" />
+    <span (click)="toggleexplorer()" class="sidebar1-icons icon icon-hamburger" title="Toggle Explorer"></span>
+    <span class="sidebar1-icons icon icon-search" title="Search"></span>
+    <span class="sidebar1-icons icon icon-git-branch" title="Git"></span>
+    <span class="sidebar1-icons icon icon-debug" title="Debug"></span>
+    <span class="sidebar1-icons icon icon-extension" title="Extensions"></span>
+    <a href="https://github.com/Abhinav6174" target="_blank" title="GitHub" style="display: inline-flex; justify-content: center; align-items: center;">
+      <span class="sidebar1-icons icon icon-github" alt="GitHub"></span>
     </a>
-    <img (click)="share()" class="sidebar1-icons" src="assets/live-share.png" title="Live Share" />
+    <span (click)="share()" class="sidebar1-icons icon icon-live-share" title="Live Share"></span>
   </div>
   <div>
     <div class="bottom-sidebar1-icon-container">
-      <img class="sidebar1-icons" (click)="navigateTo('/home')" src="assets/profile.png" />
-      <img class="sidebar1-icons" src="assets/settings.png" />
+      <span class="sidebar1-icons icon icon-profile" (click)="navigateTo('/home')" title="Home Profile"></span>
+      <div class="settings-container">
+        <span class="sidebar1-icons icon icon-settings" (click)="toggleSettingsMenu($event)" title="Settings"></span>
+        
+        @if (showSettingsMenu) {
+          <div class="settings-menu">
+            <div class="menu-item" (click)="toggleThemeSubmenu($event)">
+              <span>Color Theme</span>
+              <span class="arrow-right">▶</span>
+            </div>
+            
+            @if (showThemeSubmenu) {
+              <div class="theme-submenu">
+                <div class="submenu-item" 
+                     [class.active]="themeService.currentPalette() === 'original'"
+                     (click)="selectTheme('original', $event)">
+                  Original Lavender
+                </div>
+                <div class="submenu-item" 
+                     [class.active]="themeService.currentPalette() === 'concerto'"
+                     (click)="selectTheme('concerto', $event)">
+                  Concerto Slate
+                </div>
+                <div class="submenu-item" 
+                     [class.active]="themeService.currentPalette() === 'rose-quartz'"
+                     (click)="selectTheme('rose-quartz', $event)">
+                  Rose Quartz
+                </div>
+              </div>
+            }
+          </div>
+        }
+      </div>
     </div>
   </div>
 </div>

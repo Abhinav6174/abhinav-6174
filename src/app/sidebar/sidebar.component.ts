@@ -1,19 +1,49 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { ToggleExplorerService } from '../service/toggle-service';
 import { Router } from '@angular/router';
+import { ThemeService } from '../service/theme.service';
 
 @Component({
-  selector: 'app-sidebar',
-  standalone: true,
-  imports: [],
-  templateUrl: './sidebar.component.html',
-  styleUrl: './sidebar.component.css'
+    selector: 'app-sidebar',
+    imports: [],
+    templateUrl: './sidebar.component.html',
+    styleUrl: './sidebar.component.css'
 })
 export class SidebarComponent {
   isSidebar2Visible = true;
+  showSettingsMenu = false;
+  showThemeSubmenu = false;
 
-  constructor(public toggleExplorer: ToggleExplorerService, private router: Router) {
-    
+  constructor(
+    public toggleExplorer: ToggleExplorerService, 
+    private router: Router,
+    public themeService: ThemeService
+  ) {}
+
+  toggleSettingsMenu(event: MouseEvent) {
+    event.stopPropagation();
+    this.showSettingsMenu = !this.showSettingsMenu;
+    if (!this.showSettingsMenu) {
+      this.showThemeSubmenu = false;
+    }
+  }
+
+  toggleThemeSubmenu(event: MouseEvent) {
+    event.stopPropagation();
+    this.showThemeSubmenu = !this.showThemeSubmenu;
+  }
+
+  selectTheme(theme: string, event: MouseEvent) {
+    event.stopPropagation();
+    this.themeService.setPalette(theme);
+    this.showSettingsMenu = false;
+    this.showThemeSubmenu = false;
+  }
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent) {
+    this.showSettingsMenu = false;
+    this.showThemeSubmenu = false;
   }
 
   toggleexplorer() {
@@ -27,13 +57,9 @@ export class SidebarComponent {
   share(){
     let url = window.location.href;
     const shareData = {
-      //title: 'Check this out',
-      //text: 'My Portfolio',
-      //url: 'https://abhinav6174.github.io/abhinav-6174',
       url: url
     };
 
-    // Check if the device is a mobile device
     const isMobileDevice = /Mobi|Android/i.test(navigator.userAgent);
 
     if (isMobileDevice && navigator.share) {
@@ -54,5 +80,4 @@ export class SidebarComponent {
     document.execCommand('copy');
     document.body.removeChild(textarea);
   }
-
 }

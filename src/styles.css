@@ -1,4 +1,198 @@
-@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Default Theme: Concerto Slate Light */
+  --md-sys-color-primary: #272B36; /* Blue Anthracite */
+  --md-sys-color-on-primary: #FFFFFF;
+  --md-sys-color-primary-container: #D7D7D6; /* Concerto */
+  --md-sys-color-on-primary-container: #272B36;
+  --md-sys-color-secondary: #A08A81; /* Cinereous */
+  --md-sys-color-secondary-container: #B7B8BB; /* Cloudy Sky */
+  --md-sys-color-on-secondary-container: #272B36;
+  --md-sys-color-surface: #F0F0F0; /* Soft off-white */
+  --md-sys-color-surface-container: #D7D7D6; /* Concerto */
+  --md-sys-color-surface-container-high: #B7B8BB; /* Cloudy Sky */
+  --md-sys-color-surface-container-highest: #A08A81; /* Cinereous */
+  --md-sys-color-on-surface: #272B36; /* Blue Anthracite */
+  --md-sys-color-on-surface-variant: #595D66; /* Alaska Gray */
+  --md-sys-color-outline: #B7B8BB; /* Cloudy Sky */
+  --md-sys-color-outline-variant: #D7D7D6; /* Concerto */
+  
+  /* VSCode layout variables */
+  --vscode-bg: #F0F0F0;
+  --vscode-sidebar-bg: #D7D7D6;
+  --vscode-border: #B7B8BB;
+  --vscode-text: #272B36;
+  --vscode-icon-hover: #B7B8BB;
+  
+  --transition-speed: 0.3s;
+}
+
+body.dark-theme {
+  /* Default Theme: Concerto Slate Dark */
+  --md-sys-color-primary: #B7B8BB; /* Cloudy Sky */
+  --md-sys-color-on-primary: #272B36; /* Blue Anthracite */
+  --md-sys-color-primary-container: #A08A81; /* Cinereous */
+  --md-sys-color-on-primary-container: #D7D7D6; /* Concerto */
+  --md-sys-color-secondary: #A08A81; /* Cinereous */
+  --md-sys-color-secondary-container: #595D66; /* Alaska Gray */
+  --md-sys-color-on-secondary-container: #D7D7D6;
+  --md-sys-color-surface: #1D2029; /* Deep Blue Anthracite */
+  --md-sys-color-surface-container: #272B36; /* Blue Anthracite */
+  --md-sys-color-surface-container-high: #363C4A;
+  --md-sys-color-surface-container-highest: #595D66; /* Alaska Gray */
+  --md-sys-color-on-surface: #D7D7D6; /* Concerto */
+  --md-sys-color-on-surface-variant: #B7B8BB; /* Cloudy Sky */
+  --md-sys-color-outline: #595D66; /* Alaska Gray */
+  --md-sys-color-outline-variant: #A08A81; /* Cinereous */
+
+  --vscode-bg: #1D2029;
+  --vscode-sidebar-bg: #272B36;
+  --vscode-border: #363C4A;
+  --vscode-text: #D7D7D6;
+  --vscode-icon-hover: #595D66;
+}
+
+/* Explicit Concerto Slate Theme (Matches default root) */
+body.theme-concerto {
+  --md-sys-color-primary: #272B36;
+  --md-sys-color-on-primary: #FFFFFF;
+  --md-sys-color-primary-container: #D7D7D6;
+  --md-sys-color-on-primary-container: #272B36;
+  --md-sys-color-secondary: #A08A81;
+  --md-sys-color-secondary-container: #B7B8BB;
+  --md-sys-color-on-secondary-container: #272B36;
+  --md-sys-color-surface: #F0F0F0;
+  --md-sys-color-surface-container: #D7D7D6;
+  --md-sys-color-surface-container-high: #B7B8BB;
+  --md-sys-color-surface-container-highest: #A08A81;
+  --md-sys-color-on-surface: #272B36;
+  --md-sys-color-on-surface-variant: #595D66;
+  --md-sys-color-outline: #B7B8BB;
+  --md-sys-color-outline-variant: #D7D7D6;
+  --vscode-bg: #F0F0F0;
+  --vscode-sidebar-bg: #D7D7D6;
+  --vscode-border: #B7B8BB;
+  --vscode-text: #272B36;
+  --vscode-icon-hover: #B7B8BB;
+}
+
+body.theme-concerto.dark-theme {
+  --md-sys-color-primary: #B7B8BB;
+  --md-sys-color-on-primary: #272B36;
+  --md-sys-color-primary-container: #A08A81;
+  --md-sys-color-on-primary-container: #D7D7D6;
+  --md-sys-color-secondary: #A08A81;
+  --md-sys-color-secondary-container: #595D66;
+  --md-sys-color-on-secondary-container: #D7D7D6;
+  --md-sys-color-surface: #1D2029;
+  --md-sys-color-surface-container: #272B36;
+  --md-sys-color-surface-container-high: #363C4A;
+  --md-sys-color-surface-container-highest: #595D66;
+  --md-sys-color-on-surface: #D7D7D6;
+  --md-sys-color-on-surface-variant: #B7B8BB;
+  --md-sys-color-outline: #595D66;
+  --md-sys-color-outline-variant: #A08A81;
+  --vscode-bg: #1D2029;
+  --vscode-sidebar-bg: #272B36;
+  --vscode-border: #363C4A;
+  --vscode-text: #D7D7D6;
+  --vscode-icon-hover: #595D66;
+}
+
+/* Original Lavender Theme */
+body.theme-original {
+  --md-sys-color-primary: #6750A4;
+  --md-sys-color-on-primary: #FFFFFF;
+  --md-sys-color-primary-container: #EADDFF;
+  --md-sys-color-on-primary-container: #21005D;
+  --md-sys-color-secondary: #625B71;
+  --md-sys-color-secondary-container: #E8DEF8;
+  --md-sys-color-on-secondary-container: #1D192B;
+  --md-sys-color-surface: #FEF7FF;
+  --md-sys-color-surface-container: #F7F2FA;
+  --md-sys-color-surface-container-high: #F3EDF7;
+  --md-sys-color-surface-container-highest: #ECE6F0;
+  --md-sys-color-on-surface: #1C1B1F;
+  --md-sys-color-on-surface-variant: #49454F;
+  --md-sys-color-outline: #79747E;
+  --md-sys-color-outline-variant: #CAC4D0;
+  --vscode-bg: #FFFFFF;
+  --vscode-sidebar-bg: #F3EDF7;
+  --vscode-border: #E6E0E9;
+  --vscode-text: #1C1B1F;
+  --vscode-icon-hover: #EADDFF;
+}
+
+body.theme-original.dark-theme {
+  --md-sys-color-primary: #D0BCFF;
+  --md-sys-color-on-primary: #381E72;
+  --md-sys-color-primary-container: #4F378B;
+  --md-sys-color-on-primary-container: #EADDFF;
+  --md-sys-color-secondary: #CCC2DC;
+  --md-sys-color-secondary-container: #4A4458;
+  --md-sys-color-on-secondary-container: #E8DEF8;
+  --md-sys-color-surface: #0F0E13;
+  --md-sys-color-surface-container: #1A191E;
+  --md-sys-color-surface-container-high: #211F26;
+  --md-sys-color-surface-container-highest: #2B2930;
+  --md-sys-color-on-surface: #E6E0E9;
+  --md-sys-color-on-surface-variant: #CAC4D0;
+  --md-sys-color-outline: #938F99;
+  --md-sys-color-outline-variant: #49454F;
+  --vscode-bg: #0F0E13;
+  --vscode-sidebar-bg: #1A191E;
+  --vscode-border: #2B2930;
+  --vscode-text: #E6E0E9;
+  --vscode-icon-hover: #381E72;
+}
+
+/* Rose Quartz Theme */
+body.theme-rose-quartz {
+  --md-sys-color-primary: #22223B;
+  --md-sys-color-on-primary: #FFFFFF;
+  --md-sys-color-primary-container: #C9ADA7;
+  --md-sys-color-on-primary-container: #22223B;
+  --md-sys-color-secondary: #9A8C98;
+  --md-sys-color-secondary-container: #C9ADA7;
+  --md-sys-color-on-secondary-container: #22223B;
+  --md-sys-color-surface: #F2E9E4;
+  --md-sys-color-surface-container: #E5DCD8;
+  --md-sys-color-surface-container-high: #C9ADA7;
+  --md-sys-color-surface-container-highest: #9A8C98;
+  --md-sys-color-on-surface: #22223B;
+  --md-sys-color-on-surface-variant: #4A4E69;
+  --md-sys-color-outline: #C9ADA7;
+  --md-sys-color-outline-variant: #E5DCD8;
+  --vscode-bg: #F2E9E4;
+  --vscode-sidebar-bg: #E5DCD8;
+  --vscode-border: #C9ADA7;
+  --vscode-text: #22223B;
+  --vscode-icon-hover: #C9ADA7;
+}
+
+body.theme-rose-quartz.dark-theme {
+  --md-sys-color-primary: #C9ADA7;
+  --md-sys-color-on-primary: #22223B;
+  --md-sys-color-primary-container: #4A4E69;
+  --md-sys-color-on-primary-container: #F2E9E4;
+  --md-sys-color-secondary: #9A8C98;
+  --md-sys-color-secondary-container: #363A54;
+  --md-sys-color-on-secondary-container: #F2E9E4;
+  --md-sys-color-surface: #161628;
+  --md-sys-color-surface-container: #22223B;
+  --md-sys-color-surface-container-high: #363A54;
+  --md-sys-color-surface-container-highest: #4A4E69;
+  --md-sys-color-on-surface: #F2E9E4;
+  --md-sys-color-on-surface-variant: #D8C2BD; /* Improved contrast on dark background */
+  --md-sys-color-outline: #4A4E69;
+  --md-sys-color-outline-variant: #363A54;
+  --vscode-bg: #161628;
+  --vscode-sidebar-bg: #22223B;
+  --vscode-border: #363A54;
+  --vscode-text: #F2E9E4;
+  --vscode-icon-hover: #9A8C98;
+}
 
 *,
 *::before,
@@ -7,17 +201,24 @@
 }
 
 body {
-  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-  /* font-family: 'patrick-hand'; */
-  font-family: "Itim", cursive;
-  font-size: 18px;
+  font-family: 'Google Sans', 'Outfit', 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
   padding: 0;
   margin: 0;
-  color: #d4d4d4;
+  background-color: var(--vscode-bg);
+  color: var(--vscode-text);
   overflow: hidden;
   scroll-behavior: smooth !important;
+  transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
   cursor: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgawujXWquSQp7BjdSzXnbPbpg6L4_xgBgt4dOM8Cr4F3oMaawiyLDh_8WWr4FwcVbKv5uyW2I9r8YPyfky5L7nSR3j9lKs2QGc8pF-MiOYWfL2zZT3pnW8kzRVPxRDQJSbG5ekiXeFtqWbkGvHdPSCSYcRFlEUG4I4BUlj4FYDG62BPaTFqFhllYxp6mE/s1600/cursor1.png'), pointer !important;
 }
+
+body.theme-transitioning,
+body.theme-transitioning * {
+  transition: none !important;
+}
+
 
 a {
   cursor: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgawujXWquSQp7BjdSzXnbPbpg6L4_xgBgt4dOM8Cr4F3oMaawiyLDh_8WWr4FwcVbKv5uyW2I9r8YPyfky5L7nSR3j9lKs2QGc8pF-MiOYWfL2zZT3pnW8kzRVPxRDQJSbG5ekiXeFtqWbkGvHdPSCSYcRFlEUG4I4BUlj4FYDG62BPaTFqFhllYxp6mE/s1600/cursor1.png'), pointer !important;
@@ -33,18 +234,88 @@ a:-webkit-any-link {
   background-color: transparent;
   position: fixed;
   border-radius: 50%;
-  border: 1px solid #ffffff59;
+  border: 1px solid var(--md-sys-color-primary);
   pointer-events: none;
 }
 
 @keyframes ripple-effect {
   to {
-     transform:scale(15);
+     transform: scale(15);
      opacity: 0.01;
   }
 }
 
-/* 
-*{
-  border: solid 1px red;
-} */
+/* Custom Icon System utilizing CSS masks for dynamic coloring */
+.icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-color: currentColor;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+  transition: background-color var(--transition-speed) ease;
+  vertical-align: middle;
+}
+
+.icon-hamburger {
+  mask-image: url('assets/icons/hamburger.svg');
+  -webkit-mask-image: url('assets/icons/hamburger.svg');
+}
+.icon-search {
+  mask-image: url('assets/icons/search.svg');
+  -webkit-mask-image: url('assets/icons/search.svg');
+}
+.icon-git-branch {
+  mask-image: url('assets/icons/git-branch.svg');
+  -webkit-mask-image: url('assets/icons/git-branch.svg');
+}
+.icon-debug {
+  mask-image: url('assets/icons/debug.svg');
+  -webkit-mask-image: url('assets/icons/debug.svg');
+}
+.icon-extension {
+  mask-image: url('assets/icons/extension.svg');
+  -webkit-mask-image: url('assets/icons/extension.svg');
+}
+.icon-github {
+  mask-image: url('assets/icons/github.svg');
+  -webkit-mask-image: url('assets/icons/github.svg');
+}
+.icon-live-share {
+  mask-image: url('assets/icons/live-share.svg');
+  -webkit-mask-image: url('assets/icons/live-share.svg');
+}
+.icon-profile {
+  mask-image: url('assets/icons/profile.svg');
+  -webkit-mask-image: url('assets/icons/profile.svg');
+}
+.icon-settings {
+  mask-image: url('assets/icons/settings.svg');
+  -webkit-mask-image: url('assets/icons/settings.svg');
+}
+
+/* Shared Page Header Styles (follows project page style) */
+.page-header {
+  margin-bottom: 24px;
+  padding-left: 12px;
+}
+
+.page-header h2 {
+  font-family: 'Google Sans', 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 4px;
+  color: var(--md-sys-color-primary);
+  transition: color var(--transition-speed) ease;
+}
+
+.page-header .subtitle {
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: 1rem;
+  transition: color var(--transition-speed) ease;
+  margin: 0;
+}

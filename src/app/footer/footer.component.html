@@ -1,22 +1,55 @@
 <div class="footer">
-    <div class="left-content">
-      <div class="footer-content">
-        <img class="footer-icons" src="assets/remote-desktop.png" title="Remote Desktop"/>
-        <img class="footer-icons" src="assets/code-branch.png" title="Code Branch"/>
-        <span style="font-weight: 100; color: #adadad; font-size: 16px;">main *</span>
-        <img class="footer-icons" (click)="reloadWindow()" src="assets/sync.png" title="Sync"/>
-        &nbsp;
-        <img class="footer-icons" src="assets/wrong.png" title="No Problems"/>
-        <span style="font-weight: 100; color: #adadad; font-size: 16px;">0</span>
-        <img class="footer-icons" src="assets/warning.png" title="No Problems"/>
-        <span style="font-weight: 100; color: #adadad; font-size: 16px;">0</span>
-      </div>
-    </div>
-    <div class="right-content">
-      <span style="font-weight: 100; color: #adadad; margin-right: 10px; font-size: 16px;">UTF-8</span>
-      <span style="font-weight: 100; color: #adadad; margin-right: 10px; font-size: 16px;">Angular</span>
-      <img class="footer-icons" style="width: 20px; height: 20px;" src="assets/double-check.png" title="Prettier"/>
-      <span style="font-weight: 100; color: #adadad; margin-right: 10px; font-size: 16px;">Prettier</span>
-      <img class="footer-icons" src="assets/notification.png" title="Notifications"/>
+  <div class="left-content">
+    <div class="footer-content">
+      <!-- Remote Desktop -->
+      <svg class="footer-icons" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" title="Remote Desktop">
+        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+        <line x1="8" y1="21" x2="16" y2="21"></line>
+        <line x1="12" y1="17" x2="12" y2="21"></line>
+      </svg>
+      <!-- Git Branch -->
+      <svg class="footer-icons" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" title="Code Branch">
+        <line x1="6" y1="3" x2="6" y2="15"></line>
+        <circle cx="18" cy="6" r="3"></circle>
+        <circle cx="6" cy="18" r="3"></circle>
+        <path d="M18 9a9 9 0 0 1-9 9"></path>
+      </svg>
+      <span class="footer-label">main *</span>
+      <!-- Sync -->
+      <svg class="footer-icons" (click)="reloadWindow()" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" title="Sync">
+        <path d="M23 4v6h-6M1 20v-6h6"></path>
+        <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+      </svg>
+      &nbsp;
+      <!-- Problems (Errors) -->
+      <svg class="footer-icons" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" title="No Problems">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="15" y1="9" x2="9" y2="15"></line>
+        <line x1="9" y1="9" x2="15" y2="15"></line>
+      </svg>
+      <span class="footer-label">0</span>
+      <!-- Warning -->
+      <svg class="footer-icons" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" title="No Problems">
+        <path d="m12 5 9 14H3L12 5z"></path>
+        <line x1="12" y1="10" x2="12" y2="14"></line>
+        <circle cx="12" cy="17" r="0.5"></circle>
+      </svg>
+      <span class="footer-label">0</span>
     </div>
   </div>
+  <div class="right-content">
+    <span class="footer-label">UTF-8</span>
+    <span class="footer-label">Angular</span>
+    <!-- Prettier -->
+    <svg class="footer-icons" style="width: 14px; height: 14px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" title="Prettier">
+      <polyline points="20 6 9 17 4 12"></polyline>
+      <polyline points="22 10 14 18 10 14"></polyline>
+    </svg>
+    <span class="footer-label">Prettier</span>
+    <!-- Notification -->
+    <svg class="footer-icons" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" title="Notifications">
+      <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+      <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+    </svg>
+  </div>
+</div>

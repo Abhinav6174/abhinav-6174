@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { HeaderComponent } from "./header/header.component";
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ExplorerComponent } from './explorer/explorer.component';
@@ -9,14 +9,13 @@ import { RippleEffectComponent } from './ripple-effect/ripple-effect.component';
 import { Inject } from '@angular/core';
 import { APP_BASE_HREF } from '@angular/common';
 import { GoogleAnalyticsService } from './service/google-analytics.service';
+import { ThemeService } from './service/theme.service';
 
 @Component({
     selector: 'app-root',
-    standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
     imports: [
-        CommonModule,
         HeaderComponent,
         SidebarComponent,
         ExplorerComponent,
@@ -31,10 +30,11 @@ export class AppComponent {
         
     // }
 
-    constructor(private googleAnalyticsService: GoogleAnalyticsService) {
-        
-    }
+    constructor(
+      private googleAnalyticsService: GoogleAnalyticsService,
+      private themeService: ThemeService
+    ) {}
 
     ngOnInit() {
-      }
+    }
 }

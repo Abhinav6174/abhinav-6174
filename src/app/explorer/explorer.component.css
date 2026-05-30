@@ -8,7 +8,7 @@
 }
 
 .explorer {
-  background-color: #15161A;
+  background-color: var(--vscode-sidebar-bg);
   padding: 10px;
   overflow: auto;
   scrollbar-width: none;
@@ -19,6 +19,7 @@
   position: relative;
     height: -webkit-fill-available;
     margin-bottom: 55px;
+    transition: background-color var(--transition-speed) ease;
 }
 
 .explorer::-webkit-scrollbar {
@@ -88,7 +89,8 @@
 }
 
 .dropdown-content a:hover {
-  background-color: #1e1e1e;
+  background-color: var(--md-sys-color-surface-container-highest);
+  border-radius: 4px;
 }
 
 .subfolder-dropdown-content {
@@ -99,7 +101,8 @@
 .resizer {
   width: 3px;
   cursor: ew-resize;
-  background-color: #242424;
+  background-color: var(--vscode-border);
+  transition: background-color var(--transition-speed) ease;
 }
 
 @media (max-width: 768px) {

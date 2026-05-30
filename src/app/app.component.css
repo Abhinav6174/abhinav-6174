@@ -1,16 +1,18 @@
 .editor-container {
   flex-grow: 1;
-  background-color: #121116;
+  background-color: var(--vscode-bg);
   overflow-y: auto;
   display: flex;
   height: 100vh;
+  transition: background-color var(--transition-speed) ease;
 }
 
 .editor {
   flex-grow: 1;
-  background-color: #121116;
-  color: #d4d4d4;
+  background-color: var(--vscode-bg);
+  color: var(--vscode-text);
   padding: 10px;
   overflow: hidden;
-  margin-left: 49px
+  margin-left: 49px;
+  transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
 }
