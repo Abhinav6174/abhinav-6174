@@ -100,7 +100,7 @@ body.theme-concerto.dark-theme {
   --vscode-icon-hover: #595D66;
 }
 
-/* Original Lavender Theme */
+/* Amethyst Classic Theme */
 body.theme-original {
   --md-sys-color-primary: #6750A4;
   --md-sys-color-on-primary: #FFFFFF;
@@ -318,4 +318,4 @@ a:-webkit-any-link {
   font-size: 1rem;
   transition: color var(--transition-speed) ease;
   margin: 0;
-}
+}
