@@ -1,12 +1,108 @@
-<div>
-  <app-header></app-header>
-  <app-sidebar></app-sidebar>
-  <div class="editor-container">
-    <app-explorer></app-explorer>
-    <div class="editor">
-      <app-editor></app-editor>
-      <app-ripple-effect></app-ripple-effect>
+<div class="m3-shell">
+  <!-- Top App Bar -->
+  <header class="m3-top-app-bar">
+    <div class="m3-top-app-bar-start">
+      <div class="m3-brand">
+        <span class="m3-brand-icon">
+          <i class="fas fa-terminal"></i>
+        </span>
+        <span class="m3-brand-text">Abhinav</span>
+      </div>
     </div>
+
+    <!-- Desktop Navigation Links (inline in the top bar) -->
+    <nav class="m3-desktop-nav">
+      <a class="m3-nav-pill" routerLink="/home" routerLinkActive="active-pill">
+        <div class="m3-nav-pill-state">
+          <i class="fas fa-home"></i>
+          <span>Home</span>
+        </div>
+      </a>
+      <a class="m3-nav-pill" routerLink="/experience" routerLinkActive="active-pill">
+        <div class="m3-nav-pill-state">
+          <i class="fas fa-briefcase"></i>
+          <span>Experience</span>
+        </div>
+      </a>
+      <a class="m3-nav-pill" routerLink="/projects" routerLinkActive="active-pill">
+        <div class="m3-nav-pill-state">
+          <i class="fas fa-code"></i>
+          <span>Projects</span>
+        </div>
+      </a>
+      <a class="m3-nav-pill" routerLink="/skills" routerLinkActive="active-pill">
+        <div class="m3-nav-pill-state">
+          <i class="fas fa-tools"></i>
+          <span>Skills</span>
+        </div>
+      </a>
+      <a class="m3-nav-pill" routerLink="/education" routerLinkActive="active-pill">
+        <div class="m3-nav-pill-state">
+          <i class="fas fa-graduation-cap"></i>
+          <span>Education</span>
+        </div>
+      </a>
+    </nav>
+
+    <div class="m3-top-app-bar-end">
+      <!-- M3 Toggle Switch for Dark Mode -->
+      <button class="m3-switch" 
+              [class.checked]="isDarkMode" 
+              (click)="toggleDarkMode()" 
+              type="button"
+              role="switch" 
+              [attr.aria-checked]="isDarkMode"
+              title="Toggle theme">
+        <span class="m3-switch-thumb">
+          @if (isDarkMode) {
+            <i class="fas fa-check"></i>
+          }
+        </span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <div class="m3-main-container">
+    <main class="m3-main-content">
+      <router-outlet></router-outlet>
+    </main>
   </div>
-  <app-footer></app-footer>
+
+  <!-- Mobile Bottom Navigation Bar -->
+  <nav class="m3-bottom-nav">
+    <a class="m3-bottom-nav-item" routerLink="/home" routerLinkActive="active-nav">
+      <div class="m3-bottom-nav-indicator">
+        <i class="fas fa-home"></i>
+      </div>
+      <span class="m3-bottom-nav-label">Home</span>
+    </a>
+    <a class="m3-bottom-nav-item" routerLink="/experience" routerLinkActive="active-nav">
+      <div class="m3-bottom-nav-indicator">
+        <i class="fas fa-briefcase"></i>
+      </div>
+      <span class="m3-bottom-nav-label">Experience</span>
+    </a>
+    <a class="m3-bottom-nav-item" routerLink="/projects" routerLinkActive="active-nav">
+      <div class="m3-bottom-nav-indicator">
+        <i class="fas fa-code"></i>
+      </div>
+      <span class="m3-bottom-nav-label">Projects</span>
+    </a>
+    <a class="m3-bottom-nav-item" routerLink="/skills" routerLinkActive="active-nav">
+      <div class="m3-bottom-nav-indicator">
+        <i class="fas fa-tools"></i>
+      </div>
+      <span class="m3-bottom-nav-label">Skills</span>
+    </a>
+    <a class="m3-bottom-nav-item" routerLink="/education" routerLinkActive="active-nav">
+      <div class="m3-bottom-nav-indicator">
+        <i class="fas fa-graduation-cap"></i>
+      </div>
+      <span class="m3-bottom-nav-label">Education</span>
+    </a>
+  </nav>
+
+  <!-- Tap feedback ripple component -->
+  <app-ripple-effect></app-ripple-effect>
 </div>

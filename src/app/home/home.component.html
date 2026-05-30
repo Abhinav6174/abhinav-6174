@@ -1,39 +1,60 @@
-<div class="home-container">
-    <div class="profile-container">
-        <div class="profile-item">
-            <div>
-                <img src="assets/Profile-pic.jpg" alt="Profile Picture" class="profile-image">
-            </div>
-            <div class="profile-text">
-                <div>
-                    <div class="d-flex flex-row align-items-center justify-content-center">
-                        <h2 class="name">Hi, I’m Abhinav</h2>
-                        <img class="hi" src="assets/hi.gif"/>
-                    </div>
-                </div>
-                <div>
-                    <p class="about">
-                        I am a 🧑🏻‍💻 Web Developer with experience in building web applications using Angular, ReactJs and ASP .NET
-                        Core.
-                        I am excited to explore new opportunities and take on challenges in my career. In my leisure
-                        time, I enjoy browsing through 📃 tech articles and 🔭 stargazing.
-                    </p>
-                </div>
-                <div class="social-icons">
-                    <a href="https://github.com/Abhinav6174" target="_blank"><i class="fab fa-github"></i></a>
-                    <!-- <a href="#" target="_blank"><i class="fa fa-envelope"></i></a> -->
-                    <a href="https://www.linkedin.com/in/abhinav6174" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <div class="buttons">
-                    <a href="mailto:abhinav.vadlamudi1@gmail.com" target="_blank" style="text-decoration: none;">
-                        <button style="width: 95px;" class="btn btn-light">Contact</button>
-                    </a>
-                    &nbsp;
-                    <!-- <a [href]="'https://drive.google.com/uc?export=download&id=' + documentId" download style="text-decoration: none;">
-                        <button class="btn btn-light">Download CV</button>
-                    </a> -->
-                </div>
-            </div>
+<div class="m3-home-container">
+  <div class="m3-profile-card">
+    <div class="m3-profile-layout">
+      <!-- Profile Picture Container with M3 organic shape -->
+      <div class="m3-avatar-wrapper">
+        <div class="m3-avatar-expressive">
+          <img src="assets/Profile-pic.jpg" alt="Abhinav's Profile Picture" class="m3-profile-img">
         </div>
+        <!-- Decorative M3 mini badge -->
+        <span class="m3-avatar-badge">
+          <img class="waving-hand" src="assets/hi.gif" alt="Waving Hand">
+        </span>
+      </div>
+
+      <!-- Profile Details -->
+      <div class="m3-profile-text">
+        <div class="m3-headline-wrapper">
+          <span class="m3-overline">WEB DEVELOPER & ENGINEER</span>
+          <h1 class="m3-title-name">Hi, I'm Abhinav</h1>
+        </div>
+        
+        <p class="m3-about-body">
+          I am a passionate <strong>Web Developer</strong> with experience building responsive and highly usable web applications using 
+          <span class="m3-chip-inline">Angular</span>, 
+          <span class="m3-chip-inline">ReactJs</span>, and 
+          <span class="m3-chip-inline">ASP.NET Core</span>.
+        </p>
+        
+        <p class="m3-about-body-secondary">
+          I am always excited to explore new opportunities, solve complex logic, and create stellar user interfaces. In my leisure time, I enjoy browsing through tech articles and stargazing.
+        </p>
+
+        <!-- Social Media Icons (M3 IconButton style) -->
+        <div class="m3-social-row">
+          <a href="https://github.com/Abhinav6174" target="_blank" class="m3-icon-button" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/abhinav6174" target="_blank" class="m3-icon-button" title="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:abhinav.vadlamudi1@gmail.com" class="m3-icon-button" title="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+
+        <!-- M3 Call to Action Buttons -->
+        <div class="m3-actions-row">
+          <a href="mailto:abhinav.vadlamudi1@gmail.com" class="m3-button m3-button-filled">
+            <i class="fas fa-paper-plane"></i>
+            <span>Contact Me</span>
+          </a>
+          <a routerLink="/projects" class="m3-button m3-button-tonal">
+            <i class="fas fa-arrow-right"></i>
+            <span>View My Work</span>
+          </a>
+        </div>
+      </div>
     </div>
+  </div>
 </div>

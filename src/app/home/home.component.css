@@ -1,118 +1,272 @@
-.home-container {
-    max-height: 80vh;
-    overflow-y: auto;
-    background-color: #121116;
-    margin-top: 50px;
-    padding: 0px;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+.m3-home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  animation: fadeIn 0.6s ease-out;
 }
 
-.home-container::-webkit-scrollbar {
-    display: none;
+/* M3 Profile Card */
+.m3-profile-card {
+  background-color: var(--m3-surface-container-low);
+  border-radius: var(--m3-radius-extra-large);
+  padding: 40px;
+  width: 100%;
+  box-shadow: 0 4px 20px var(--m3-shadow);
+  border: 1px solid var(--m3-outline-variant);
+  transition: background-color var(--transition-speed), border-color var(--transition-speed);
 }
 
-.profile-container {
-    display: flex;
-    justify-content: center;
+.m3-profile-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Desktop row-reverse/column based on screen width */
+@media (min-width: 992px) {
+  .m3-profile-layout {
+    flex-direction: row-reverse;
+    justify-content: space-between;
     padding: 20px;
+  }
+  
+  .m3-profile-text {
+    flex: 1;
+    max-width: 60%;
+    text-align: left;
+  }
+
+  .m3-avatar-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
 }
 
-.profile-item {
-    display: flex;
+/* Avatar styling with M3 Expressive Blob Shape */
+.m3-avatar-wrapper {
+  position: relative;
+  width: 260px;
+  height: 260px;
+}
+
+.m3-avatar-expressive {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--m3-primary-container);
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; /* Organic shape */
+  animation: blob-bounce 8s ease-in-out infinite alternate;
+  box-shadow: 0 8px 16px var(--m3-shadow);
+  transition: transform 0.3s ease;
+}
+
+.m3-avatar-expressive:hover {
+  transform: scale(1.03) rotate(2deg);
+}
+
+.m3-profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.m3-avatar-expressive:hover .m3-profile-img {
+  transform: scale(1.15);
+}
+
+/* Waving Hand Badge */
+.m3-avatar-badge {
+  position: absolute;
+  bottom: 0px;
+  right: 12px;
+  width: 56px;
+  height: 56px;
+  background-color: var(--m3-tertiary-container);
+  border: 4px solid var(--m3-surface-container-low);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px var(--m3-shadow);
+  animation: bounce-slow 2s infinite;
+  transition: border-color var(--transition-speed);
+}
+
+.waving-hand {
+  width: 32px;
+  height: 32px;
+}
+
+/* Typography styles */
+.m3-overline {
+  font-family: var(--m3-font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--m3-tertiary);
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.m3-title-name {
+  font-family: var(--m3-font-heading);
+  font-size: 44px;
+  font-weight: 700;
+  color: var(--m3-primary);
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.m3-about-body {
+  font-size: 20px;
+  line-height: 1.6;
+  color: var(--m3-on-background);
+  margin-bottom: 16px;
+}
+
+.m3-about-body-secondary {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--m3-on-surface-variant);
+  margin-bottom: 32px;
+}
+
+/* Inline styling chips */
+.m3-chip-inline {
+  background-color: var(--m3-secondary-container);
+  color: var(--m3-on-secondary-container);
+  padding: 2px 10px;
+  border-radius: var(--m3-radius-full);
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Icon Buttons for Social Row */
+.m3-social-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.m3-icon-button {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--m3-radius-full);
+  background-color: var(--m3-surface-variant);
+  color: var(--m3-on-surface-variant);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  transition: transform 0.2s, background-color 0.2s, color 0.2s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.m3-icon-button:hover {
+  transform: translateY(-2px);
+  background-color: var(--m3-primary-container);
+  color: var(--m3-on-primary-container);
+}
+
+/* Buttons Styling */
+.m3-actions-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.m3-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 48px;
+  padding: 0 24px;
+  border-radius: var(--m3-radius-full);
+  font-family: var(--m3-font-heading);
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s, color 0.2s;
+  border: none;
+}
+
+.m3-button-filled {
+  background-color: var(--m3-primary);
+  color: var(--m3-on-primary);
+  box-shadow: 0 2px 4px var(--m3-shadow);
+}
+
+.m3-button-filled:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px var(--m3-shadow);
+}
+
+.m3-button-tonal {
+  background-color: var(--m3-secondary-container);
+  color: var(--m3-on-secondary-container);
+}
+
+.m3-button-tonal:hover {
+  transform: translateY(-2px);
+  background-color: var(--m3-surface-variant);
+}
+
+/* Animations */
+@keyframes blob-bounce {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 40% 60% 70% 30% / 50% 60% 30% 70%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustment for Mobile screens */
+@media (max-width: 576px) {
+  .m3-profile-card {
+    padding: 24px 16px;
+  }
+  
+  .m3-title-name {
+    font-size: 32px;
+  }
+
+  .m3-actions-row {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
+    width: 100%;
+  }
 
-.profile-image {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    margin-bottom: 15px;
-    transition: transform .3s;
-    box-shadow: -2px -2px 8px rgba(0, 0, 0, 0), -2px -2px 12px rgba(1, 1, 1, 0.5), inset 2px 2px 4px rgba(1, 1, 1, 0.1), 2px 2px 8px rgba(1, 1, 1, 0.15);
-}
-
-.profile-image:hover {
-    -ms-transform: scale(1.03);
-    -webkit-transform: scale(1.03);
-    transform: scale(1.03);
-}
-
-.name {
-    font-size: 40px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.hi {
-    margin-left: 16px;
-    margin-bottom: 12px;
-    width: 40px;
-}
-
-.role {
-    margin-top: -8px;
-    font-size: 20px;
-    color: #999;
-    margin-bottom: 20px;
-}
-
-.about {
-    font-size: 22px;
-    line-height: 1.8;
-}
-
-.social-icons {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.social-icons a {
-    color: #ffffff;
-    font-size: 25px;
-    text-decoration: none;
-}
-
-.buttons {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-    
-}
-
-button {
-    cursor: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgawujXWquSQp7BjdSzXnbPbpg6L4_xgBgt4dOM8Cr4F3oMaawiyLDh_8WWr4FwcVbKv5uyW2I9r8YPyfky5L7nSR3j9lKs2QGc8pF-MiOYWfL2zZT3pnW8kzRVPxRDQJSbG5ekiXeFtqWbkGvHdPSCSYcRFlEUG4I4BUlj4FYDG62BPaTFqFhllYxp6mE/s1600/cursor1.png'), pointer !important;
-    transition: transform .3s;
-    box-shadow: -2px -2px 8px rgba(0, 0, 0, 0), -2px -2px 12px rgba(1, 1, 1, 0.5), inset 2px 2px 4px rgba(1, 1, 1, 0.1), 2px 2px 8px rgba(1, 1, 1, 0.15);
-}
-
-button:hover {
-    -ms-transform: scale(1.03);
-    -webkit-transform: scale(1.03);
-    transform: scale(1.03);
-}
-
-@media (min-width: 768px) {
-    .profile-item {
-        flex-direction: row;
-        align-items: center;
-        text-align: left;
-    }
-
-    .profile-text {
-        margin: 20px;
-    }
-
-    .profile-image {
-        width: 250px;
-        height: 250px;
-    }
+  .m3-button {
+    width: 100%;
+  }
 }
