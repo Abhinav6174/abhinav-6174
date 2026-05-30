@@ -1,7 +1,107 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
 
 :root {
-  /* Material 3 Expressive Light Theme - Clean, pleasant and premium */
+  /* Default Theme: Concerto Slate Light */
+  --md-sys-color-primary: #272B36; /* Blue Anthracite */
+  --md-sys-color-on-primary: #FFFFFF;
+  --md-sys-color-primary-container: #D7D7D6; /* Concerto */
+  --md-sys-color-on-primary-container: #272B36;
+  --md-sys-color-secondary: #A08A81; /* Cinereous */
+  --md-sys-color-secondary-container: #B7B8BB; /* Cloudy Sky */
+  --md-sys-color-on-secondary-container: #272B36;
+  --md-sys-color-surface: #F0F0F0; /* Soft off-white */
+  --md-sys-color-surface-container: #D7D7D6; /* Concerto */
+  --md-sys-color-surface-container-high: #B7B8BB; /* Cloudy Sky */
+  --md-sys-color-surface-container-highest: #A08A81; /* Cinereous */
+  --md-sys-color-on-surface: #272B36; /* Blue Anthracite */
+  --md-sys-color-on-surface-variant: #595D66; /* Alaska Gray */
+  --md-sys-color-outline: #B7B8BB; /* Cloudy Sky */
+  --md-sys-color-outline-variant: #D7D7D6; /* Concerto */
+  
+  /* VSCode layout variables */
+  --vscode-bg: #F0F0F0;
+  --vscode-sidebar-bg: #D7D7D6;
+  --vscode-border: #B7B8BB;
+  --vscode-text: #272B36;
+  --vscode-icon-hover: #B7B8BB;
+  
+  --transition-speed: 0.3s;
+}
+
+body.dark-theme {
+  /* Default Theme: Concerto Slate Dark */
+  --md-sys-color-primary: #B7B8BB; /* Cloudy Sky */
+  --md-sys-color-on-primary: #272B36; /* Blue Anthracite */
+  --md-sys-color-primary-container: #A08A81; /* Cinereous */
+  --md-sys-color-on-primary-container: #D7D7D6; /* Concerto */
+  --md-sys-color-secondary: #A08A81; /* Cinereous */
+  --md-sys-color-secondary-container: #595D66; /* Alaska Gray */
+  --md-sys-color-on-secondary-container: #D7D7D6;
+  --md-sys-color-surface: #1D2029; /* Deep Blue Anthracite */
+  --md-sys-color-surface-container: #272B36; /* Blue Anthracite */
+  --md-sys-color-surface-container-high: #363C4A;
+  --md-sys-color-surface-container-highest: #595D66; /* Alaska Gray */
+  --md-sys-color-on-surface: #D7D7D6; /* Concerto */
+  --md-sys-color-on-surface-variant: #B7B8BB; /* Cloudy Sky */
+  --md-sys-color-outline: #595D66; /* Alaska Gray */
+  --md-sys-color-outline-variant: #A08A81; /* Cinereous */
+
+  --vscode-bg: #1D2029;
+  --vscode-sidebar-bg: #272B36;
+  --vscode-border: #363C4A;
+  --vscode-text: #D7D7D6;
+  --vscode-icon-hover: #595D66;
+}
+
+/* Explicit Concerto Slate Theme (Matches default root) */
+body.theme-concerto {
+  --md-sys-color-primary: #272B36;
+  --md-sys-color-on-primary: #FFFFFF;
+  --md-sys-color-primary-container: #D7D7D6;
+  --md-sys-color-on-primary-container: #272B36;
+  --md-sys-color-secondary: #A08A81;
+  --md-sys-color-secondary-container: #B7B8BB;
+  --md-sys-color-on-secondary-container: #272B36;
+  --md-sys-color-surface: #F0F0F0;
+  --md-sys-color-surface-container: #D7D7D6;
+  --md-sys-color-surface-container-high: #B7B8BB;
+  --md-sys-color-surface-container-highest: #A08A81;
+  --md-sys-color-on-surface: #272B36;
+  --md-sys-color-on-surface-variant: #595D66;
+  --md-sys-color-outline: #B7B8BB;
+  --md-sys-color-outline-variant: #D7D7D6;
+  --vscode-bg: #F0F0F0;
+  --vscode-sidebar-bg: #D7D7D6;
+  --vscode-border: #B7B8BB;
+  --vscode-text: #272B36;
+  --vscode-icon-hover: #B7B8BB;
+}
+
+body.theme-concerto.dark-theme {
+  --md-sys-color-primary: #B7B8BB;
+  --md-sys-color-on-primary: #272B36;
+  --md-sys-color-primary-container: #A08A81;
+  --md-sys-color-on-primary-container: #D7D7D6;
+  --md-sys-color-secondary: #A08A81;
+  --md-sys-color-secondary-container: #595D66;
+  --md-sys-color-on-secondary-container: #D7D7D6;
+  --md-sys-color-surface: #1D2029;
+  --md-sys-color-surface-container: #272B36;
+  --md-sys-color-surface-container-high: #363C4A;
+  --md-sys-color-surface-container-highest: #595D66;
+  --md-sys-color-on-surface: #D7D7D6;
+  --md-sys-color-on-surface-variant: #B7B8BB;
+  --md-sys-color-outline: #595D66;
+  --md-sys-color-outline-variant: #A08A81;
+  --vscode-bg: #1D2029;
+  --vscode-sidebar-bg: #272B36;
+  --vscode-border: #363C4A;
+  --vscode-text: #D7D7D6;
+  --vscode-icon-hover: #595D66;
+}
+
+/* Original Lavender Theme */
+body.theme-original {
   --md-sys-color-primary: #6750A4;
   --md-sys-color-on-primary: #FFFFFF;
   --md-sys-color-primary-container: #EADDFF;
@@ -17,19 +117,14 @@
   --md-sys-color-on-surface-variant: #49454F;
   --md-sys-color-outline: #79747E;
   --md-sys-color-outline-variant: #CAC4D0;
-  
-  /* VSCode layout variables mapped to clean Material 3 surfaces */
   --vscode-bg: #FFFFFF;
   --vscode-sidebar-bg: #F3EDF7;
   --vscode-border: #E6E0E9;
   --vscode-text: #1C1B1F;
   --vscode-icon-hover: #EADDFF;
-  
-  --transition-speed: 0.3s;
 }
 
-body.dark-theme {
-  /* Material 3 Expressive Dark Theme - Deep, modern and premium */
+body.theme-original.dark-theme {
   --md-sys-color-primary: #D0BCFF;
   --md-sys-color-on-primary: #381E72;
   --md-sys-color-primary-container: #4F378B;
@@ -45,13 +140,58 @@ body.dark-theme {
   --md-sys-color-on-surface-variant: #CAC4D0;
   --md-sys-color-outline: #938F99;
   --md-sys-color-outline-variant: #49454F;
-
-  /* VSCode layout variables mapped to clean Material 3 dark surfaces */
   --vscode-bg: #0F0E13;
   --vscode-sidebar-bg: #1A191E;
   --vscode-border: #2B2930;
   --vscode-text: #E6E0E9;
   --vscode-icon-hover: #381E72;
+}
+
+/* Rose Quartz Theme */
+body.theme-rose-quartz {
+  --md-sys-color-primary: #22223B;
+  --md-sys-color-on-primary: #FFFFFF;
+  --md-sys-color-primary-container: #C9ADA7;
+  --md-sys-color-on-primary-container: #22223B;
+  --md-sys-color-secondary: #9A8C98;
+  --md-sys-color-secondary-container: #C9ADA7;
+  --md-sys-color-on-secondary-container: #22223B;
+  --md-sys-color-surface: #F2E9E4;
+  --md-sys-color-surface-container: #E5DCD8;
+  --md-sys-color-surface-container-high: #C9ADA7;
+  --md-sys-color-surface-container-highest: #9A8C98;
+  --md-sys-color-on-surface: #22223B;
+  --md-sys-color-on-surface-variant: #4A4E69;
+  --md-sys-color-outline: #C9ADA7;
+  --md-sys-color-outline-variant: #E5DCD8;
+  --vscode-bg: #F2E9E4;
+  --vscode-sidebar-bg: #E5DCD8;
+  --vscode-border: #C9ADA7;
+  --vscode-text: #22223B;
+  --vscode-icon-hover: #C9ADA7;
+}
+
+body.theme-rose-quartz.dark-theme {
+  --md-sys-color-primary: #C9ADA7;
+  --md-sys-color-on-primary: #22223B;
+  --md-sys-color-primary-container: #4A4E69;
+  --md-sys-color-on-primary-container: #F2E9E4;
+  --md-sys-color-secondary: #9A8C98;
+  --md-sys-color-secondary-container: #363A54;
+  --md-sys-color-on-secondary-container: #F2E9E4;
+  --md-sys-color-surface: #161628;
+  --md-sys-color-surface-container: #22223B;
+  --md-sys-color-surface-container-high: #363A54;
+  --md-sys-color-surface-container-highest: #4A4E69;
+  --md-sys-color-on-surface: #F2E9E4;
+  --md-sys-color-on-surface-variant: #D8C2BD; /* Improved contrast on dark background */
+  --md-sys-color-outline: #4A4E69;
+  --md-sys-color-outline-variant: #363A54;
+  --vscode-bg: #161628;
+  --vscode-sidebar-bg: #22223B;
+  --vscode-border: #363A54;
+  --vscode-text: #F2E9E4;
+  --vscode-icon-hover: #9A8C98;
 }
 
 *,
@@ -73,6 +213,12 @@ body {
   transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
   cursor: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgawujXWquSQp7BjdSzXnbPbpg6L4_xgBgt4dOM8Cr4F3oMaawiyLDh_8WWr4FwcVbKv5uyW2I9r8YPyfky5L7nSR3j9lKs2QGc8pF-MiOYWfL2zZT3pnW8kzRVPxRDQJSbG5ekiXeFtqWbkGvHdPSCSYcRFlEUG4I4BUlj4FYDG62BPaTFqFhllYxp6mE/s1600/cursor1.png'), pointer !important;
 }
+
+body.theme-transitioning,
+body.theme-transitioning * {
+  transition: none !important;
+}
+
 
 a {
   cursor: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgawujXWquSQp7BjdSzXnbPbpg6L4_xgBgt4dOM8Cr4F3oMaawiyLDh_8WWr4FwcVbKv5uyW2I9r8YPyfky5L7nSR3j9lKs2QGc8pF-MiOYWfL2zZT3pnW8kzRVPxRDQJSbG5ekiXeFtqWbkGvHdPSCSYcRFlEUG4I4BUlj4FYDG62BPaTFqFhllYxp6mE/s1600/cursor1.png'), pointer !important;
