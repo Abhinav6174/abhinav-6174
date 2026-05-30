@@ -214,7 +214,7 @@ export class ThemeService {
       }
 
       // Swap palette class
-      const classesToRemove = Array.from(target.classList).filter(c => c.startsWith('theme-'));
+      const classesToRemove = Array.from(target.classList).filter(c => c.startsWith('theme-') && c !== 'theme-transitioning');
       classesToRemove.forEach(c => target.classList.remove(c));
       target.classList.add(`theme-${palette}`);
 
