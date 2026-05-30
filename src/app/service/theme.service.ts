@@ -1,5 +1,4 @@
-import { DOCUMENT } from '@angular/common';
-import { Inject, Injectable, effect, signal } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 
 interface ThemeTokens {
   [key: string]: string;
@@ -16,8 +15,6 @@ interface PaletteConfig {
 export class ThemeService {
   public isDarkTheme = signal<boolean>(true);
   public currentPalette = signal<string>('concerto');
-  private readonly storageThemeKey = 'theme';
-  private readonly storagePaletteKey = 'palette';
 
   /**
    * All theme palettes with their light/dark token values.
@@ -165,9 +162,9 @@ export class ThemeService {
     }
   };
 
-  constructor(@Inject(DOCUMENT) private document: Document) {
+  constructor() {
     // Initialize light/dark theme based on preference or default to dark
-    const savedTheme = localStorage.getItem(this.storageThemeKey);
+    const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
       this.isDarkTheme.set(savedTheme === 'dark');
     } else {
@@ -176,79 +173,66 @@ export class ThemeService {
     }
 
     // Initialize palette selection
-    const savedPalette = localStorage.getItem(this.storagePaletteKey);
-    if (savedPalette && this.palettes[savedPalette]) {
+    const savedPalette = localStorage.getItem('palette');
+    if (savedPalette) {
       this.currentPalette.set(savedPalette);
     }
 
-    effect(() => {
-      this.applyTheme(this.isDarkTheme(), this.currentPalette());
-    });
+    this.applyTheme(this.isDarkTheme(), this.currentPalette());
   }
 
   toggleTheme() {
     this.isDarkTheme.update(val => !val);
-    localStorage.setItem(this.storageThemeKey, this.isDarkTheme() ? 'dark' : 'light');
+    this.applyTheme(this.isDarkTheme(), this.currentPalette());
+    localStorage.setItem('theme', this.isDarkTheme() ? 'dark' : 'light');
   }
 
   setPalette(palette: string) {
-    if (!this.palettes[palette]) {
-      return;
-    }
-
     this.currentPalette.set(palette);
-    localStorage.setItem(this.storagePaletteKey, palette);
+    this.applyTheme(this.isDarkTheme(), palette);
+    localStorage.setItem('palette', palette);
   }
 
   private applyTheme(isDark: boolean, palette: string) {
-    const selectedPalette = this.palettes[palette] ?? this.palettes['concerto'];
-    const tokens = isDark ? selectedPalette.dark : selectedPalette.light;
-    const body = this.document.body;
-    const root = this.document.documentElement;
-    const themeColorMeta = this.document.querySelector('meta[name="theme-color"]');
-
-    if (!body || !root) {
-      return;
-    }
+    const body = document.body;
+    const root = document.documentElement;
 
     // Temporarily disable transitions to fix a Chrome/Edge rendering bug where 
     // CSS variable updates fail to trigger repaints on descendants with transitions.
     body.classList.add('theme-transitioning');
-    body.classList.remove('dark-theme');
-    root.classList.remove('dark-theme');
-    this.clearThemeClasses(body);
-    this.clearThemeClasses(root);
 
-    for (const property of this.getTokenKeys()) {
-      root.style.removeProperty(property);
-      body.style.removeProperty(property);
+    const targets = [body, root];
+
+    for (const target of targets) {
+      if (!target) continue;
+
+      // Toggle dark-theme class
+      if (isDark) {
+        target.classList.add('dark-theme');
+      } else {
+        target.classList.remove('dark-theme');
+      }
+
+      // Swap palette class
+      const classesToRemove = Array.from(target.classList).filter(c => c.startsWith('theme-') && c !== 'theme-transitioning');
+      classesToRemove.forEach(c => target.classList.remove(c));
+      target.classList.add(`theme-${palette}`);
+
+      // Strip any inline styles that might have been applied by earlier logic.
+      const tokens = this.palettes['concerto']?.['light'];
+      if (tokens) {
+        for (const property of Object.keys(tokens)) {
+          target.style.removeProperty(property);
+        }
+      }
     }
-
-    for (const [property, value] of Object.entries(tokens)) {
-      root.style.setProperty(property, value);
-      body.style.setProperty(property, value);
-    }
-
-    root.style.setProperty('color-scheme', isDark ? 'dark' : 'light');
-    body.style.setProperty('color-scheme', isDark ? 'dark' : 'light');
-    themeColorMeta?.setAttribute('content', tokens['--vscode-bg'] ?? tokens['--md-sys-color-surface']);
 
     // Force a synchronous reflow while transitions are disabled
-    void root.offsetHeight;
+    void document.body.offsetHeight;
 
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        body.classList.remove('theme-transitioning');
-      });
-    });
-  }
-
-  private getTokenKeys(): string[] {
-    return Object.keys(this.palettes['concerto'].light);
-  }
-
-  private clearThemeClasses(target: HTMLElement): void {
-    const classesToRemove = Array.from(target.classList).filter(className => className.startsWith('theme-'));
-    classesToRemove.forEach(className => target.classList.remove(className));
+    // Re-enable transitions after the browser has painted the new variables
+    setTimeout(() => {
+      body.classList.remove('theme-transitioning');
+    }, 50);
   }
 }
