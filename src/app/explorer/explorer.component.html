@@ -52,19 +52,19 @@
           <div class="dropdown-content">
             <div class="explorer-item2" (click)="toggleDropdown('angular')">
               <fa-icon class="icon-arrow" [icon]="dropdownStates['angular'] ? faChevronDown : faChevronRight"></fa-icon>
-              <img class="explorer-folder-icon" src="assets/folder.png" />
+              <img class="explorer-folder-icon" [src]="dropdownStates['angular'] ? 'assets/icons/folder-open.svg' : 'assets/icons/folder.svg'" />
               <span>.angular</span>
             </div>
-            @if (dropdownStates['angular']) {
+             @if (dropdownStates['angular']) {
               <div class="dropdown-content">
                 <div class="explorer-item2 subfolder-dropdown-content">
                   <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
-                  <img class="explorer-folder-icon" src="assets/folder.png" />
+                  <img class="explorer-folder-icon" src="assets/icons/folder.svg" />
                   <span>myapp</span>
                 </div>
                 <div class="explorer-item2 subfolder-dropdown-content">
                   <fa-icon class="icon-arrow" [icon]="faChevronRight"></fa-icon>
-                  <img class="explorer-folder-icon" src="assets/folder.png" />
+                  <img class="explorer-folder-icon" src="assets/icons/folder.svg" />
                   <span>vite</span>
                 </div>
               </div>
@@ -72,7 +72,7 @@
             <div style="margin-top: 4px;">
               <div class="explorer-item2" (click)="toggleDropdown('vscode')">
                 <fa-icon class="icon-arrow" [icon]="dropdownStates['vscode'] ? faChevronDown : faChevronRight"></fa-icon>
-                <img class="explorer-folder-icon" src="assets/folder.png" />
+                <img class="explorer-folder-icon" [src]="dropdownStates['vscode'] ? 'assets/icons/folder-open.svg' : 'assets/icons/folder.svg'" />
                 <span>.vscode</span>
               </div>
               @if (dropdownStates['vscode']) {
@@ -96,14 +96,14 @@
               <div class="explorer-item2">
                 <fa-icon class="icon-arrow"
                 [icon]="dropdownStates['nodemodules'] ? faChevronDown : faChevronRight"></fa-icon>
-                <img class="explorer-folder-icon" src="assets/folder.png" />
+                <img class="explorer-folder-icon" src="assets/icons/folder.svg" />
                 <span>node_modules</span>
               </div>
             </div>
             <div style="margin-top: 4px;">
               <div class="explorer-item2" (click)="toggleDropdown('public')">
                 <fa-icon class="icon-arrow" [icon]="dropdownStates['public'] ? faChevronDown : faChevronRight"></fa-icon>
-                <img class="explorer-folder-icon" src="assets/folder.png" />
+                <img class="explorer-folder-icon" [src]="dropdownStates['public'] ? 'assets/icons/folder-open.svg' : 'assets/icons/folder.svg'" />
                 <span>public</span>
               </div>
               @if (dropdownStates['public']) {
@@ -118,7 +118,7 @@
             <div style="margin-top: 4px;">
               <div class="explorer-item2" (click)="toggleDropdown('src')">
                 <fa-icon class="icon-arrow" [icon]="dropdownStates['src'] ? faChevronDown : faChevronRight"></fa-icon>
-                <img class="explorer-folder-icon" src="assets/folder.png" />
+                <img class="explorer-folder-icon" [src]="dropdownStates['src'] ? 'assets/icons/folder-open.svg' : 'assets/icons/folder.svg'" />
                 <span>src</span>
               </div>
               @if (dropdownStates['src']) {
@@ -126,7 +126,7 @@
                   <div style="margin-top: 5px;">
                     <div class="explorer-item2" (click)="toggleDropdown('app')">
                       <fa-icon class="icon-arrow" [icon]="dropdownStates['app'] ? faChevronDown : faChevronRight"></fa-icon>
-                      <img class="explorer-folder-icon" src="assets/folder.png" />
+                      <img class="explorer-folder-icon" [src]="dropdownStates['app'] ? 'assets/icons/folder-open.svg' : 'assets/icons/folder.svg'" />
                       <span>app</span>
                     </div>
                     @if (dropdownStates['app']) {
@@ -134,7 +134,7 @@
                         <div class="explorer-item2" (click)="toggleDropdown('home')">
                           <fa-icon class="icon-arrow"
                           [icon]="dropdownStates['home'] ? faChevronDown : faChevronRight"></fa-icon>
-                          <img class="explorer-folder-icon" src="assets/folder.png" />
+                          <img class="explorer-folder-icon" [src]="dropdownStates['home'] ? 'assets/icons/folder-open.svg' : 'assets/icons/folder.svg'" />
                           <span>Home</span>
                         </div>
                         @if (dropdownStates['home']) {
@@ -156,7 +156,7 @@
                         <div class="explorer-item2" (click)="toggleDropdown('experience')">
                           <fa-icon class="icon-arrow"
                           [icon]="dropdownStates['experience'] ? faChevronDown : faChevronRight"></fa-icon>
-                          <img class="explorer-folder-icon" src="assets/folder.png" />
+                          <img class="explorer-folder-icon" [src]="dropdownStates['experience'] ? 'assets/icons/folder-open.svg' : 'assets/icons/folder.svg'" />
                           <span>Experience</span>
                         </div>
                         @if (dropdownStates['experience']) {
@@ -178,7 +178,7 @@
                         <div class="explorer-item2" (click)="toggleDropdown('projects')">
                           <fa-icon class="icon-arrow"
                           [icon]="dropdownStates['projects'] ? faChevronDown : faChevronRight"></fa-icon>
-                          <img class="explorer-folder-icon" src="assets/folder.png" />
+                          <img class="explorer-folder-icon" [src]="dropdownStates['projects'] ? 'assets/icons/folder-open.svg' : 'assets/icons/folder.svg'" />
                           <span>Projects</span>
                         </div>
                         @if (dropdownStates['projects']) {
@@ -200,7 +200,7 @@
                         <div class="explorer-item2" (click)="toggleDropdown('skills')">
                           <fa-icon class="icon-arrow"
                           [icon]="dropdownStates['skills'] ? faChevronDown : faChevronRight"></fa-icon>
-                          <img class="explorer-folder-icon" src="assets/folder.png" />
+                          <img class="explorer-folder-icon" [src]="dropdownStates['skills'] ? 'assets/icons/folder-open.svg' : 'assets/icons/folder.svg'" />
                           <span>Skills</span>
                         </div>
                         @if (dropdownStates['skills']) {
@@ -222,7 +222,7 @@
                         <div class="explorer-item2" (click)="toggleDropdown('education')">
                           <fa-icon class="icon-arrow"
                           [icon]="dropdownStates['education'] ? faChevronDown : faChevronRight"></fa-icon>
-                          <img class="explorer-folder-icon" src="assets/folder.png" />
+                          <img class="explorer-folder-icon" [src]="dropdownStates['education'] ? 'assets/icons/folder-open.svg' : 'assets/icons/folder.svg'" />
                           <span>Education</span>
                         </div>
                         @if (dropdownStates['education']) {
@@ -270,7 +270,7 @@
                     <div class="explorer-item2" (click)="toggleDropdown('assets')">
                       <fa-icon class="icon-arrow"
                       [icon]="dropdownStates['assets'] ? faChevronDown : faChevronRight"></fa-icon>
-                      <img class="explorer-folder-icon" src="assets/folder.png" />
+                      <img class="explorer-folder-icon" [src]="dropdownStates['assets'] ? 'assets/icons/folder-open.svg' : 'assets/icons/folder.svg'" />
                       <span>assets</span>
                     </div>
                     @if (dropdownStates['assets']) {

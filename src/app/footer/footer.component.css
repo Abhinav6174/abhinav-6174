@@ -23,21 +23,23 @@
               color var(--transition-speed) ease, 
               border-color var(--transition-speed) ease;
 }
-
 .footer-icons {
   width: 14px;
   height: 14px;
   margin-left: 6px;
   margin-right: 6px;
   vertical-align: middle;
-  transition: filter var(--transition-speed) ease, transform 0.2s ease;
+  transition: transform 0.2s ease, color var(--transition-speed) ease, opacity var(--transition-speed) ease;
   cursor: pointer;
+  color: var(--vscode-text);
+  opacity: 0.65;
 }
 
 .footer-icons:hover {
   transform: scale(1.15);
+  opacity: 1;
+  color: var(--md-sys-color-primary);
 }
-
 .footer-label {
   font-family: 'Google Sans', 'Outfit', sans-serif;
   font-weight: 500;
@@ -49,10 +51,7 @@
   transition: color var(--transition-speed) ease;
 }
 
-/* Invert white footer icons in light mode so they are visible */
-body:not(.dark-theme) .footer-icons {
-  filter: invert(0.85);
-}
+
 
 .footer-tabs {
   display: flex;

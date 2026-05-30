@@ -29,22 +29,23 @@
     align-items: center;
     text-align: center;
 }
-
 .profile-image {
     width: 180px;
     height: 180px;
-    border-radius: 50%;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
     margin-bottom: 24px;
-    transition: transform 0.3s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.3s ease;
+    transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1),
+            border-radius 0.4s cubic-bezier(0.2, 0, 0, 1),
+            box-shadow 0.4s ease;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     border: 4px solid var(--md-sys-color-primary-container);
 }
 
 .profile-image:hover {
-    transform: scale(1.04) rotate(2deg);
+    transform: scale(1.05) rotate(1deg);
+        border-radius: 40% 60% 70% 30% / 50% 60% 30% 70%;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 }
-
 .name {
     font-family: 'Google Sans', 'Outfit', sans-serif;
     font-size: 40px;

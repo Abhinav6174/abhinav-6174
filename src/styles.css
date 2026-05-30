@@ -97,4 +97,57 @@ a:-webkit-any-link {
      transform: scale(15);
      opacity: 0.01;
   }
+}
+
+/* Custom Icon System utilizing CSS masks for dynamic coloring */
+.icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-color: currentColor;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+  transition: background-color var(--transition-speed) ease;
+  vertical-align: middle;
+}
+
+.icon-hamburger {
+  mask-image: url('assets/icons/hamburger.svg');
+  -webkit-mask-image: url('assets/icons/hamburger.svg');
+}
+.icon-search {
+  mask-image: url('assets/icons/search.svg');
+  -webkit-mask-image: url('assets/icons/search.svg');
+}
+.icon-git-branch {
+  mask-image: url('assets/icons/git-branch.svg');
+  -webkit-mask-image: url('assets/icons/git-branch.svg');
+}
+.icon-debug {
+  mask-image: url('assets/icons/debug.svg');
+  -webkit-mask-image: url('assets/icons/debug.svg');
+}
+.icon-extension {
+  mask-image: url('assets/icons/extension.svg');
+  -webkit-mask-image: url('assets/icons/extension.svg');
+}
+.icon-github {
+  mask-image: url('assets/icons/github.svg');
+  -webkit-mask-image: url('assets/icons/github.svg');
+}
+.icon-live-share {
+  mask-image: url('assets/icons/live-share.svg');
+  -webkit-mask-image: url('assets/icons/live-share.svg');
+}
+.icon-profile {
+  mask-image: url('assets/icons/profile.svg');
+  -webkit-mask-image: url('assets/icons/profile.svg');
+}
+.icon-settings {
+  mask-image: url('assets/icons/settings.svg');
+  -webkit-mask-image: url('assets/icons/settings.svg');
 }

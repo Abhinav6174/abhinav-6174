@@ -4,6 +4,7 @@
   justify-content: space-between;
   width: 26px;
   background-color: var(--vscode-sidebar-bg);
+  border-right: 1px solid var(--vscode-border);
   padding: 12px;
   position: absolute;
   left: 0;
@@ -11,10 +12,10 @@
   bottom: 0;
   height: -webkit-fill-available;
   overflow: hidden;
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
+  -webkit-user-select: none;
+  -ms-user-select: none;
   user-select: none;
-  transition: background-color var(--transition-speed) ease;
+  transition: background-color var(--transition-speed) ease, border-color var(--transition-speed) ease;
 }
 
 .top-sidebar1-icon-container,
@@ -27,11 +28,6 @@
 .sidebar-item1 {
   display: flex;
   align-items: center;
-
-}
-
-.sidebar-item1 fa-icon {
-  margin-right: 10px;
 }
 
 .sidebar-item1 span {
@@ -49,24 +45,20 @@
 }
 
 .sidebar1-icons {
-  width: 23px;
-  height: 23px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  transition: transform 0.2s ease, filter 0.2s ease;
+  width: 20px;
+  height: 20px;
+  margin-top: 14px;
+  margin-bottom: 14px;
+  color: var(--vscode-text);
+  opacity: 0.65;
+  transition: transform 0.2s cubic-bezier(0.2, 0, 0, 1), 
+              color var(--transition-speed) ease, 
+              opacity 0.2s ease;
   cursor: pointer;
 }
 
 .sidebar1-icons:hover {
-  transform: scale(1.1);
-  filter: drop-shadow(0 0 4px var(--md-sys-color-primary));
-}
-
-/* Add a filter for light mode icons if they are white initially */
-body:not(.dark-theme) .sidebar1-icons {
-  filter: invert(1);
-}
-
-body:not(.dark-theme) .sidebar1-icons:hover {
-  filter: invert(1) drop-shadow(0 0 4px var(--md-sys-color-primary));
+  transform: scale(1.15);
+  opacity: 1;
+  color: var(--md-sys-color-primary);
 }
