@@ -2,11 +2,11 @@
   <div class="resizable-explorer">
     <div class="explorer" #explorer>
       <div class="explorer-content">
-        <div style="font-size: 16px;">EXPLORER</div>
+        <div style="font-size: 15px;">Explorer</div>
         <div style="margin-top: 10px;">
           <div class="explorer-item2" (click)="toggleDropdown('OPENEDITORS')">
             <fa-icon class="icon-arrow" [icon]="dropdownStates['OPENEDITORS'] ? faChevronDown : faChevronRight"></fa-icon>
-            <span style="font-size: 16px;">OPEN EDITORS</span>
+            <span style="font-size: 15px;">Open Editors</span>
           </div>
           @if (dropdownStates['OPENEDITORS']) {
             <div class="dropdown-content">
@@ -46,7 +46,7 @@
       <div style="margin-top: 4px;">
         <div class="explorer-item2" (click)="toggleDropdown('MYPORTFOLIO')">
           <fa-icon class="icon-arrow" [icon]="dropdownStates['MYPORTFOLIO'] ? faChevronDown : faChevronRight"></fa-icon>
-          <span style="font-size: 16px;">MY-PORTFOLIO</span>
+          <span style="font-size: 15px;">My Portfolio</span>
         </div>
         @if (dropdownStates['MYPORTFOLIO']) {
           <div class="dropdown-content">

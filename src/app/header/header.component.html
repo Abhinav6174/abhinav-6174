@@ -17,10 +17,17 @@
     </span>
     <span class="search-box">
       <i style="margin-right: 5px;" class="fa fa-search"></i>
-      ABHINAV
+      Abhinav
     </span>
   </div>
   <div class="window-controls">
+    <div class="theme-toggle" (click)="themeService.toggleTheme()" title="Toggle Dark/Light Theme">
+      @if (themeService.isDarkTheme()) {
+      <i class="fas fa-sun"></i>
+      } @else {
+      <i class="fas fa-moon"></i>
+      }
+    </div>
     <img class="window-controls-icon" src="assets/minimise.png" />
     <img class="window-controls-icon" src="assets/maximise.png" />
     <img class="window-controls-icon" src="assets/close.png" />

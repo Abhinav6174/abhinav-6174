@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
   width: 26px;
-  background-color: #15161A;
+  background-color: var(--vscode-sidebar-bg);
   padding: 12px;
   position: absolute;
   left: 0;
@@ -14,6 +14,7 @@
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none;
+  transition: background-color var(--transition-speed) ease;
 }
 
 .top-sidebar1-icon-container,
@@ -52,4 +53,20 @@
   height: 23px;
   margin-top: 10px;
   margin-bottom: 10px;
+  transition: transform 0.2s ease, filter 0.2s ease;
+  cursor: pointer;
+}
+
+.sidebar1-icons:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 4px var(--md-sys-color-primary));
+}
+
+/* Add a filter for light mode icons if they are white initially */
+body:not(.dark-theme) .sidebar1-icons {
+  filter: invert(1);
+}
+
+body:not(.dark-theme) .sidebar1-icons:hover {
+  filter: invert(1) drop-shadow(0 0 4px var(--md-sys-color-primary));
 }

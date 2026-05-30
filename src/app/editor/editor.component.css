@@ -4,8 +4,11 @@
   scrollbar-width: none;
   -ms-overflow-style: none;
   user-select: none;
-  margin: -10px;
-  /* cursor: url('/assets/cursor.png'), pointer; */
+  margin: -10px -10px 10px -10px;
+  background-color: var(--vscode-sidebar-bg);
+  border-bottom: 1px solid var(--vscode-border);
+  padding: 8px 8px 0 8px;
+  transition: background-color var(--transition-speed) ease, border-color var(--transition-speed) ease;
 }
 
 .file-tabs::-webkit-scrollbar {
@@ -13,39 +16,59 @@
 }
 
 .file-tab {
-  background-color: #212121;
-  padding: 2px 10px;
-  margin-right: 1px;
-  margin-left: 1px;
-  /* cursor: pointer; */
-  transition: background-color 0.3s ease;
+  background-color: var(--md-sys-color-surface-container-high);
+  color: var(--md-sys-color-on-surface-variant);
+  font-family: 'Google Sans', 'Outfit', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 16px;
+  margin-right: 4px;
+  border-radius: 12px 12px 0 0;
+  border: 1px solid var(--vscode-border);
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color var(--transition-speed) ease, 
+              color var(--transition-speed) ease, 
+              border-color var(--transition-speed) ease;
   max-width: fit-content;
   min-width: fit-content;
   z-index: 999;
 }
 
 .file-tab:hover {
-  background-color: #333333;
+  background-color: var(--md-sys-color-surface-container-highest);
+  color: var(--md-sys-color-on-surface);
 }
 
 .file-tab.active {
-  background-color: #121116;
-  color: #ffffff;
-  border-top: solid 2px #888888;
+  background-color: var(--vscode-bg);
+  color: var(--vscode-text);
+  border-top: 3px solid var(--md-sys-color-primary);
+  font-weight: 600;
 }
 
 .file-tab .tab-close {
-  margin-left: 5px;
-  color: #d4d4d4;
+  margin-left: 4px;
+  color: var(--md-sys-color-on-surface-variant);
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  transition: background-color 0.2s, color 0.2s;
 }
 
 .file-tab .tab-close:hover {
-  color: #fff;
+  background-color: var(--md-sys-color-surface-container-highest);
+  color: var(--md-sys-color-primary);
 }
 
 .explorer-folder-icon {
-  height: 18px;
-  width: 18px;
-  margin-right: 5px;
-  margin-bottom: 3px;
+  height: 16px;
+  width: 16px;
+  margin-bottom: 1px;
 }

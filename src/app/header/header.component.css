@@ -1,16 +1,17 @@
 .header1 {
   padding: 2px;
-  color: #d4d4d4;
+  color: var(--vscode-text);
   display: flex;
   justify-content: space-between;
   align-items: center;
   user-select: none;
   overflow-x: auto;
   overflow-y: hidden;
-  background-color: #15161A;
+  background-color: var(--vscode-sidebar-bg);
   scrollbar-width: none;
   -ms-overflow-style: none;
   height: 25px;
+  transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
 }
 
 .header1::-webkit-scrollbar {
@@ -30,21 +31,22 @@
 .tab1 {
   padding: 1px 8px;
   /* cursor: pointer; */
-  transition: background-color 0.3s ease;
+  transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
 }
 
 .tab:hover {
-  background-color: #3a3a3a;
+  background-color: var(--md-sys-color-surface-container-high);
 }
 
 .search-box {
   display: flex;
   align-items: center;
   padding: 2px 8px;
-  background-color: #2a2a2a;
+  background-color: var(--md-sys-color-surface-container);
   border-radius: 4px;
   flex-grow: 1;
   justify-content: center;
+  transition: background-color var(--transition-speed) ease;
 }
 
 .search-icon {
@@ -66,8 +68,8 @@
   position: absolute;
   top: 25px;
   right: 0;
-  background-color: #2a2a2a;
-  border: 1px solid #3a3a3a;
+  background-color: var(--md-sys-color-surface-container);
+  border: 1px solid var(--md-sys-color-outline-variant);
   border-radius: 4px;
   overflow: hidden;
   z-index: 1000;
@@ -88,14 +90,14 @@
 }
 
 .search-box {
-  border: solid 1px #999999;
+  border: solid 1px var(--md-sys-color-outline-variant);
   border-radius: 8px;
   padding: 1px 94px;
   text-align: center;
   font-size: 12px;
   margin: 3px;
   margin-left: 12px;
-  background-color: #00000000;
+  background-color: transparent;
 }
 
 .arrow-box {
@@ -111,9 +113,34 @@
   margin-right: 10px;
 }
 
+.theme-toggle {
+  margin-right: 15px;
+  font-size: 14px;
+  color: var(--vscode-text);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.theme-toggle:hover {
+  background-color: var(--md-sys-color-surface-container-high);
+  color: var(--md-sys-color-primary);
+}
+
 .window-controls-icon {
   height: 12px;
   width: 12px;
+  filter: var(--icon-filter, none);
+}
+
+/* Add a filter for light mode icons if they are white initially */
+body:not(.dark-theme) .window-controls-icon {
+  filter: invert(1);
 }
 
 .window-controls img {
@@ -122,6 +149,6 @@
 }
 
 .window-controls i:hover {
-  background-color: #3a3a3a;
+  background-color: var(--md-sys-color-surface-container-high);
   border-radius: 3px;
 }

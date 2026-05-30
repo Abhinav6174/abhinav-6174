@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { ThemeService } from '../service/theme.service';
 
 @Component({
     selector: 'app-header',
@@ -6,10 +7,10 @@ import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angula
     templateUrl: './header.component.html',
     styleUrl: './header.component.css'
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit, AfterViewInit {
   @ViewChild('header') header!: ElementRef;
 
-  constructor() { }
+  constructor(public themeService: ThemeService) { }
 
   ngOnInit(): void { }
 

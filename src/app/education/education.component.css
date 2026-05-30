@@ -1,7 +1,8 @@
 .education-container {
   max-height: 80vh;
   overflow-y: auto;
-  background-color: 1e1e1e;
+  background-color: var(--vscode-bg);
+  color: var(--vscode-text);
   margin: 0px;
   padding: 17px;
   display: flex;
@@ -11,6 +12,7 @@
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
 }
 
 .education-container::-webkit-scrollbar {
@@ -18,19 +20,17 @@
 }
 
 .timeline {
-  background-color: #00000000;
+  background-color: transparent;
   margin: 20px auto;
   padding: 20px;
 }
 
 .card {
   position: relative;
-  background-color: #00000000;
+  background-color: transparent;
   --bs-card-border-width: none;
-
 }
 
-/* setting padding based on even or odd */
 .card:nth-child(odd) {
   padding: 30px 0 30px 30px;
   max-width: 450px;
@@ -42,12 +42,12 @@
   max-width: 450px;
 }
 
-/* Global ::before */
 .card::before {
   content: "";
   position: absolute;
   width: 50%;
-  border: solid #555555;
+  border: solid var(--vscode-border);
+  transition: border-color var(--transition-speed) ease;
 }
 
 .card:nth-child(odd)::before {
@@ -91,67 +91,98 @@
 .info {
   display: flex;
   flex-direction: column;
-  color: #D4D4D4;
+  color: var(--vscode-text);
   border-radius: 24px;
-  padding: 16px;
-  background-color: #222127;
-  transition: transform .3s;
-  box-shadow: -2px -2px 8px rgba(0, 0, 0, 0), -2px -2px 12px rgba(1, 1, 1, 0.5), inset 2px 2px 4px rgba(1, 1, 1, 0.1), 2px 2px 8px rgba(1, 1, 1, 0.15);
+  padding: 20px;
+  background-color: var(--md-sys-color-surface-container);
+  border: 1px solid var(--md-sys-color-outline-variant);
+  transition: transform 0.3s cubic-bezier(0.2, 0, 0, 1), 
+              background-color var(--transition-speed) ease, 
+              border-color var(--transition-speed) ease, 
+              color var(--transition-speed) ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.info:hover {
+  transform: translateY(-4px);
+  background-color: var(--md-sys-color-surface-container-high);
+  border-color: var(--md-sys-color-primary);
 }
 
 .title {
-  color: ffffff;
+  color: var(--vscode-text);
   position: relative;
-  font-size: 24px;
-  font-weight: bold;
+  font-family: 'Google Sans', 'Outfit', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 8px;
+  margin-bottom: 4px;
+  transition: color var(--transition-speed) ease;
 }
 
 /* Timeline dot  */
 .title::before {
   content: "";
   position: absolute;
-  width: 12px;
-  height: 12px;
-  background: white;
-  border-radius: 999px;
-  border: 3px solid #8210AC;
+  box-sizing: border-box;
+  width: 16px;
+  height: 16px;
+  background: var(--vscode-bg);
+  border-radius: 50%;
+  border: 3.5px solid var(--md-sys-color-primary);
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color var(--transition-speed) ease, border-color var(--transition-speed) ease;
 }
 
-/* text right if the card is even  */
 .card:nth-child(even)>.info {
   text-align: right;
   display: flex;
   align-items: end;
 }
 
-/* setting dot to the left if the card is odd */
 .card:nth-child(odd)>.info>.title::before {
-  left: -52px;
+  left: -55px;
 }
 
-/* setting dot to the right if the card is odd */
 .card:nth-child(even)>.info>.title::before {
-  right: -52px;
+  right: -55px;
 }
 
 .exp-company-logo {
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   height: 60px;
   width: 60px;
   border-radius: 14px;
   margin-bottom: 8px;
-  transition: transform .3s;
-  box-shadow: -2px -2px 8px rgba(0, 0, 0, 0), -2px -2px 12px rgba(1, 1, 1, 0.5), inset 2px 2px 4px rgba(1, 1, 1, 0.1), 2px 2px 8px rgba(1, 1, 1, 0.15);
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 .exp-company-logo:hover {
-  -ms-transform: scale(1.03);
-  -webkit-transform: scale(1.03);
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 
 .work-details {
-  margin-top: -5px;
+  font-family: 'Google Sans', 'Outfit', sans-serif;
+  color: var(--md-sys-color-primary);
+  font-weight: 500;
+  margin: 4px 0;
+  font-size: 14px;
+  transition: color var(--transition-speed) ease;
+}
+
+.company-name {
+  font-family: 'Google Sans', 'Outfit', sans-serif;
+  margin: 0;
+  color: var(--md-sys-color-on-surface-variant);
+  transition: color var(--transition-speed) ease;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.info p {
+  font-family: 'Google Sans', 'Outfit', sans-serif;
+  margin: 0;
+  color: var(--md-sys-color-on-surface-variant);
+  transition: color var(--transition-speed) ease;
 }

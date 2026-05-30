@@ -4,36 +4,64 @@
   position: fixed;
   bottom: 0;
   left: 0;
+  z-index: 1000;
 }
 
 .footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #15161A;
-  color: white;
-  padding: 8px 10px;
-  height: 10px;
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
+  background-color: var(--vscode-sidebar-bg);
+  color: var(--vscode-text);
+  border-top: 1px solid var(--vscode-border);
+  padding: 8px 12px;
+  height: 14px;
+  -webkit-user-select: none;
+  -ms-user-select: none;
   user-select: none;
+  transition: background-color var(--transition-speed) ease, 
+              color var(--transition-speed) ease, 
+              border-color var(--transition-speed) ease;
 }
 
 .footer-icons {
-  width: 15px;
-  height: 15px;
-  margin-left: 5px;
-  margin-right: 5px;
+  width: 14px;
+  height: 14px;
+  margin-left: 6px;
+  margin-right: 6px;
+  vertical-align: middle;
+  transition: filter var(--transition-speed) ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.footer-icons:hover {
+  transform: scale(1.15);
+}
+
+.footer-label {
+  font-family: 'Google Sans', 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: 11.5px;
+  color: var(--md-sys-color-on-surface-variant);
+  margin-right: 12px;
+  margin-left: 2px;
+  vertical-align: middle;
+  transition: color var(--transition-speed) ease;
+}
+
+/* Invert white footer icons in light mode so they are visible */
+body:not(.dark-theme) .footer-icons {
+  filter: invert(0.85);
 }
 
 .footer-tabs {
   display: flex;
-
+  align-items: center;
 }
 
 .footer-content {
-  margin-right: 10px;
-  /* cursor: pointer; */
+  display: flex;
+  align-items: center;
 }
 
 .left-content {
@@ -45,12 +73,6 @@
 .right-content {
   display: flex;
   align-items: center;
-}
-
-.notification-icon {
-  width: 20px;
-  height: 20px;
-  margin-left: 20px;
 }
 
 @media (max-width: 470px) {
