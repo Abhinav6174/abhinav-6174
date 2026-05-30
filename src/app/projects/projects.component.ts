@@ -21,6 +21,14 @@ export class ProjectsComponent {
 
   projects: Project[] = [
     {
+      title: 'Digital Column Clock Live Wallpaper (Android)',
+      description: 'A beautiful, feature-rich live wallpaper app that displays an animated digital clock on your Android home screen with smooth animations, multiple themes, custom backgrounds, and extensive customization.',
+      image: 'assets/column-clock-android.png',
+      technologies: ['Kotlin', 'Jetpack Compose', 'Android Canvas API', 'Jetpack DataStore', 'WallpaperService'],
+      githubUrl: '',
+      liveUrl: 'https://play.google.com/store/apps/details?id=com.abhinav.digitalclockapp'
+    },
+    {
       title: 'WA Echo Scroll - WhatsApp Chat Viewer',
       description: 'Dive back into your WhatsApp chats with ease. Scroll through old convos like flipping through a photo album. Your memories, alive and ready to explore, anytime.',
       image: 'assets/waechoscroll.png',
