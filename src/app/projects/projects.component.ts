@@ -21,6 +21,14 @@ export class ProjectsComponent {
 
   projects: Project[] = [
     {
+      title: 'NetScope (Windows Desktop App)',
+      description: 'NetScope is a lightweight Windows desktop application that shows your real-time internet download and upload speed in a small always-on-top floating overlay on your screen. It reads live data from your network adapters using Windows performance counters and displays it using WPF.',
+      image: 'assets/netscope.png',
+      technologies: ['C#', 'WPF', 'Windows Forms', 'AutoUpdater.NET', 'Inno Setup'],
+      githubUrl: '',
+      liveUrl: ''
+    },
+    {
       title: 'Digital Column Clock Live Wallpaper (Android)',
       description: 'A beautiful, feature-rich live wallpaper app that displays an animated digital clock on your Android home screen with smooth animations, multiple themes, custom backgrounds, and extensive customization.',
       image: 'assets/column-clock-android.png',
