@@ -21,6 +21,22 @@ export class ProjectsComponent {
 
   projects: Project[] = [
     {
+      title: 'TextToSql',
+      description: 'AI-powered Natural Language to SQL query engine and interactive studio for SQL Server built with .NET 10, Google Gemini, Qdrant Vector DB, and local ONNX embeddings (bge-small-en-v1.5).',
+      image: 'assets/texttosql.png',
+      technologies: ['C#', '.NET 10', 'Google Gemini', 'Qdrant Vector DB', 'ONNX'],
+      githubUrl: '',
+      liveUrl: ''
+    },
+    {
+      title: 'DocBridge MCP Server',
+      description: 'A Model Context Protocol (MCP) server built with C# .NET 10 that exposes document reading capabilities to AI assistants. This server enabled AI models to read, search and extract content from multiple formats including PDF, Word, PowerPoint, Excel, CSV, HTML, Markdown, JSON, Plain text files and images via OCR.',
+      image: 'assets/docbridge.png',
+      technologies: ['C#', '.NET 10', 'OCR', 'MCP Protocol', 'AI Assistants'],
+      githubUrl: '',
+      liveUrl: ''
+    },
+    {
       title: 'NetScope (Windows Desktop App)',
       description: 'NetScope is a lightweight Windows desktop application that shows your real-time internet download and upload speed in a small always-on-top floating overlay on your screen. It reads live data from your network adapters using Windows performance counters and displays it using WPF.',
       image: 'assets/netscope.png',
@@ -67,6 +83,14 @@ export class ProjectsComponent {
       technologies: ['HTML', 'CSS', 'Javascript', 'Chrome APIs'],
       githubUrl: '#',
       liveUrl: '#'
+    },
+    {
+      title: 'Siddhartha Campus Hub - SAHE (Android)',
+      description: 'Siddhartha Campus Hub brings campus announcements, exams, results, placements, events, and academic resources together in one place. Search, bookmark, get notifications, and stay updated automatically.',
+      image: 'assets/sahe.png',
+      technologies: ['Kotlin', 'Jetpack Compose', 'Cloud Firestore', 'FCM'],
+      githubUrl: '',
+      liveUrl: 'https://play.google.com/store/apps/details?id=com.vrsec.abhinav'
     },
     {
       title: 'TimeSheet Management Web App',
