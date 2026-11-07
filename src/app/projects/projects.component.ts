@@ -109,7 +109,7 @@ export class ProjectsComponent {
     //   liveUrl: '#'
     // },
     {
-      title: 'To-Do List App',
+      title: 'Task Master',
       description: 'A customizable task manager to create, organize, and track tasks with priorities, categories, deadlines, subtasks, progress insights, and quick templates. Supports task search, import, and export.',
       image: 'assets/to-do-app.png',
       technologies: ['HTML', 'CSS', 'RectsJs'],
