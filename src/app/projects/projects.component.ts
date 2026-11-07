@@ -100,25 +100,25 @@ export class ProjectsComponent {
       githubUrl: '#',
       liveUrl: '#'
     },
-    {
-      title: 'Super Market Web App',
-      description: 'Products categorized into sections, manage orders and payment information',
-      image: 'assets/super-market-app.png',
-      technologies: ['HTML', 'CSS', 'Javascript', '.NET', 'MVC', 'MS SQL'],
-      githubUrl: '#',
-      liveUrl: '#'
-    },
+    // {
+    //   title: 'Super Market Web App',
+    //   description: 'Products categorized into sections, manage orders and payment information',
+    //   image: 'assets/super-market-app.png',
+    //   technologies: ['HTML', 'CSS', 'Javascript', '.NET', 'MVC', 'MS SQL'],
+    //   githubUrl: '#',
+    //   liveUrl: '#'
+    // },
     {
       title: 'To-Do List App',
-      description: 'Make To-Do lists. Completed tasks are usually moved to a separate section for easy tracking.',
-      image: 'assets/to-do-app1.png',
+      description: 'A customizable task manager to create, organize, and track tasks with priorities, categories, deadlines, subtasks, progress insights, and quick templates. Supports task search, import, and export.',
+      image: 'assets/to-do-app.png',
       technologies: ['HTML', 'CSS', 'RectsJs'],
       githubUrl: 'https://github.com/Abhinav6174/to-do-app',
       liveUrl: 'https://abhinav6174.github.io/to-do-app'
     },
     {
       title: 'Age Calculator',
-      description: 'Calculate your age in days, weeks, months and years, etc.',
+      description: 'An interactive age calculator with live age tracking, birthday countdowns, life milestones, and detailed lifetime statistics.',
       image: 'assets/age-calculator.png',
       technologies: ['HTML', 'CSS', 'RectsJs'],
       githubUrl: 'https://github.com/Abhinav6174/age-calculator',
